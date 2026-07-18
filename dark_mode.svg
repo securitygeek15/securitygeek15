@@ -82,7 +82,6 @@ text, tspan {white-space: pre;}
 <text x="20" y="812" fill="#e6edf3">
 <tspan x="20" y="812" class="cc">. </tspan><tspan class="key">Email</tspan><tspan class="cc"> ....................... </tspan><tspan class="val">goofyaapa@gmail.com</tspan>
 <tspan x="20" y="830" class="cc">. </tspan><tspan class="key">Instagram</tspan><tspan class="cc"> .................. </tspan><tspan class="val">security__geek</tspan>
-<tspan x="20" y="848" class="cc">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="cc"> ..................... </tspan><tspan class="val">amaan-khan-194b5226b</tspan>
 </text>
 
 <!-- Separator -->
