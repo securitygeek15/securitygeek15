@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1200px" height="530px" font-size="16px">
+<style>
+@font-face {
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}
+.key {fill: #ffa657;}
+.value {fill: #79c0ff;}
+.addColor {fill: #3fb950;}
+.delColor {fill: #f85149;}
+.cc {fill: #484f58;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="1200px" height="530px" fill="#0d1117" rx="15"/>
+<text x="10" y="15" fill="#c9d1d9" class="ascii" font-size="14px">
+<tspan x="10" y="15">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="29">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="43">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="57">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⣷⡀⠀⠀⢷⡇⠀⠻⣼⠀⠀⠀⡾⣷⡀⠀⢸⡄⡇⠘⣶⡼⠀⠀⠀⠀⠀⠀⣰⣦⠞⠁⢰⠁⢰⣯⣺⢏⠏⢀⣼⠃⢀⡼⢁⣬⡿⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="71">⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⡇⠀⠀⣌⣇⠀⠀⠉⠘⣆⡴⠇⠀⢣⠀⠀⠻⡀⠀⠘⣇⠀⠀⠀⠀⣠⣾⣥⠟⠀⢀⣾⡄⢸⠃⢠⣞⣴⠋⣼⠠⣯⢊⠏⣾⣁⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="85">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠹⣿⠀⠀⠹⣾⡄⠀⠀⠀⠈⢷⠀⠠⡈⢷⡀⠀⢳⡀⠀⠀⣆⠀⣠⢾⢟⡿⡁⢀⡴⣻⣿⠁⣟⣀⡽⢫⢏⡜⢁⣰⠏⡜⠀⢻⡟⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="99">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠈⢧⠀⢠⠘⢷⢸⠳⡄⠀⠀⢧⡀⢹⣶⡄⠀⢸⣿⠀⠀⣿⠟⢡⠏⣾⣼⡷⠋⣴⡏⣮⣾⢿⡇⢡⣯⢏⣠⣾⣁⣴⢃⣴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="113">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡄⠈⣇⣿⠀⢰⡻⢧⣹⣄⠀⠀⠳⣄⢷⠈⢧⠘⢏⡆⣸⣁⣰⢏⡼⣿⡟⢠⠞⠟⡷⣿⣿⢀⡷⠚⢉⣿⡿⠚⣻⣱⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="127">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣶⣆⣹⡠⣄⠳⡀⣹⢻⣿⣧⣀⣦⡙⡆⢻⠀⡼⣽⡿⢁⣯⡞⣀⣾⠟⠁⠀⠀⠀⣾⡟⣸⠁⣰⠿⡿⣣⣾⡽⢟⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="141">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣻⡷⣬⠲⡄⠿⢸⣿⢻⣿⣿⣿⣿⣾⣧⣁⢻⠃⣼⣼⡾⢻⣿⠀⠀⠀⠀⠀⢻⢇⣧⣴⠃⣼⡟⡝⡽⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="155">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣋⠹⣌⣢⣿⠂⢸⣿⢸⣿⣿⣿⣿⣯⠙⢿⣾⣴⡿⠉⠀⠘⣿⡀⠀⠀⠀⠀⢸⣿⣩⣇⢠⣾⢸⡇⢘⣽⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="169">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⢹⣿⣄⠀⢻⣿⣿⣿⣿⣿⠟⠀⠀⠙⠃⠀⠀⣠⠒⢿⣷⡀⠀⠀⢀⣸⣿⡟⢻⣿⠃⣼⣵⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="183">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣮⣻⡿⢗⢦⣻⣿⣿⣿⣿⠆⠀⠀⢰⠇⠀⢰⠟⢀⡾⢹⣇⣠⣴⣿⣿⠋⠀⢿⠶⢋⣾⠙⠛⠳⠶⠦⢤⣄⣀⣀⡀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="197">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠾⠻⣿⣿⢷⣜⠻⢿⣿⡿⠀⠀⠀⣼⠀⢀⡏⢀⣼⣧⣼⣯⠟⢋⣽⡏⠀⢀⣬⠴⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠓⠶⢤⣀⡀</tspan>
+<tspan x="10" y="211">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠾⣋⠁⠀⠀⢳⡹⣆⠉⠛⣦⣝⢧⡀⢠⡆⡧⡄⣈⡵⢋⣬⠶⠋⠀⣤⠿⠛⠀⠀⡼⠁⡄⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉</tspan>
+<tspan x="10" y="225">⠀⠀⣠⣤⠄⠀⠠⠴⠶⠤⣴⠞⠋⠀⠀⠀⠀⠀⠀⠈⢧⣿⡗⢶⣤⣈⣳⣽⣦⡿⡇⣷⡿⢚⣿⣶⣶⣶⣿⠃⠀⠀⠀⢠⠇⠀⠃⠀⠙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="239">⠈⠉⠀⠀⠀⠀⠀⢀⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⡇⠀⣿⣿⣿⣿⠙⠟⠁⠀⠀⠈⠀⢻⣿⣿⠃⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="253">⠀⢀⣠⣴⣾⣿⡿⠋⠀⠀⠀⠀⠀⢀⡠⣴⣾⣿⣿⣿⣿⣿⡹⠀⣿⣿⣿⡃⣰⡆⠀⠀⠀⠀⠀⣿⡇⢸⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⢀⡴⣿⠛⣖⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="267">⣠⣿⣿⡿⠿⠋⠀⠀⠀⠀⠀⠀⣺⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⢿⣏⢸⣏⡋⠀⠀⠀⠀⠀⠀⢿⡇⠘⠀⠀⠀⣠⣟⠀⠀⠀⠀⢀⣾⣵⣷⣬⣭⣽⠟⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="281">⠉⠁⠀⠀⠀⠀⠀⠀⣠⠤⢲⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡝⣾⣯⠈⢿⣝⢦⣠⣶⡀⠀⠀⠙⢷⠀⠀⢀⣴⣿⠙⠀⢠⠆⠀⣸⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="295">⣾⣿⣷⡄⠀⠀⠀⡀⠉⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣿⡄⠈⢿⣿⠾⠾⠷⣖⡒⠂⢸⠀⣰⣿⣿⠏⠀⢀⡏⠀⢠⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="309">⣿⣿⣿⠃⠀⠀⠀⣧⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣄⠀⢬⣉⣉⠉⠉⠉⠀⣼⣾⣿⣿⡟⠀⣠⡿⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣦⣄</tspan>
+<tspan x="10" y="323">⣿⠟⣁⣤⣴⣿⣿⣿⣶⣤⡈⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡞⣿⣿⣦⡀⠀⠀⠀⠀⣠⣼⣿⣿⣿⠏⠀⣰⢿⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉</tspan>
+<tspan x="10" y="337">⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣹⡼⣿⣿⣷⣄⣀⣀⣴⡿⡿⢻⣽⠋⠀⣰⠏⠘⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠋⠀⠀⠀⠀</tspan>
+<tspan x="10" y="351">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣒⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⡻⣿⣿⠋⠀⠀⢀⡅⠀⢠⣿⠀⠀⠘⠻⠿⢿⣿⠿⠛⠋⠉⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="365">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⡽⣿⠀⠀⢠⡞⠀⢠⣿⡿⣦⣀⣤⣄⣀⣤⣤⣶⣶⣾⠿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="379">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣶⣦⣤⣄⡀⠀⠈⠙⠿⣿⣿⣷⣾⣿⣿⣿⣿⡈⣇⣴⠏⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="393">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠞⠛⠙⠛⠛⠛⢿⣿⣿⣿⠟⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="407">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⡏⣠⣾⣿⣿⣿⣿⣿⣿⣿⡿⢋⡴⠋⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="421">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣥⣤⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="435">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⠏⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="449">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="10" y="463">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⡀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+</text>
+<text x="530" y="30" fill="#c9d1d9">
+<tspan x="530" y="30">securitygeek15@system</tspan> -—————————————————————————————————————————-
+<tspan x="530" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Arch Linux</tspan>
+<tspan x="530" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ...................... </tspan><tspan class="value">17 years, 4 months</tspan>
+<tspan x="530" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Ethical Hacker And Bug Hunter</tspan>
+<tspan x="530" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">Security Research &amp; Penetration Testing</tspan>
+<tspan x="530" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">VSCode</tspan>
+<tspan x="530" y="150" class="cc">. </tspan>
+<tspan x="530" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Python, JavaScript, Java, Golang, Lua</tspan>
+<tspan x="530" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">HTML, CSS, JSON, YAML, Bash</tspan>
+<tspan x="530" y="210" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">English, Hindi, Urdu</tspan>
+<tspan x="530" y="230" class="cc">. </tspan>
+<tspan x="530" y="250" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Security</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">Bug Bounty, CTF, Pentesting</tspan>
+<tspan x="530" y="270" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Coding</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">Open Source, Automation</tspan>
+<tspan x="530" y="310">- Contact</tspan> -——————————————————————————————————————————————
+<tspan x="530" y="330" class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">goofyaapa@gmail.com</tspan>
+<tspan x="530" y="350" class="cc">. </tspan><tspan class="key">Instagram</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">security__geek</tspan>
+<tspan x="530" y="370" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">amaan-khan-194b5226b</tspan>
+<tspan x="530" y="410">- GitHub Stats</tspan> -————————————————————————————————————————
+<tspan x="530" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> .... </tspan><tspan class="value" id="repo_data">0</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">0</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value" id="star_data">0</tspan>
+<tspan x="530" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value" id="commit_data">0</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc"> ....... </tspan><tspan class="value" id="follower_data">0</tspan>
+<tspan x="530" y="470" class="cc">. </tspan><tspan class="key">Lines of Code</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value" id="loc_data">0</tspan>
+</text>
+</svg>
