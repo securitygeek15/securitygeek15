@@ -8,6 +8,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       
@@ -23,9 +25,9 @@ jobs:
           
       - name: Update stats
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN || github.token }}
           USER_NAME: ${{ github.repository_owner }}
-        run: python today.py
+        run: python today.py 2>&1
         
       - name: Commit and push if changed
         run: |
