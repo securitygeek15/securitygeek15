@@ -1,20 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="880px" height="900px" font-size="14px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="880px" height="880px" font-size="14px">
 <style>
 @font-face {
 src: local('Consolas'), local('Consolas Bold');
 font-family: 'ConsolasFallback';
 font-display: swap;
 }
-.key {fill: #953800;}
-.val {fill: #0a3069;}
-.hd {fill: #24292f; font-weight: bold;}
+@keyframes draw {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.key {fill: #953800; font-weight: bold;}
+.val {fill: #0a3069; text-shadow: 0 0 2px rgba(10, 48, 105, 0.2);}
+.hd {fill: #24292f; font-weight: bold; font-size: 15px;}
+.cc {fill: #24292f;}
+.art { animation: draw 1.5s ease-in-out forwards; }
+.info { animation: slideDown 1s ease-out 0.5s backwards; }
+.contact { animation: slideDown 1s ease-out 0.8s backwards; }
 text, tspan {white-space: pre;}
 </style>
-<rect width="880" height="900" fill="#f6f8fa" rx="12"/>
+<rect width="880" height="880" fill="#f6f8fa" rx="12"/>
 
 <!-- ASCII Art -->
-<text x="20" y="22" fill="#24292f" font-size="13px" font-family="Consolas, monospace">
+<text x="20" y="22" fill="#24292f" font-size="13px" font-family="Consolas, monospace" class="art">
 <tspan x="20" y="22">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾⠀⠀⠀⠀⠀⠀</tspan>
 <tspan x="20" y="35">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃⠀⠀⠀⠀⠀⠀</tspan>
 <tspan x="20" y="48">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁⠀⠀⠀⠀⠀⠀⠀</tspan>
@@ -54,6 +66,7 @@ text, tspan {white-space: pre;}
 <text x="20" y="475" fill="#24292f">──────────────────────────────────────────────────────────────────────</text>
 
 <!-- System Info -->
+<g class="info">
 <text x="20" y="505" fill="#24292f">
 <tspan x="20" y="505" class="hd">securitygeek15@system</tspan></text>
 
@@ -71,20 +84,19 @@ text, tspan {white-space: pre;}
 <tspan x="20" y="710" class="cc">. </tspan><tspan class="key">Hobbies.Security</tspan><tspan class="cc"> ....... </tspan><tspan class="val">Bug Bounty, CTF, Pentesting</tspan>
 <tspan x="20" y="728" class="cc">. </tspan><tspan class="key">Hobbies.Coding</tspan><tspan class="cc"> ......... </tspan><tspan class="val">Open Source, Automation</tspan>
 </text>
+</g>
 
 <!-- Separator -->
 <text x="20" y="760" fill="#24292f">──────────────────────────────────────────────────────────────────────</text>
 
 <!-- Contact -->
+<g class="contact">
 <text x="20" y="790" fill="#24292f">
 <tspan x="20" y="790" class="hd">Contact</tspan></text>
 <text x="20" y="812" fill="#24292f">
 <tspan x="20" y="812" class="cc">. </tspan><tspan class="key">Email</tspan><tspan class="cc"> ....................... </tspan><tspan class="val">goofyaapa@gmail.com</tspan>
 <tspan x="20" y="830" class="cc">. </tspan><tspan class="key">Instagram</tspan><tspan class="cc"> .................. </tspan><tspan class="val">security__geek</tspan>
+<tspan x="20" y="848" class="cc">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="cc"> ..................... </tspan><tspan class="val">amaan-khan-194b5226b</tspan>
 </text>
-
-<!-- Separator -->
-<text x="20" y="875" fill="#24292f">──────────────────────────────────────────────────────────────────────</text>
-
-
+</g>
 </svg>
