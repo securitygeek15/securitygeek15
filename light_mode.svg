@@ -87,8 +87,5 @@ text, tspan {white-space: pre;}
 <!-- Separator -->
 <text x="20" y="875" fill="#24292f">──────────────────────────────────────────────────────────────────────</text>
 
-<!-- GitHub Stats -->
-<text x="20" y="895" fill="#24292f">
-<tspan x="20" y="895"><tspan class="key">Repos</tspan>: <tspan class="val" id="repo_data">0</tspan>  |  <tspan class="key">Contributed</tspan>: <tspan class="val" id="contrib_data">0</tspan>  |  <tspan class="key">Stars</tspan>: <tspan class="val" id="star_data">0</tspan>  |  <tspan class="key">Commits</tspan>: <tspan class="val" id="commit_data">0</tspan>  |  <tspan class="key">Followers</tspan>: <tspan class="val" id="follower_data">0</tspan></tspan>
-</text>
+
 </svg>
