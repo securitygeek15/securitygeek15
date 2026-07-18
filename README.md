@@ -18,9 +18,4 @@
   <a href="https://instagram.com/security__geek"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/securitygeek15/securitygeek15/main/dist/github-snake-dark.svg">
-    <img alt="GitHub Contribution Snake Graph" src="https://raw.githubusercontent.com/securitygeek15/securitygeek15/main/dist/github-snake.svg">
-  </picture>
-</p>
+
