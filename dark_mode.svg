@@ -77,7 +77,7 @@ text, tspan {white-space: pre;}
 
 <text x="20" y="530" fill="#e6edf3">
 <tspan x="20" y="530" class="cc">. </tspan><tspan class="key">OS</tspan><tspan class="cc"> ................... </tspan><tspan class="val">Arch Linux</tspan>
-<tspan x="20" y="548" class="cc">. </tspan><tspan class="key">Uptime</tspan><tspan class="cc"> ................. </tspan><tspan class="val">17 years, 4 months</tspan>
+<tspan x="20" y="548" class="cc">. </tspan><tspan class="key">Uptime</tspan><tspan class="cc"> ................. </tspan><tspan class="val" id="uptime_data">17 years, 4 months</tspan>
 <tspan x="20" y="566" class="cc">. </tspan><tspan class="key">Host</tspan><tspan class="cc"> .................... </tspan><tspan class="val">Ethical Hacker And Bug Hunter</tspan>
 <tspan x="20" y="584" class="cc">. </tspan><tspan class="key">Kernel</tspan><tspan class="cc"> .................. </tspan><tspan class="val">Security Research &amp; Pentesting</tspan>
 <tspan x="20" y="602" class="cc">. </tspan><tspan class="key">IDE</tspan><tspan class="cc"> ................... </tspan><tspan class="val">VSCode</tspan>
@@ -110,7 +110,7 @@ text, tspan {white-space: pre;}
 
 <g class="stats">
 <text x="20" y="895" fill="#e6edf3">
-<tspan x="20" y="895"><tspan class="key">Repos</tspan>: <tspan class="val" id="repo_data">19</tspan>  |  <tspan class="key">Contributed</tspan>: <tspan class="val" id="contrib_data">19</tspan>  |  <tspan class="key">Stars</tspan>: <tspan class="val" id="star_data">20</tspan>  |  <tspan class="key">Commits</tspan>: <tspan class="val" id="commit_data">99</tspan>  |  <tspan class="key">Followers</tspan>: <tspan class="val" id="follower_data">4</tspan></tspan>
+<tspan x="20" y="895"><tspan class="key">Repos</tspan>: <tspan class="val" id="repo_data">19</tspan>  |  <tspan class="key">Contributed</tspan>: <tspan class="val" id="contrib_data">19</tspan>  |  <tspan class="key">Stars</tspan>: <tspan class="val" id="star_data">20</tspan>  |  <tspan class="key">Commits</tspan>: <tspan class="val" id="commit_data">100</tspan>  |  <tspan class="key">Followers</tspan>: <tspan class="val" id="follower_data">4</tspan></tspan>
 </text>
 </g>
 

@@ -2,6 +2,7 @@ import os
 import json
 import urllib.request
 import xml.etree.ElementTree as ET
+import datetime
 
 # Configuration
 TOKEN = os.environ.get('GITHUB_TOKEN')
@@ -49,12 +50,21 @@ def main():
     all_repos = fetch_json(f'{API_URL}/users/{USER}/repos?per_page=100&type=all') or []
     contributed = len(all_repos)
     
+    # Calculate Uptime based on age
+    birth_date = datetime.datetime(2009, 3, 1)
+    now = datetime.datetime.now()
+    diff = now - birth_date
+    years = diff.days // 365
+    months = (diff.days % 365) // 30
+    uptime_str = f"{years} years, {months} months"
+    
     stats = {
         'repo_data': str(public_repos),
         'contrib_data': str(contributed),
         'star_data': str(total_stars),
         'commit_data': str(total_commits),
-        'follower_data': str(followers)
+        'follower_data': str(followers),
+        'uptime_data': uptime_str
     }
     
     print(f"Stats fetched: {stats}")
