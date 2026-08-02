@@ -77,13 +77,13 @@
 text, tspan {white-space: pre;}
 </style>
 
-<!-- Background -->
+
 <rect width="880" height="420" fill="#fafafa" rx="10" />
 
-<!-- Border frame -->
+
 <rect x="3" y="3" width="874" height="414" fill="none" stroke="url(#border-grad)" stroke-width="1" rx="8" class="border-frame" />
 
-<!-- Corner brackets -->
+
 <g opacity="0.5">
   <path d="M 16 6 L 6 6 L 6 16" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
   <path d="M 864 6 L 874 6 L 874 16" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
@@ -91,7 +91,7 @@ text, tspan {white-space: pre;}
   <path d="M 864 414 L 874 414 L 874 404" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
 </g>
 
-<!-- Braille Art Character -->
+
 <text x="20" y="30" font-size="9px" font-family="Consolas, monospace" class="art">
 <tspan x="20" y="30">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾</tspan>
 <tspan x="20" y="40">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃</tspan>
@@ -128,7 +128,7 @@ text, tspan {white-space: pre;}
 <tspan x="20" y="350">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⡀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀</tspan>
 </text>
 
-<!-- Info Panel -->
+
 <g class="info" filter="url(#glow)">
   <circle cx="502" cy="26" r="3" class="status-dot" />
 
@@ -154,7 +154,7 @@ text, tspan {white-space: pre;}
   </text>
 </g>
 
-<!-- Contact Section -->
+
 <g class="contact" filter="url(#glow)">
   <text x="500" y="290">
     <tspan x="500" y="290" class="hd">Contact</tspan>
@@ -165,16 +165,16 @@ text, tspan {white-space: pre;}
   </text>
 </g>
 
-<!-- Stats Divider -->
+
 <line x1="20" y1="355" x2="860" y2="355" stroke="url(#line-grad)" stroke-width="0.5" opacity="0.3" class="stats divider-line" />
 
-<!-- Stats Bar -->
+
 <g class="stats" filter="url(#glow)">
   <text x="20" y="385">
-    <tspan x="20" y="385"><tspan class="key">Repos</tspan><tspan class="cc">:</tspan> <tspan class="val" id="repo_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Contributed</tspan><tspan class="cc">:</tspan> <tspan class="val" id="contrib_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Stars</tspan><tspan class="cc">:</tspan> <tspan class="val" id="star_data">22</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Commits</tspan><tspan class="cc">:</tspan> <tspan class="val" id="commit_data">118</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Followers</tspan><tspan class="cc">:</tspan> <tspan class="val" id="follower_data">4</tspan></tspan>
+    <tspan x="20" y="385"><tspan class="key">Repos</tspan><tspan class="cc">:</tspan> <tspan class="val" id="repo_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Contributed</tspan><tspan class="cc">:</tspan> <tspan class="val" id="contrib_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Stars</tspan><tspan class="cc">:</tspan> <tspan class="val" id="star_data">22</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Commits</tspan><tspan class="cc">:</tspan> <tspan class="val" id="commit_data">119</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Followers</tspan><tspan class="cc">:</tspan> <tspan class="val" id="follower_data">4</tspan></tspan>
   </text>
 </g>
 
-<!-- Scanline -->
+
 <rect width="880" height="150" class="scan" rx="10" />
 </svg>
