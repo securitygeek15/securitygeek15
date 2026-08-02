@@ -1,43 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="880px" height="420px" font-size="14px">
 <defs>
-  <radialGradient id="bg-glow" cx="25%" cy="45%" r="55%">
-    <stop offset="0%" stop-color="#ede9fe" stop-opacity="0.6" />
-    <stop offset="100%" stop-color="#faf5ff" stop-opacity="0" />
-  </radialGradient>
-  <radialGradient id="bg-glow2" cx="85%" cy="25%" r="40%">
-    <stop offset="0%" stop-color="#fce7f3" stop-opacity="0.4" />
-    <stop offset="100%" stop-color="#faf5ff" stop-opacity="0" />
-  </radialGradient>
-  <linearGradient id="art-grad" x1="0%" y1="0%" x2="20%" y2="100%">
-    <stop offset="0%" stop-color="#7c3aed" />
-    <stop offset="35%" stop-color="#9333ea" />
-    <stop offset="70%" stop-color="#a21caf" />
-    <stop offset="100%" stop-color="#db2777" />
+  <linearGradient id="art-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#18181b" />
+    <stop offset="60%" stop-color="#27272a" />
+    <stop offset="100%" stop-color="#dc2626" stop-opacity="0.5" />
   </linearGradient>
   <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4" />
-    <stop offset="50%" stop-color="#db2777" stop-opacity="0.3" />
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.4" />
+    <stop offset="0%" stop-color="#dc2626" stop-opacity="0.2" />
+    <stop offset="50%" stop-color="#b91c1c" stop-opacity="0.1" />
+    <stop offset="100%" stop-color="#dc2626" stop-opacity="0.2" />
   </linearGradient>
   <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#7c3aed" />
-    <stop offset="50%" stop-color="#db2777" />
-    <stop offset="100%" stop-color="#d97706" />
+    <stop offset="0%" stop-color="#dc2626" stop-opacity="0" />
+    <stop offset="20%" stop-color="#dc2626" />
+    <stop offset="80%" stop-color="#b91c1c" />
+    <stop offset="100%" stop-color="#b91c1c" stop-opacity="0" />
   </linearGradient>
   <linearGradient id="scanline-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0" />
-    <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.3" />
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    <stop offset="0%" stop-color="#dc2626" stop-opacity="0" />
+    <stop offset="50%" stop-color="#dc2626" stop-opacity="0.2" />
+    <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
   </linearGradient>
-  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur stdDeviation="0.8" result="blur" />
-    <feMerge>
-      <feMergeNode in="blur" />
-      <feMergeNode in="SourceGraphic" />
-    </feMerge>
-  </filter>
-  <filter id="art-glow" x="-10%" y="-10%" width="120%" height="120%">
+  <filter id="glow" x="-15%" y="-15%" width="130%" height="130%">
     <feGaussianBlur stdDeviation="0.5" result="blur" />
     <feMerge>
       <feMergeNode in="blur" />
@@ -52,11 +37,11 @@
     font-display: swap;
 }
 @keyframes draw {
-  0% { opacity: 0; transform: translateX(-8px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes slideIn {
-  0% { opacity: 0; transform: translateY(-8px); }
+  0% { opacity: 0; transform: translateY(-6px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 @keyframes scanline {
@@ -64,63 +49,50 @@
   100% { transform: translateY(420px); }
 }
 @keyframes borderPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
 }
-@keyframes dotPulse {
+@keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  50% { opacity: 0.3; }
 }
-@keyframes lineExpand {
-  0% { stroke-dashoffset: 360; }
+@keyframes lineReveal {
+  0% { stroke-dashoffset: 400; }
   100% { stroke-dashoffset: 0; }
 }
 
-.key {fill: #7c3aed; font-weight: bold;}
-.val {fill: #1e1b4b;}
-.hd {fill: #0f172a; font-weight: bold; font-size: 15px;}
-.cc {fill: #c4b5fd;}
-.art { fill: url(#art-grad); animation: draw 2s ease-out forwards; }
-.info { animation: slideIn 0.8s ease-out 0.4s backwards; }
-.contact { animation: slideIn 0.8s ease-out 0.7s backwards; }
-.stats { animation: slideIn 0.8s ease-out 1s backwards; }
-.scan { animation: scanline 8s linear infinite; opacity: 0.04; fill: url(#scanline-gradient); pointer-events: none; }
-.border-frame { animation: borderPulse 5s ease-in-out infinite; }
-.status-dot { fill: #22c55e; animation: dotPulse 2.5s ease-in-out infinite; }
-.stats-line { animation: lineExpand 2s ease-out 1.2s backwards; stroke-dasharray: 360; }
+.key {fill: #dc2626; font-weight: bold;}
+.val {fill: #18181b;}
+.hd {fill: #09090b; font-weight: bold; font-size: 15px; letter-spacing: 1px;}
+.cc {fill: #d4d4d8;}
+.art { fill: url(#art-grad); animation: draw 1.5s ease-out forwards; }
+.info { animation: slideIn 0.6s ease-out 0.3s backwards; }
+.contact { animation: slideIn 0.6s ease-out 0.6s backwards; }
+.stats { animation: slideIn 0.6s ease-out 0.9s backwards; }
+.scan { animation: scanline 10s linear infinite; opacity: 0.03; fill: url(#scanline-gradient); pointer-events: none; }
+.border-frame { animation: borderPulse 6s ease-in-out infinite; }
+.status-dot { fill: #dc2626; animation: blink 3s ease-in-out infinite; }
+.divider-line { animation: lineReveal 1.5s ease-out 1s backwards; stroke-dasharray: 400; }
 
 text, tspan {white-space: pre;}
 </style>
 
-<!-- Background layers -->
-<rect width="880" height="420" fill="#faf5ff" rx="12" />
-<rect width="880" height="420" fill="url(#bg-glow)" rx="12" />
-<rect width="880" height="420" fill="url(#bg-glow2)" rx="12" />
-
-<!-- Subtle dot pattern -->
-<g opacity="0.04" fill="#7c3aed">
-  <circle cx="50" cy="50" r="1" /><circle cx="100" cy="50" r="1" /><circle cx="150" cy="50" r="1" /><circle cx="200" cy="50" r="1" /><circle cx="250" cy="50" r="1" /><circle cx="300" cy="50" r="1" /><circle cx="350" cy="50" r="1" /><circle cx="400" cy="50" r="1" /><circle cx="450" cy="50" r="1" /><circle cx="500" cy="50" r="1" /><circle cx="550" cy="50" r="1" /><circle cx="600" cy="50" r="1" /><circle cx="650" cy="50" r="1" /><circle cx="700" cy="50" r="1" /><circle cx="750" cy="50" r="1" /><circle cx="800" cy="50" r="1" /><circle cx="850" cy="50" r="1" />
-  <circle cx="50" cy="100" r="1" /><circle cx="100" cy="100" r="1" /><circle cx="150" cy="100" r="1" /><circle cx="200" cy="100" r="1" /><circle cx="250" cy="100" r="1" /><circle cx="300" cy="100" r="1" /><circle cx="350" cy="100" r="1" /><circle cx="400" cy="100" r="1" /><circle cx="450" cy="100" r="1" /><circle cx="500" cy="100" r="1" /><circle cx="550" cy="100" r="1" /><circle cx="600" cy="100" r="1" /><circle cx="650" cy="100" r="1" /><circle cx="700" cy="100" r="1" /><circle cx="750" cy="100" r="1" /><circle cx="800" cy="100" r="1" /><circle cx="850" cy="100" r="1" />
-  <circle cx="50" cy="150" r="1" /><circle cx="100" cy="150" r="1" /><circle cx="150" cy="150" r="1" /><circle cx="200" cy="150" r="1" /><circle cx="250" cy="150" r="1" /><circle cx="300" cy="150" r="1" /><circle cx="350" cy="150" r="1" /><circle cx="400" cy="150" r="1" /><circle cx="450" cy="150" r="1" /><circle cx="500" cy="150" r="1" /><circle cx="550" cy="150" r="1" /><circle cx="600" cy="150" r="1" /><circle cx="650" cy="150" r="1" /><circle cx="700" cy="150" r="1" /><circle cx="750" cy="150" r="1" /><circle cx="800" cy="150" r="1" /><circle cx="850" cy="150" r="1" />
-  <circle cx="50" cy="200" r="1" /><circle cx="100" cy="200" r="1" /><circle cx="150" cy="200" r="1" /><circle cx="200" cy="200" r="1" /><circle cx="250" cy="200" r="1" /><circle cx="300" cy="200" r="1" /><circle cx="350" cy="200" r="1" /><circle cx="400" cy="200" r="1" /><circle cx="450" cy="200" r="1" /><circle cx="500" cy="200" r="1" /><circle cx="550" cy="200" r="1" /><circle cx="600" cy="200" r="1" /><circle cx="650" cy="200" r="1" /><circle cx="700" cy="200" r="1" /><circle cx="750" cy="200" r="1" /><circle cx="800" cy="200" r="1" /><circle cx="850" cy="200" r="1" />
-  <circle cx="50" cy="250" r="1" /><circle cx="100" cy="250" r="1" /><circle cx="150" cy="250" r="1" /><circle cx="200" cy="250" r="1" /><circle cx="250" cy="250" r="1" /><circle cx="300" cy="250" r="1" /><circle cx="350" cy="250" r="1" /><circle cx="400" cy="250" r="1" /><circle cx="450" cy="250" r="1" /><circle cx="500" cy="250" r="1" /><circle cx="550" cy="250" r="1" /><circle cx="600" cy="250" r="1" /><circle cx="650" cy="250" r="1" /><circle cx="700" cy="250" r="1" /><circle cx="750" cy="250" r="1" /><circle cx="800" cy="250" r="1" /><circle cx="850" cy="250" r="1" />
-  <circle cx="50" cy="300" r="1" /><circle cx="100" cy="300" r="1" /><circle cx="150" cy="300" r="1" /><circle cx="200" cy="300" r="1" /><circle cx="250" cy="300" r="1" /><circle cx="300" cy="300" r="1" /><circle cx="350" cy="300" r="1" /><circle cx="400" cy="300" r="1" /><circle cx="450" cy="300" r="1" /><circle cx="500" cy="300" r="1" /><circle cx="550" cy="300" r="1" /><circle cx="600" cy="300" r="1" /><circle cx="650" cy="300" r="1" /><circle cx="700" cy="300" r="1" /><circle cx="750" cy="300" r="1" /><circle cx="800" cy="300" r="1" /><circle cx="850" cy="300" r="1" />
-  <circle cx="50" cy="350" r="1" /><circle cx="100" cy="350" r="1" /><circle cx="150" cy="350" r="1" /><circle cx="200" cy="350" r="1" /><circle cx="250" cy="350" r="1" /><circle cx="300" cy="350" r="1" /><circle cx="350" cy="350" r="1" /><circle cx="400" cy="350" r="1" /><circle cx="450" cy="350" r="1" /><circle cx="500" cy="350" r="1" /><circle cx="550" cy="350" r="1" /><circle cx="600" cy="350" r="1" /><circle cx="650" cy="350" r="1" /><circle cx="700" cy="350" r="1" /><circle cx="750" cy="350" r="1" /><circle cx="800" cy="350" r="1" /><circle cx="850" cy="350" r="1" />
-</g>
+<!-- Background -->
+<rect width="880" height="420" fill="#fafafa" rx="10" />
 
 <!-- Border frame -->
-<rect x="3" y="3" width="874" height="414" fill="none" stroke="url(#border-grad)" stroke-width="1.5" rx="10" class="border-frame" />
+<rect x="3" y="3" width="874" height="414" fill="none" stroke="url(#border-grad)" stroke-width="1" rx="8" class="border-frame" />
 
 <!-- Corner brackets -->
-<g opacity="0.7">
-  <path d="M 16 7 L 7 7 L 7 16" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" />
-  <path d="M 864 7 L 873 7 L 873 16" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round" />
-  <path d="M 16 413 L 7 413 L 7 404" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round" />
-  <path d="M 864 413 L 873 413 L 873 404" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" />
+<g opacity="0.5">
+  <path d="M 16 6 L 6 6 L 6 16" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 864 6 L 874 6 L 874 16" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 16 414 L 6 414 L 6 404" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 864 414 L 874 414 L 874 404" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" />
 </g>
 
 <!-- Braille Art Character -->
-<text x="20" y="30" font-size="9px" font-family="Consolas, monospace" class="art" filter="url(#art-glow)">
+<text x="20" y="30" font-size="9px" font-family="Consolas, monospace" class="art">
 <tspan x="20" y="30">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾</tspan>
 <tspan x="20" y="40">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃</tspan>
 <tspan x="20" y="50">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁</tspan>
@@ -158,17 +130,17 @@ text, tspan {white-space: pre;}
 
 <!-- Info Panel -->
 <g class="info" filter="url(#glow)">
-  <circle cx="502" cy="26" r="3.5" class="status-dot" />
+  <circle cx="502" cy="26" r="3" class="status-dot" />
 
-  <text x="512" y="30" fill="#0f172a">
+  <text x="512" y="30">
     <tspan x="512" y="30" class="hd">securitygeek15@system</tspan>
   </text>
 
-  <line x1="500" y1="40" x2="855" y2="40" stroke="url(#line-grad)" stroke-width="1.5" opacity="0.4" class="stats-line" />
+  <line x1="500" y1="40" x2="855" y2="40" stroke="url(#line-grad)" stroke-width="1" opacity="0.4" class="divider-line" />
 
-  <text x="500" y="60" fill="#1e1b4b">
+  <text x="500" y="60">
     <tspan x="500" y="60" class="cc">▸ </tspan><tspan class="key">OS</tspan><tspan class="cc"> ················ </tspan><tspan class="val">Arch Linux</tspan>
-    <tspan x="500" y="78" class="cc">▸ </tspan><tspan class="key">Uptime</tspan><tspan class="cc"> ············ </tspan><tspan class="val" id="uptime_data">17 years, 4 months</tspan>
+    <tspan x="500" y="78" class="cc">▸ </tspan><tspan class="key">Uptime</tspan><tspan class="cc"> ············ </tspan><tspan class="val" id="uptime_data">17 years, 5 months</tspan>
     <tspan x="500" y="96" class="cc">▸ </tspan><tspan class="key">Host</tspan><tspan class="cc"> ·············· </tspan><tspan class="val">Ethical Hacker &amp; Bug Hunter</tspan>
     <tspan x="500" y="114" class="cc">▸ </tspan><tspan class="key">Kernel</tspan><tspan class="cc"> ············ </tspan><tspan class="val">Security Research &amp; Pentesting</tspan>
     <tspan x="500" y="132" class="cc">▸ </tspan><tspan class="key">IDE</tspan><tspan class="cc"> ··············· </tspan><tspan class="val">VSCode</tspan>
@@ -184,25 +156,25 @@ text, tspan {white-space: pre;}
 
 <!-- Contact Section -->
 <g class="contact" filter="url(#glow)">
-  <text x="500" y="290" fill="#0f172a">
+  <text x="500" y="290">
     <tspan x="500" y="290" class="hd">Contact</tspan>
   </text>
-  <text x="500" y="310" fill="#1e1b4b">
+  <text x="500" y="310">
     <tspan x="500" y="310" class="cc">▸ </tspan><tspan class="key">Email</tspan><tspan class="cc"> ············· </tspan><tspan class="val">goofyaapa@gmail.com</tspan>
     <tspan x="500" y="328" class="cc">▸ </tspan><tspan class="key">Instagram</tspan><tspan class="cc"> ········· </tspan><tspan class="val">security__geek</tspan>
   </text>
 </g>
 
 <!-- Stats Divider -->
-<line x1="20" y1="358" x2="860" y2="358" stroke="url(#line-grad)" stroke-width="1" opacity="0.3" class="stats stats-line" />
+<line x1="20" y1="355" x2="860" y2="355" stroke="url(#line-grad)" stroke-width="0.5" opacity="0.3" class="stats divider-line" />
 
 <!-- Stats Bar -->
 <g class="stats" filter="url(#glow)">
-  <text x="20" y="385" fill="#1e1b4b">
-    <tspan x="20" y="385"><tspan class="key">Repos</tspan><tspan class="val">:</tspan> <tspan class="val" id="repo_data">19</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Contributed</tspan><tspan class="val">:</tspan> <tspan class="val" id="contrib_data">19</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Stars</tspan><tspan class="val">:</tspan> <tspan class="val" id="star_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Commits</tspan><tspan class="val">:</tspan> <tspan class="val" id="commit_data">105</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Followers</tspan><tspan class="val">:</tspan> <tspan class="val" id="follower_data">4</tspan></tspan>
+  <text x="20" y="385">
+    <tspan x="20" y="385"><tspan class="key">Repos</tspan><tspan class="cc">:</tspan> <tspan class="val" id="repo_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Contributed</tspan><tspan class="cc">:</tspan> <tspan class="val" id="contrib_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Stars</tspan><tspan class="cc">:</tspan> <tspan class="val" id="star_data">22</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Commits</tspan><tspan class="cc">:</tspan> <tspan class="val" id="commit_data">118</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Followers</tspan><tspan class="cc">:</tspan> <tspan class="val" id="follower_data">4</tspan></tspan>
   </text>
 </g>
 
-<!-- Scanline effect -->
-<rect width="880" height="150" class="scan" rx="12" />
+<!-- Scanline -->
+<rect width="880" height="150" class="scan" rx="10" />
 </svg>
