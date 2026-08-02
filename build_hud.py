@@ -177,13 +177,15 @@ def build_svg(is_dark):
 
 <!-- Data Visualizer (Bottom Right) -->
 <g transform="translate(640, 360)">
+  <rect x="-10" y="-30" width="220" height="70" fill="{bg_color}" opacity="0.9" />
   <text x="0" y="-15" class="micro-text">CPU_LOAD_STREAM</text>
   {bars}
   <rect x="0" y="2" width="196" height="1" fill="{accent}" />
 </g>
 
 <!-- Top Right Stats -->
-<rect x="660" y="40" width="180" height="90" fill="{panel_bg}" stroke="{accent_dim}" stroke-width="1" />
+<rect x="660" y="40" width="180" height="90" fill="{bg_color}" stroke="{accent_dim}" stroke-width="1" />
+<rect x="660" y="40" width="180" height="90" fill="{panel_bg}" />
 <rect x="836" y="40" width="4" height="90" fill="{accent}" />
 <text x="670" y="60" class="text-accent">[+] DATABANK</text>
 <text x="670" y="80" class="text-muted">REPOS : <tspan class="text-main" id="repo_data">20</tspan></text>

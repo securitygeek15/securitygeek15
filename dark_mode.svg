@@ -149,38 +149,40 @@
 
 
 <g transform="translate(640, 360)">
+  <rect x="-10" y="-30" width="220" height="70" fill="#050505" opacity="0.9" />
   <text x="0" y="-15" class="micro-text">CPU_LOAD_STREAM</text>
-  <rect x="0" y="0" width="4" height="5" fill="#ef4444" class="bar" style="animation-delay: -1.42s; animation-duration: 1.43s" />
-<rect x="8" y="0" width="4" height="12" fill="#ef4444" class="bar" style="animation-delay: -0.81s; animation-duration: 1.33s" />
-<rect x="16" y="0" width="4" height="9" fill="#ef4444" class="bar" style="animation-delay: -0.35s; animation-duration: 0.7s" />
-<rect x="24" y="0" width="4" height="18" fill="#ef4444" class="bar" style="animation-delay: -1.18s; animation-duration: 0.94s" />
-<rect x="32" y="0" width="4" height="27" fill="#ef4444" class="bar" style="animation-delay: -0.47s; animation-duration: 0.59s" />
-<rect x="40" y="0" width="4" height="11" fill="#ef4444" class="bar" style="animation-delay: -1.88s; animation-duration: 1.3s" />
-<rect x="48" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -0.88s; animation-duration: 1.0s" />
-<rect x="56" y="0" width="4" height="21" fill="#ef4444" class="bar" style="animation-delay: -0.53s; animation-duration: 0.91s" />
-<rect x="64" y="0" width="4" height="24" fill="#ef4444" class="bar" style="animation-delay: -1.55s; animation-duration: 1.29s" />
-<rect x="72" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -1.18s; animation-duration: 1.22s" />
-<rect x="80" y="0" width="4" height="20" fill="#ef4444" class="bar" style="animation-delay: -0.71s; animation-duration: 0.68s" />
-<rect x="88" y="0" width="4" height="12" fill="#ef4444" class="bar" style="animation-delay: -1.01s; animation-duration: 0.77s" />
-<rect x="96" y="0" width="4" height="21" fill="#ef4444" class="bar" style="animation-delay: -1.06s; animation-duration: 0.63s" />
-<rect x="104" y="0" width="4" height="7" fill="#ef4444" class="bar" style="animation-delay: -1.34s; animation-duration: 1.11s" />
-<rect x="112" y="0" width="4" height="14" fill="#ef4444" class="bar" style="animation-delay: -0.77s; animation-duration: 0.81s" />
-<rect x="120" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -0.44s; animation-duration: 1.3s" />
-<rect x="128" y="0" width="4" height="20" fill="#ef4444" class="bar" style="animation-delay: -1.21s; animation-duration: 1.24s" />
-<rect x="136" y="0" width="4" height="17" fill="#ef4444" class="bar" style="animation-delay: -0.04s; animation-duration: 1.25s" />
-<rect x="144" y="0" width="4" height="17" fill="#ef4444" class="bar" style="animation-delay: -0.97s; animation-duration: 0.57s" />
-<rect x="152" y="0" width="4" height="19" fill="#ef4444" class="bar" style="animation-delay: -1.18s; animation-duration: 0.79s" />
-<rect x="160" y="0" width="4" height="16" fill="#ef4444" class="bar" style="animation-delay: -0.02s; animation-duration: 0.83s" />
-<rect x="168" y="0" width="4" height="14" fill="#ef4444" class="bar" style="animation-delay: -0.3s; animation-duration: 1.41s" />
-<rect x="176" y="0" width="4" height="20" fill="#ef4444" class="bar" style="animation-delay: -1.62s; animation-duration: 1.05s" />
-<rect x="184" y="0" width="4" height="10" fill="#ef4444" class="bar" style="animation-delay: -0.83s; animation-duration: 0.65s" />
-<rect x="192" y="0" width="4" height="9" fill="#ef4444" class="bar" style="animation-delay: -0.42s; animation-duration: 1.06s" />
+  <rect x="0" y="0" width="4" height="26" fill="#ef4444" class="bar" style="animation-delay: -1.82s; animation-duration: 0.56s" />
+<rect x="8" y="0" width="4" height="21" fill="#ef4444" class="bar" style="animation-delay: -1.32s; animation-duration: 1.42s" />
+<rect x="16" y="0" width="4" height="12" fill="#ef4444" class="bar" style="animation-delay: -1.22s; animation-duration: 0.65s" />
+<rect x="24" y="0" width="4" height="27" fill="#ef4444" class="bar" style="animation-delay: -1.81s; animation-duration: 0.89s" />
+<rect x="32" y="0" width="4" height="29" fill="#ef4444" class="bar" style="animation-delay: -1.96s; animation-duration: 0.86s" />
+<rect x="40" y="0" width="4" height="26" fill="#ef4444" class="bar" style="animation-delay: -0.14s; animation-duration: 1.16s" />
+<rect x="48" y="0" width="4" height="6" fill="#ef4444" class="bar" style="animation-delay: -1.93s; animation-duration: 1.25s" />
+<rect x="56" y="0" width="4" height="23" fill="#ef4444" class="bar" style="animation-delay: -1.58s; animation-duration: 1.17s" />
+<rect x="64" y="0" width="4" height="28" fill="#ef4444" class="bar" style="animation-delay: -1.53s; animation-duration: 1.38s" />
+<rect x="72" y="0" width="4" height="27" fill="#ef4444" class="bar" style="animation-delay: -1.19s; animation-duration: 0.86s" />
+<rect x="80" y="0" width="4" height="23" fill="#ef4444" class="bar" style="animation-delay: -0.35s; animation-duration: 1.19s" />
+<rect x="88" y="0" width="4" height="7" fill="#ef4444" class="bar" style="animation-delay: -0.75s; animation-duration: 0.99s" />
+<rect x="96" y="0" width="4" height="24" fill="#ef4444" class="bar" style="animation-delay: -0.57s; animation-duration: 0.8s" />
+<rect x="104" y="0" width="4" height="15" fill="#ef4444" class="bar" style="animation-delay: -0.32s; animation-duration: 0.65s" />
+<rect x="112" y="0" width="4" height="15" fill="#ef4444" class="bar" style="animation-delay: -1.89s; animation-duration: 1.18s" />
+<rect x="120" y="0" width="4" height="16" fill="#ef4444" class="bar" style="animation-delay: -1.5s; animation-duration: 0.98s" />
+<rect x="128" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -1.52s; animation-duration: 0.67s" />
+<rect x="136" y="0" width="4" height="19" fill="#ef4444" class="bar" style="animation-delay: -1.42s; animation-duration: 1.16s" />
+<rect x="144" y="0" width="4" height="29" fill="#ef4444" class="bar" style="animation-delay: -0.32s; animation-duration: 0.76s" />
+<rect x="152" y="0" width="4" height="19" fill="#ef4444" class="bar" style="animation-delay: -0.35s; animation-duration: 1.19s" />
+<rect x="160" y="0" width="4" height="12" fill="#ef4444" class="bar" style="animation-delay: -0.34s; animation-duration: 0.84s" />
+<rect x="168" y="0" width="4" height="29" fill="#ef4444" class="bar" style="animation-delay: -1.37s; animation-duration: 1.44s" />
+<rect x="176" y="0" width="4" height="22" fill="#ef4444" class="bar" style="animation-delay: -1.83s; animation-duration: 1.18s" />
+<rect x="184" y="0" width="4" height="24" fill="#ef4444" class="bar" style="animation-delay: -1.81s; animation-duration: 0.87s" />
+<rect x="192" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -0.59s; animation-duration: 0.52s" />
 
   <rect x="0" y="2" width="196" height="1" fill="#ef4444" />
 </g>
 
 
-<rect x="660" y="40" width="180" height="90" fill="#ffffff05" stroke="#ef444433" stroke-width="1" />
+<rect x="660" y="40" width="180" height="90" fill="#050505" stroke="#ef444433" stroke-width="1" />
+<rect x="660" y="40" width="180" height="90" fill="#ffffff05" />
 <rect x="836" y="40" width="4" height="90" fill="#ef4444" />
 <text x="670" y="60" class="text-accent">[+] DATABANK</text>
 <text x="670" y="80" class="text-muted">REPOS : <tspan class="text-main" id="repo_data">20</tspan></text>
