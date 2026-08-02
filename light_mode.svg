@@ -143,7 +143,7 @@ text, tspan {white-space: pre;}
     <tspan x="500" y="60" class="cc">▸ </tspan><tspan class="key">OS</tspan><tspan class="cc"> ················ </tspan><tspan class="val">Arch Linux</tspan>
     <tspan x="500" y="78" class="cc">▸ </tspan><tspan class="key">Uptime</tspan><tspan class="cc"> ············ </tspan><tspan class="val" id="uptime_data">17 years, 5 months</tspan>
     <tspan x="500" y="96" class="cc">▸ </tspan><tspan class="key">Host</tspan><tspan class="cc"> ·············· </tspan><tspan class="val">Ethical Hacker &amp; Bug Hunter</tspan>
-    <tspan x="500" y="114" class="cc">▸ </tspan><tspan class="key">Kernel</tspan><tspan class="cc"> ············ </tspan><tspan class="val">Security Research &amp; Pentesting</tspan>
+    <tspan x="500" y="114" class="cc">▸ </tspan><tspan class="key">Kernel</tspan><tspan class="cc"> ············ </tspan><tspan class="val">Security &amp; Pentesting</tspan>
     <tspan x="500" y="132" class="cc">▸ </tspan><tspan class="key">IDE</tspan><tspan class="cc"> ··············· </tspan><tspan class="val">VSCode</tspan>
     <tspan x="500" y="155" class="cc">  </tspan>
     <tspan x="500" y="168" class="cc">▸ </tspan><tspan class="key">Langs.Coding</tspan><tspan class="cc"> ······ </tspan><tspan class="val">Python, JS, Java, Golang</tspan>
