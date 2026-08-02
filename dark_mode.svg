@@ -1,197 +1,195 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" viewBox="0 0 880 420" width="100%" height="100%" font-size="14px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="100%" height="100%">
 <defs>
-  <linearGradient id="art-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#ffffff" />
-    <stop offset="40%" stop-color="#e4e4e7" stop-opacity="0.5" />
-    <stop offset="70%" stop-color="#ef4444" stop-opacity="0.1" />
+  <style>
+    @font-face {
+        src: local('Consolas'), local('Consolas Bold');
+        font-family: 'ConsolasFallback';
+        font-display: swap;
+    }
+    .bg { fill: #050505; }
+    .text-main { fill: #ffffff; font-family: ConsolasFallback, Consolas, monospace; font-size: 13px; font-weight: bold; }
+    .text-muted { fill: #a1a1aa; font-family: ConsolasFallback, Consolas, monospace; font-size: 12px; }
+    .text-accent { fill: #ef4444; font-family: ConsolasFallback, Consolas, monospace; font-size: 13px; font-weight: bold; }
+    .micro-text { fill: #a1a1aa; font-family: ConsolasFallback, Consolas, monospace; font-size: 10px; letter-spacing: 2px; }
+    
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 10px #ef4444); }
+      50% { opacity: 1; filter: drop-shadow(0 0 20px #ef4444); }
+    }
+    @keyframes barAnim {
+      0%, 100% { transform: scaleY(0.2); }
+      50% { transform: scaleY(1); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-50px); }
+      100% { transform: translateY(450px); }
+    }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    
+    .art {
+        fill: #ffffff;
+        font-family: ConsolasFallback, Consolas, monospace;
+        font-size: 12px;
+        white-space: pre;
+    }
+    
+    /* The hologram effect applies an intense red glow to the Braille art */
+    .hologram {
+        fill: #ef4444;
+        animation: pulseGlow 4s infinite ease-in-out;
+        opacity: 0.85;
+    }
+    
+    .bar {
+        transform-origin: bottom;
+        animation: barAnim infinite ease-in-out;
+    }
+    .cursor { animation: blink 1s infinite; fill: #ef4444; }
+    .scan { animation: scanline 8s linear infinite; fill: url(#scan-grad); pointer-events: none; opacity: 0.15; }
+  </style>
+  
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 20 40 M 0 20 L 40 20" stroke="#ffffff11" stroke-width="1" stroke-dasharray="2 2" />
+    <circle cx="20" cy="20" r="1.5" fill="#ef444433" />
+  </pattern>
+  
+  <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#ef4444" stop-opacity="0" />
+    <stop offset="50%" stop-color="#ef4444" stop-opacity="1" />
     <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
   </linearGradient>
-  <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#ef4444" stop-opacity="0.3" />
-    <stop offset="50%" stop-color="#dc2626" stop-opacity="0.15" />
-    <stop offset="100%" stop-color="#ef4444" stop-opacity="0.3" />
-  </linearGradient>
-  <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#ef4444" stop-opacity="0" />
-    <stop offset="20%" stop-color="#ef4444" />
-    <stop offset="80%" stop-color="#dc2626" />
-    <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
-  </linearGradient>
-  <linearGradient id="scanline-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#ef4444" stop-opacity="0" />
-    <stop offset="50%" stop-color="#ef4444" stop-opacity="0.3" />
+  
+  <linearGradient id="art-fade" x1="100%" y1="0%" x2="0%" y2="0%">
+    <stop offset="0%" stop-color="#ef4444" stop-opacity="1" />
+    <stop offset="70%" stop-color="#ef4444" stop-opacity="0.3" />
     <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
   </linearGradient>
-  <radialGradient id="bg-vignette" cx="50%" cy="50%" r="70%">
-    <stop offset="0%" stop-color="#0a0a0a" />
-    <stop offset="100%" stop-color="#000000" />
-  </radialGradient>
-  <filter id="glow" x="-15%" y="-15%" width="130%" height="130%">
-    <feGaussianBlur stdDeviation="0.8" result="blur" />
-    <feMerge>
-      <feMergeNode in="blur" />
-      <feMergeNode in="SourceGraphic" />
-    </feMerge>
-  </filter>
 </defs>
-<style>
-@font-face {
-    src: local('Consolas'), local('Consolas Bold');
-    font-family: 'ConsolasFallback';
-    font-display: swap;
-}
-@keyframes draw {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes slideIn {
-  0% { opacity: 0; transform: translateY(-6px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes scanline {
-  0% { transform: translateY(-150px); }
-  100% { transform: translateY(420px); }
-}
-@keyframes borderPulse {
-  0%, 100% { opacity: 0.25; }
-  50% { opacity: 0.5; }
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-@keyframes lineReveal {
-  0% { stroke-dashoffset: 400; }
-  100% { stroke-dashoffset: 0; }
-}
-
-.key {fill: #ef4444; font-weight: bold;}
-.val {fill: #e4e4e7;}
-.hd {fill: #ffffff; font-weight: bold; font-size: 15px; letter-spacing: 1px;}
-.cc {fill: #3f3f46;}
-.art { fill: url(#art-grad); animation: draw 1.5s ease-out forwards; }
-.info { animation: slideIn 0.6s ease-out 0.3s backwards; }
-.contact { animation: slideIn 0.6s ease-out 0.6s backwards; }
-.stats { animation: slideIn 0.6s ease-out 0.9s backwards; }
-.scan { animation: scanline 10s linear infinite; opacity: 0.04; fill: url(#scanline-gradient); pointer-events: none; }
-.border-frame { animation: borderPulse 6s ease-in-out infinite; }
-.status-dot { fill: #ef4444; animation: blink 3s ease-in-out infinite; }
-.divider-line { animation: lineReveal 1.5s ease-out 1s backwards; stroke-dasharray: 400; }
-
-text, tspan {white-space: pre;}
-</style>
 
 
-<rect width="880" height="420" fill="url(#bg-vignette)" rx="10" />
+<rect width="100%" height="100%" class="bg" />
+<rect width="100%" height="100%" fill="url(#grid)" />
 
 
-<g opacity="0.015" fill="#ffffff">
-  <circle cx="44" cy="44" r="0.5" /><circle cx="88" cy="44" r="0.5" /><circle cx="132" cy="44" r="0.5" /><circle cx="176" cy="44" r="0.5" /><circle cx="220" cy="44" r="0.5" /><circle cx="264" cy="44" r="0.5" /><circle cx="308" cy="44" r="0.5" /><circle cx="352" cy="44" r="0.5" /><circle cx="396" cy="44" r="0.5" /><circle cx="440" cy="44" r="0.5" /><circle cx="484" cy="44" r="0.5" /><circle cx="528" cy="44" r="0.5" /><circle cx="572" cy="44" r="0.5" /><circle cx="616" cy="44" r="0.5" /><circle cx="660" cy="44" r="0.5" /><circle cx="704" cy="44" r="0.5" /><circle cx="748" cy="44" r="0.5" /><circle cx="792" cy="44" r="0.5" /><circle cx="836" cy="44" r="0.5" />
-  <circle cx="44" cy="88" r="0.5" /><circle cx="88" cy="88" r="0.5" /><circle cx="132" cy="88" r="0.5" /><circle cx="176" cy="88" r="0.5" /><circle cx="220" cy="88" r="0.5" /><circle cx="264" cy="88" r="0.5" /><circle cx="308" cy="88" r="0.5" /><circle cx="352" cy="88" r="0.5" /><circle cx="396" cy="88" r="0.5" /><circle cx="440" cy="88" r="0.5" /><circle cx="484" cy="88" r="0.5" /><circle cx="528" cy="88" r="0.5" /><circle cx="572" cy="88" r="0.5" /><circle cx="616" cy="88" r="0.5" /><circle cx="660" cy="88" r="0.5" /><circle cx="704" cy="88" r="0.5" /><circle cx="748" cy="88" r="0.5" /><circle cx="792" cy="88" r="0.5" /><circle cx="836" cy="88" r="0.5" />
-  <circle cx="44" cy="132" r="0.5" /><circle cx="88" cy="132" r="0.5" /><circle cx="132" cy="132" r="0.5" /><circle cx="176" cy="132" r="0.5" /><circle cx="220" cy="132" r="0.5" /><circle cx="264" cy="132" r="0.5" /><circle cx="308" cy="132" r="0.5" /><circle cx="352" cy="132" r="0.5" /><circle cx="396" cy="132" r="0.5" /><circle cx="440" cy="132" r="0.5" /><circle cx="484" cy="132" r="0.5" /><circle cx="528" cy="132" r="0.5" /><circle cx="572" cy="132" r="0.5" /><circle cx="616" cy="132" r="0.5" /><circle cx="660" cy="132" r="0.5" /><circle cx="704" cy="132" r="0.5" /><circle cx="748" cy="132" r="0.5" /><circle cx="792" cy="132" r="0.5" /><circle cx="836" cy="132" r="0.5" />
-  <circle cx="44" cy="176" r="0.5" /><circle cx="88" cy="176" r="0.5" /><circle cx="132" cy="176" r="0.5" /><circle cx="176" cy="176" r="0.5" /><circle cx="220" cy="176" r="0.5" /><circle cx="264" cy="176" r="0.5" /><circle cx="308" cy="176" r="0.5" /><circle cx="352" cy="176" r="0.5" /><circle cx="396" cy="176" r="0.5" /><circle cx="440" cy="176" r="0.5" /><circle cx="484" cy="176" r="0.5" /><circle cx="528" cy="176" r="0.5" /><circle cx="572" cy="176" r="0.5" /><circle cx="616" cy="176" r="0.5" /><circle cx="660" cy="176" r="0.5" /><circle cx="704" cy="176" r="0.5" /><circle cx="748" cy="176" r="0.5" /><circle cx="792" cy="176" r="0.5" /><circle cx="836" cy="176" r="0.5" />
-  <circle cx="44" cy="220" r="0.5" /><circle cx="88" cy="220" r="0.5" /><circle cx="132" cy="220" r="0.5" /><circle cx="176" cy="220" r="0.5" /><circle cx="220" cy="220" r="0.5" /><circle cx="264" cy="220" r="0.5" /><circle cx="308" cy="220" r="0.5" /><circle cx="352" cy="220" r="0.5" /><circle cx="396" cy="220" r="0.5" /><circle cx="440" cy="220" r="0.5" /><circle cx="484" cy="220" r="0.5" /><circle cx="528" cy="220" r="0.5" /><circle cx="572" cy="220" r="0.5" /><circle cx="616" cy="220" r="0.5" /><circle cx="660" cy="220" r="0.5" /><circle cx="704" cy="220" r="0.5" /><circle cx="748" cy="220" r="0.5" /><circle cx="792" cy="220" r="0.5" /><circle cx="836" cy="220" r="0.5" />
-  <circle cx="44" cy="264" r="0.5" /><circle cx="88" cy="264" r="0.5" /><circle cx="132" cy="264" r="0.5" /><circle cx="176" cy="264" r="0.5" /><circle cx="220" cy="264" r="0.5" /><circle cx="264" cy="264" r="0.5" /><circle cx="308" cy="264" r="0.5" /><circle cx="352" cy="264" r="0.5" /><circle cx="396" cy="264" r="0.5" /><circle cx="440" cy="264" r="0.5" /><circle cx="484" cy="264" r="0.5" /><circle cx="528" cy="264" r="0.5" /><circle cx="572" cy="264" r="0.5" /><circle cx="616" cy="264" r="0.5" /><circle cx="660" cy="264" r="0.5" /><circle cx="704" cy="264" r="0.5" /><circle cx="748" cy="264" r="0.5" /><circle cx="792" cy="264" r="0.5" /><circle cx="836" cy="264" r="0.5" />
-  <circle cx="44" cy="308" r="0.5" /><circle cx="88" cy="308" r="0.5" /><circle cx="132" cy="308" r="0.5" /><circle cx="176" cy="308" r="0.5" /><circle cx="220" cy="308" r="0.5" /><circle cx="264" cy="308" r="0.5" /><circle cx="308" cy="308" r="0.5" /><circle cx="352" cy="308" r="0.5" /><circle cx="396" cy="308" r="0.5" /><circle cx="440" cy="308" r="0.5" /><circle cx="484" cy="308" r="0.5" /><circle cx="528" cy="308" r="0.5" /><circle cx="572" cy="308" r="0.5" /><circle cx="616" cy="308" r="0.5" /><circle cx="660" cy="308" r="0.5" /><circle cx="704" cy="308" r="0.5" /><circle cx="748" cy="308" r="0.5" /><circle cx="792" cy="308" r="0.5" /><circle cx="836" cy="308" r="0.5" />
-  <circle cx="44" cy="352" r="0.5" /><circle cx="88" cy="352" r="0.5" /><circle cx="132" cy="352" r="0.5" /><circle cx="176" cy="352" r="0.5" /><circle cx="220" cy="352" r="0.5" /><circle cx="264" cy="352" r="0.5" /><circle cx="308" cy="352" r="0.5" /><circle cx="352" cy="352" r="0.5" /><circle cx="396" cy="352" r="0.5" /><circle cx="440" cy="352" r="0.5" /><circle cx="484" cy="352" r="0.5" /><circle cx="528" cy="352" r="0.5" /><circle cx="572" cy="352" r="0.5" /><circle cx="616" cy="352" r="0.5" /><circle cx="660" cy="352" r="0.5" /><circle cx="704" cy="352" r="0.5" /><circle cx="748" cy="352" r="0.5" /><circle cx="792" cy="352" r="0.5" /><circle cx="836" cy="352" r="0.5" />
-</g>
+<path d="M 20 10 L 860 10 L 870 20 L 870 400 L 860 410 L 20 410 L 10 400 L 10 20 Z" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.5" />
+<path d="M 10 40 L 10 80 M 870 40 L 870 80 M 10 340 L 10 380 M 870 340 L 870 380" stroke="#ef4444" stroke-width="4" />
 
 
-<rect x="3" y="3" width="874" height="414" fill="none" stroke="url(#border-grad)" stroke-width="1" rx="8" class="border-frame" />
+<text x="25" y="25" class="micro-text">SYS.INIT // CORE_V2.4</text>
+<text x="710" y="25" class="micro-text">ENCRYPTED_CONNECTION_SECURE</text>
 
 
-<g opacity="0.6">
-  <path d="M 16 6 L 6 6 L 6 16" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 864 6 L 874 6 L 874 16" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 16 414 L 6 414 L 6 404" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
-  <path d="M 864 414 L 874 414 L 874 404" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
-</g>
+<g class="hologram">
+  <text class="art">
+<tspan x="400" y="20">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾</tspan>
+<tspan x="400" y="32">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃</tspan>
+<tspan x="400" y="44">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁</tspan>
+<tspan x="400" y="56">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⣷⡀⠀⠀⢷⡇⠀⠻⣼⠀⠀⠀⡾⣷⡀⠀⢸⡄⡇⠘⣶⡼⠀⠀⠀⠀⠀⠀⣰⣦⠞⠁⢰⠁⢰⣯⣺⢏⠏⢀⣼⠃⢀⡼⢁⣬⡿</tspan>
+<tspan x="400" y="68">⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⡇⠀⠀⣌⣇⠀⠀⠉⠘⣆⡴⠇⠀⢣⠀⠀⠻⡀⠀⠘⣇⠀⠀⠀⠀⣠⣾⣥⠟⠀⢀⣾⡄⢸⠃⢠⣞⣴⠋⣼⠠⣯⢊⠏⣾⣁</tspan>
+<tspan x="400" y="80">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠹⣿⠀⠀⠹⣾⡄⠀⠀⠀⠈⢷⠀⠠⡈⢷⡀⠀⢳⡀⠀⠀⣆⠀⣠⢾⢟⡿⡁⢀⡴⣻⣿⠁⣟⣀⡽⢫⢏⡜⢁⣰⠏⡜⠀⢻⡟</tspan>
+<tspan x="400" y="92">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠈⢧⠀⢠⠘⢷⢸⠳⡄⠀⠀⢧⡀⢹⣶⡄⠀⢸⣿⠀⠀⣿⠟⢡⠏⣾⣼⡷⠋⣴⡏⣮⣾⢿⡇⢡⣯⢏⣠⣾⣁⣴⢃⣴⠋</tspan>
+<tspan x="400" y="104">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡄⠈⣇⣿⠀⢰⡻⢧⣹⣄⠀⠀⠳⣄⢷⠈⢧⠘⢏⡆⣸⣁⣰⢏⡼⣿⡟⢠⠞⠟⡷⣿⣿⢀⡷⠚⢉⣿⡿⠚⣻⣱⠟⠁</tspan>
+<tspan x="400" y="116">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣶⣆⣹⡠⣄⠳⡀⣹⢻⣿⣧⣀⣦⡙⡆⢻⠀⡼⣽⡿⢁⣯⡞⣀⣾⠟⠁⠀⠀⠀⣾⡟⣸⠁⣰⠿⡿⣣⣾⡽⢟⡟⠁</tspan>
+<tspan x="400" y="128">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣻⡷⣬⠲⡄⠿⢸⣿⢻⣿⣿⣿⣿⣾⣧⣁⢻⠃⣼⣼⡾⢻⣿⠀⠀⠀⠀⠀⢻⢇⣧⣴⠃⣼⡟⡝⡽⣿⡟</tspan>
+<tspan x="400" y="140">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣋⠹⣌⣢⣿⠂⢸⣿⢸⣿⣿⣿⣿⣯⠙⢿⣾⣴⡿⠉⠀⠘⣿⡀⠀⠀⠀⠀⢸⣿⣩⣇⢠⣾⢸⡇⢘⣽⠛</tspan>
+<tspan x="400" y="152">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⢹⣿⣄⠀⢻⣿⣿⣿⣿⣿⠟⠀⠀⠙⠃⠀⠀⣠⠒⢿⣷⡀⠀⠀⢀⣸⣿⡟⢻⣿⠃⣼⣵⠛⠁</tspan>
+<tspan x="400" y="164">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣮⣻⡿⢗⢦⣻⣿⣿⣿⣿⠆⠀⠀⢰⠇⠀⢰⠟⢀⡾⢹⣇⣠⣴⣿⣿⠋⠀⢿⠶⢋⣾⠙⠛⠳⠶⠦⢤⣄⣀⣀⡀</tspan>
+<tspan x="400" y="176">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠾⠻⣿⣿⢷⣜⠻⢿⣿⡿⠀⠀⠀⣼⠀⢀⡏⢀⣼⣧⣼⣯⠟⢋⣽⡏⠀⢀⣬⠴⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠓⠶⢤⣀⡀</tspan>
+<tspan x="400" y="188">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠾⣋⠁⠀⠀⢳⡹⣆⠉⠛⣦⣝⢧⡀⢠⡆⡧⡄⣈⡵⢋⣬⠶⠋⠀⣤⠿⠛⠀⠀⡼⠁⡄⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉</tspan>
+<tspan x="400" y="200">⠀⠀⣠⣤⠄⠀⠠⠴⠶⠤⣴⠞⠋⠀⠀⠀⠀⠀⠀⠈⢧⣿⡗⢶⣤⣈⣳⣽⣦⡿⡇⣷⡿⢚⣿⣶⣶⣶⣿⠃⠀⠀⠀⢠⠇⠀⠃⠀⠙⡆</tspan>
+<tspan x="400" y="212">⠈⠉⠀⠀⠀⠀⠀⢀⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⡇⠀⣿⣿⣿⣿⠙⠟⠁⠀⠀⠈⠀⢻⣿⣿⠃⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⢀</tspan>
+<tspan x="400" y="224">⠀⢀⣠⣴⣾⣿⡿⠋⠀⠀⠀⠀⠀⢀⡠⣴⣾⣿⣿⣿⣿⣿⡹⠀⣿⣿⣿⡃⣰⡆⠀⠀⠀⠀⠀⣿⡇⢸⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⢀⡴⣿⠛⣖⡀</tspan>
+<tspan x="400" y="236">⣠⣿⣿⡿⠿⠋⠀⠀⠀⠀⠀⠀⣺⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⢿⣏⢸⣏⡋⠀⠀⠀⠀⠀⠀⢿⡇⠘⠀⠀⠀⣠⣟⠀⠀⠀⠀⢀⣾⣵⣷⣬⣭⣽⠟⠓</tspan>
+<tspan x="400" y="248">⠉⠁⠀⠀⠀⠀⠀⠀⣠⠤⢲⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡝⣾⣯⠈⢿⣝⢦⣠⣶⡀⠀⠀⠙⢷⠀⠀⢀⣴⣿⠙⠀⢠⠆⠀⣸⣿⣿⣿⣿⡏</tspan>
+<tspan x="400" y="260">⣾⣿⣷⡄⠀⠀⠀⡀⠉⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣿⡄⠈⢿⣿⠾⠾⠷⣖⡒⠂⢸⠀⣰⣿⣿⠏⠀⢀⡏⠀⢠⣿⣿⣿⣿⣿⣿⣦⡀</tspan>
+<tspan x="400" y="272">⣿⣿⣿⠃⠀⠀⠀⣧⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣄⠀⢬⣉⣉⠉⠉⠉⠀⣼⣾⣿⣿⡟⠀⣠⡿⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣦⣄</tspan>
+<tspan x="400" y="284">⣿⠟⣁⣤⣴⣿⣿⣿⣶⣤⡈⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡞⣿⣿⣦⡀⠀⠀⠀⠀⣠⣼⣿⣿⣿⠏⠀⣰⢿⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉</tspan>
+<tspan x="400" y="296">⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣹⡼⣿⣿⣷⣄⣀⣀⣴⡿⡿⢻⣽⠋⠀⣰⠏⠘⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠋</tspan>
+<tspan x="400" y="308">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣒⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⡻⣿⣿⠋⠀⠀⢀⡅⠀⢠⣿⠀⠀⠘⠻⠿⢿⣿⠿⠛⠋⠉⠀⢀⡀</tspan>
+<tspan x="400" y="320">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⡽⣿⠀⠀⢠⡞⠀⢠⣿⡿⣦⣀⣤⣄⣀⣤⣤⣶⣶⣾⠿⠟⠉</tspan>
+<tspan x="400" y="332">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣶⣦⣤⣄⡀⠀⠈⠙⠿⣿⣿⣷⣾⣿⣿⣿⣿⡈⣇⣴⠏⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁</tspan>
+<tspan x="400" y="344">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠞⠛⠙⠛⠛⠛⢿⣿⣿⣿⠟⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⢀</tspan>
+<tspan x="400" y="356">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⡏⣠⣾⣿⣿⣿⣿⣿⣿⣿⡿⢋⡴⠋⠀⠀⠀⠀⠀⠈</tspan>
+<tspan x="400" y="368">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣥⣤⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⠏</tspan>
+<tspan x="400" y="380">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⠏⠂</tspan>
+<tspan x="400" y="392">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⠏</tspan>
+<tspan x="400" y="404">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⡀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀</tspan>
 
-
-<text x="20" y="30" font-size="9px" font-family="Consolas, monospace" class="art">
-<tspan x="20" y="30">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾</tspan>
-<tspan x="20" y="40">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃</tspan>
-<tspan x="20" y="50">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁</tspan>
-<tspan x="20" y="60">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⣷⡀⠀⠀⢷⡇⠀⠻⣼⠀⠀⠀⡾⣷⡀⠀⢸⡄⡇⠘⣶⡼⠀⠀⠀⠀⠀⠀⣰⣦⠞⠁⢰⠁⢰⣯⣺⢏⠏⢀⣼⠃⢀⡼⢁⣬⡿</tspan>
-<tspan x="20" y="70">⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⡇⠀⠀⣌⣇⠀⠀⠉⠘⣆⡴⠇⠀⢣⠀⠀⠻⡀⠀⠘⣇⠀⠀⠀⠀⣠⣾⣥⠟⠀⢀⣾⡄⢸⠃⢠⣞⣴⠋⣼⠠⣯⢊⠏⣾⣁</tspan>
-<tspan x="20" y="80">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠹⣿⠀⠀⠹⣾⡄⠀⠀⠀⠈⢷⠀⠠⡈⢷⡀⠀⢳⡀⠀⠀⣆⠀⣠⢾⢟⡿⡁⢀⡴⣻⣿⠁⣟⣀⡽⢫⢏⡜⢁⣰⠏⡜⠀⢻⡟</tspan>
-<tspan x="20" y="90">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠈⢧⠀⢠⠘⢷⢸⠳⡄⠀⠀⢧⡀⢹⣶⡄⠀⢸⣿⠀⠀⣿⠟⢡⠏⣾⣼⡷⠋⣴⡏⣮⣾⢿⡇⢡⣯⢏⣠⣾⣁⣴⢃⣴⠋</tspan>
-<tspan x="20" y="100">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡄⠈⣇⣿⠀⢰⡻⢧⣹⣄⠀⠀⠳⣄⢷⠈⢧⠘⢏⡆⣸⣁⣰⢏⡼⣿⡟⢠⠞⠟⡷⣿⣿⢀⡷⠚⢉⣿⡿⠚⣻⣱⠟⠁</tspan>
-<tspan x="20" y="110">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣶⣆⣹⡠⣄⠳⡀⣹⢻⣿⣧⣀⣦⡙⡆⢻⠀⡼⣽⡿⢁⣯⡞⣀⣾⠟⠁⠀⠀⠀⣾⡟⣸⠁⣰⠿⡿⣣⣾⡽⢟⡟⠁</tspan>
-<tspan x="20" y="120">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣻⡷⣬⠲⡄⠿⢸⣿⢻⣿⣿⣿⣿⣾⣧⣁⢻⠃⣼⣼⡾⢻⣿⠀⠀⠀⠀⠀⢻⢇⣧⣴⠃⣼⡟⡝⡽⣿⡟</tspan>
-<tspan x="20" y="130">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣋⠹⣌⣢⣿⠂⢸⣿⢸⣿⣿⣿⣿⣯⠙⢿⣾⣴⡿⠉⠀⠘⣿⡀⠀⠀⠀⠀⢸⣿⣩⣇⢠⣾⢸⡇⢘⣽⠛</tspan>
-<tspan x="20" y="140">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⢹⣿⣄⠀⢻⣿⣿⣿⣿⣿⠟⠀⠀⠙⠃⠀⠀⣠⠒⢿⣷⡀⠀⠀⢀⣸⣿⡟⢻⣿⠃⣼⣵⠛⠁</tspan>
-<tspan x="20" y="150">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣮⣻⡿⢗⢦⣻⣿⣿⣿⣿⠆⠀⠀⢰⠇⠀⢰⠟⢀⡾⢹⣇⣠⣴⣿⣿⠋⠀⢿⠶⢋⣾⠙⠛⠳⠶⠦⢤⣄⣀⣀⡀</tspan>
-<tspan x="20" y="160">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠾⠻⣿⣿⢷⣜⠻⢿⣿⡿⠀⠀⠀⣼⠀⢀⡏⢀⣼⣧⣼⣯⠟⢋⣽⡏⠀⢀⣬⠴⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠓⠶⢤⣀⡀</tspan>
-<tspan x="20" y="170">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠾⣋⠁⠀⠀⢳⡹⣆⠉⠛⣦⣝⢧⡀⢠⡆⡧⡄⣈⡵⢋⣬⠶⠋⠀⣤⠿⠛⠀⠀⡼⠁⡄⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉</tspan>
-<tspan x="20" y="180">⠀⠀⣠⣤⠄⠀⠠⠴⠶⠤⣴⠞⠋⠀⠀⠀⠀⠀⠀⠈⢧⣿⡗⢶⣤⣈⣳⣽⣦⡿⡇⣷⡿⢚⣿⣶⣶⣶⣿⠃⠀⠀⠀⢠⠇⠀⠃⠀⠙⡆</tspan>
-<tspan x="20" y="190">⠈⠉⠀⠀⠀⠀⠀⢀⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⡇⠀⣿⣿⣿⣿⠙⠟⠁⠀⠀⠈⠀⢻⣿⣿⠃⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⢀</tspan>
-<tspan x="20" y="200">⠀⢀⣠⣴⣾⣿⡿⠋⠀⠀⠀⠀⠀⢀⡠⣴⣾⣿⣿⣿⣿⣿⡹⠀⣿⣿⣿⡃⣰⡆⠀⠀⠀⠀⠀⣿⡇⢸⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⢀⡴⣿⠛⣖⡀</tspan>
-<tspan x="20" y="210">⣠⣿⣿⡿⠿⠋⠀⠀⠀⠀⠀⠀⣺⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⢿⣏⢸⣏⡋⠀⠀⠀⠀⠀⠀⢿⡇⠘⠀⠀⠀⣠⣟⠀⠀⠀⠀⢀⣾⣵⣷⣬⣭⣽⠟⠓</tspan>
-<tspan x="20" y="220">⠉⠁⠀⠀⠀⠀⠀⠀⣠⠤⢲⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡝⣾⣯⠈⢿⣝⢦⣠⣶⡀⠀⠀⠙⢷⠀⠀⢀⣴⣿⠙⠀⢠⠆⠀⣸⣿⣿⣿⣿⡏</tspan>
-<tspan x="20" y="230">⣾⣿⣷⡄⠀⠀⠀⡀⠉⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣿⡄⠈⢿⣿⠾⠾⠷⣖⡒⠂⢸⠀⣰⣿⣿⠏⠀⢀⡏⠀⢠⣿⣿⣿⣿⣿⣿⣦⡀</tspan>
-<tspan x="20" y="240">⣿⣿⣿⠃⠀⠀⠀⣧⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣄⠀⢬⣉⣉⠉⠉⠉⠀⣼⣾⣿⣿⡟⠀⣠⡿⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣦⣄</tspan>
-<tspan x="20" y="250">⣿⠟⣁⣤⣴⣿⣿⣿⣶⣤⡈⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡞⣿⣿⣦⡀⠀⠀⠀⠀⣠⣼⣿⣿⣿⠏⠀⣰⢿⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉</tspan>
-<tspan x="20" y="260">⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣹⡼⣿⣿⣷⣄⣀⣀⣴⡿⡿⢻⣽⠋⠀⣰⠏⠘⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠋</tspan>
-<tspan x="20" y="270">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣒⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⡻⣿⣿⠋⠀⠀⢀⡅⠀⢠⣿⠀⠀⠘⠻⠿⢿⣿⠿⠛⠋⠉⠀⢀⡀</tspan>
-<tspan x="20" y="280">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⡽⣿⠀⠀⢠⡞⠀⢠⣿⡿⣦⣀⣤⣄⣀⣤⣤⣶⣶⣾⠿⠟⠉</tspan>
-<tspan x="20" y="290">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣶⣦⣤⣄⡀⠀⠈⠙⠿⣿⣿⣷⣾⣿⣿⣿⣿⡈⣇⣴⠏⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁</tspan>
-<tspan x="20" y="300">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠞⠛⠙⠛⠛⠛⢿⣿⣿⣿⠟⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⢀</tspan>
-<tspan x="20" y="310">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⡏⣠⣾⣿⣿⣿⣿⣿⣿⣿⡿⢋⡴⠋⠀⠀⠀⠀⠀⠈</tspan>
-<tspan x="20" y="320">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣥⣤⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⠏</tspan>
-<tspan x="20" y="330">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⠏⠂</tspan>
-<tspan x="20" y="340">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⠏</tspan>
-<tspan x="20" y="350">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⡀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀</tspan>
-</text>
-
-<rect x="490" y="20" width="370" height="260" fill="#000000" opacity="0.8" rx="8" />
-<g class="info" filter="url(#glow)">
-  <circle cx="502" cy="26" r="3" class="status-dot" />
-
-  <text x="512" y="30">
-    <tspan x="512" y="30" class="hd">securitygeek15@system</tspan>
-  </text>
-
-  <line x1="500" y1="40" x2="855" y2="40" stroke="url(#line-grad)" stroke-width="1" opacity="0.6" class="divider-line" />
-
-  <text x="500" y="60">
-    <tspan x="500" y="60" class="cc">▸ </tspan><tspan class="key">OS</tspan><tspan class="cc"> ················ </tspan><tspan class="val">Arch Linux</tspan>
-    <tspan x="500" y="78" class="cc">▸ </tspan><tspan class="key">Uptime</tspan><tspan class="cc"> ············ </tspan><tspan class="val" id="uptime_data">17 years, 5 months</tspan>
-    <tspan x="500" y="96" class="cc">▸ </tspan><tspan class="key">Host</tspan><tspan class="cc"> ·············· </tspan><tspan class="val">Ethical Hacker &amp; Bug Hunter</tspan>
-    <tspan x="500" y="114" class="cc">▸ </tspan><tspan class="key">Kernel</tspan><tspan class="cc"> ············ </tspan><tspan class="val">Security &amp; Pentesting</tspan>
-    <tspan x="500" y="132" class="cc">▸ </tspan><tspan class="key">IDE</tspan><tspan class="cc"> ··············· </tspan><tspan class="val">VSCode</tspan>
-    <tspan x="500" y="155" class="cc">  </tspan>
-    <tspan x="500" y="168" class="cc">▸ </tspan><tspan class="key">Langs.Coding</tspan><tspan class="cc"> ······ </tspan><tspan class="val">Python, JS, Java, Golang</tspan>
-    <tspan x="500" y="186" class="cc">▸ </tspan><tspan class="key">Langs.Script</tspan><tspan class="cc"> ······ </tspan><tspan class="val">HTML, CSS, Bash, Lua</tspan>
-    <tspan x="500" y="204" class="cc">▸ </tspan><tspan class="key">Langs.Speak</tspan><tspan class="cc"> ······· </tspan><tspan class="val">English, Hindi, Urdu</tspan>
-    <tspan x="500" y="222" class="cc">  </tspan>
-    <tspan x="500" y="240" class="cc">▸ </tspan><tspan class="key">Hobbies.Sec</tspan><tspan class="cc"> ······· </tspan><tspan class="val">Bug Bounty, CTF</tspan>
-    <tspan x="500" y="258" class="cc">▸ </tspan><tspan class="key">Hobbies.Dev</tspan><tspan class="cc"> ······· </tspan><tspan class="val">Open Source, Automation</tspan>
   </text>
 </g>
 
+<rect x="10" y="10" width="450" height="400" class="bg" opacity="0.85" />
+<rect x="10" y="10" width="450" height="400" fill="url(#grid)" opacity="0.3" />
 
-<g class="contact" filter="url(#glow)">
-  <text x="500" y="290">
-    <tspan x="500" y="290" class="hd">Contact</tspan>
-  </text>
-  <text x="500" y="310">
-    <tspan x="500" y="310" class="cc">▸ </tspan><tspan class="key">Email</tspan><tspan class="cc"> ············· </tspan><tspan class="val">goofyaapa@gmail.com</tspan>
-    <tspan x="500" y="328" class="cc">▸ </tspan><tspan class="key">Instagram</tspan><tspan class="cc"> ········· </tspan><tspan class="val">security__geek</tspan>
-  </text>
+
+
+<rect x="40" y="50" width="380" height="60" fill="#ffffff05" stroke="#ef444433" stroke-width="1" />
+<rect x="40" y="50" width="4" height="60" fill="#ef4444" />
+<text x="55" y="70" class="text-accent">[+] TARGET_IDENTITY</text>
+<text x="55" y="95" class="text-main" font-size="20px" letter-spacing="1px">securitygeek15@system<tspan class="cursor">_</tspan></text>
+
+
+<text x="40" y="140" class="text-accent">[+] SYSTEM_SPECS</text>
+<path d="M 40 148 L 400 148" stroke="#a1a1aa" stroke-width="1" stroke-dasharray="2 4" />
+<text x="40" y="170" class="text-muted">OS</text><text x="140" y="170" class="text-main">Arch Linux</text>
+<text x="40" y="195" class="text-muted">UPTIME</text><text x="140" y="195" class="text-main" id="uptime_data">17 years, 5 months</text>
+<text x="40" y="220" class="text-muted">KERNEL</text><text x="140" y="220" class="text-main">Security &amp; Pentesting</text>
+<text x="40" y="245" class="text-muted">IDE</text><text x="140" y="245" class="text-main">VSCode</text>
+
+
+<text x="40" y="290" class="text-accent">[+] SKILL_MATRIX</text>
+<path d="M 40 298 L 400 298" stroke="#a1a1aa" stroke-width="1" stroke-dasharray="2 4" />
+<text x="40" y="320" class="text-muted">LANGS</text><text x="140" y="320" class="text-main">Python, JS, Java, Go, Bash</text>
+<text x="40" y="345" class="text-muted">SECTOR</text><text x="140" y="345" class="text-main">Bug Bounty, CTF, Automation</text>
+<text x="40" y="370" class="text-muted">CONTACT</text><text x="140" y="370" class="text-main">goofyaapa@gmail.com</text>
+
+
+<g transform="translate(640, 360)">
+  <text x="0" y="-15" class="micro-text">CPU_LOAD_STREAM</text>
+  <rect x="0" y="0" width="4" height="5" fill="#ef4444" class="bar" style="animation-delay: -1.42s; animation-duration: 1.43s" />
+<rect x="8" y="0" width="4" height="12" fill="#ef4444" class="bar" style="animation-delay: -0.81s; animation-duration: 1.33s" />
+<rect x="16" y="0" width="4" height="9" fill="#ef4444" class="bar" style="animation-delay: -0.35s; animation-duration: 0.7s" />
+<rect x="24" y="0" width="4" height="18" fill="#ef4444" class="bar" style="animation-delay: -1.18s; animation-duration: 0.94s" />
+<rect x="32" y="0" width="4" height="27" fill="#ef4444" class="bar" style="animation-delay: -0.47s; animation-duration: 0.59s" />
+<rect x="40" y="0" width="4" height="11" fill="#ef4444" class="bar" style="animation-delay: -1.88s; animation-duration: 1.3s" />
+<rect x="48" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -0.88s; animation-duration: 1.0s" />
+<rect x="56" y="0" width="4" height="21" fill="#ef4444" class="bar" style="animation-delay: -0.53s; animation-duration: 0.91s" />
+<rect x="64" y="0" width="4" height="24" fill="#ef4444" class="bar" style="animation-delay: -1.55s; animation-duration: 1.29s" />
+<rect x="72" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -1.18s; animation-duration: 1.22s" />
+<rect x="80" y="0" width="4" height="20" fill="#ef4444" class="bar" style="animation-delay: -0.71s; animation-duration: 0.68s" />
+<rect x="88" y="0" width="4" height="12" fill="#ef4444" class="bar" style="animation-delay: -1.01s; animation-duration: 0.77s" />
+<rect x="96" y="0" width="4" height="21" fill="#ef4444" class="bar" style="animation-delay: -1.06s; animation-duration: 0.63s" />
+<rect x="104" y="0" width="4" height="7" fill="#ef4444" class="bar" style="animation-delay: -1.34s; animation-duration: 1.11s" />
+<rect x="112" y="0" width="4" height="14" fill="#ef4444" class="bar" style="animation-delay: -0.77s; animation-duration: 0.81s" />
+<rect x="120" y="0" width="4" height="13" fill="#ef4444" class="bar" style="animation-delay: -0.44s; animation-duration: 1.3s" />
+<rect x="128" y="0" width="4" height="20" fill="#ef4444" class="bar" style="animation-delay: -1.21s; animation-duration: 1.24s" />
+<rect x="136" y="0" width="4" height="17" fill="#ef4444" class="bar" style="animation-delay: -0.04s; animation-duration: 1.25s" />
+<rect x="144" y="0" width="4" height="17" fill="#ef4444" class="bar" style="animation-delay: -0.97s; animation-duration: 0.57s" />
+<rect x="152" y="0" width="4" height="19" fill="#ef4444" class="bar" style="animation-delay: -1.18s; animation-duration: 0.79s" />
+<rect x="160" y="0" width="4" height="16" fill="#ef4444" class="bar" style="animation-delay: -0.02s; animation-duration: 0.83s" />
+<rect x="168" y="0" width="4" height="14" fill="#ef4444" class="bar" style="animation-delay: -0.3s; animation-duration: 1.41s" />
+<rect x="176" y="0" width="4" height="20" fill="#ef4444" class="bar" style="animation-delay: -1.62s; animation-duration: 1.05s" />
+<rect x="184" y="0" width="4" height="10" fill="#ef4444" class="bar" style="animation-delay: -0.83s; animation-duration: 0.65s" />
+<rect x="192" y="0" width="4" height="9" fill="#ef4444" class="bar" style="animation-delay: -0.42s; animation-duration: 1.06s" />
+
+  <rect x="0" y="2" width="196" height="1" fill="#ef4444" />
 </g>
 
 
-<line x1="20" y1="355" x2="860" y2="355" stroke="url(#line-grad)" stroke-width="0.5" opacity="0.4" class="stats divider-line" />
-<rect x="15" y="365" width="850" height="30" fill="#000000" opacity="0.8" rx="5" />
+<rect x="660" y="40" width="180" height="90" fill="#ffffff05" stroke="#ef444433" stroke-width="1" />
+<rect x="836" y="40" width="4" height="90" fill="#ef4444" />
+<text x="670" y="60" class="text-accent">[+] DATABANK</text>
+<text x="670" y="80" class="text-muted">REPOS : <tspan class="text-main" id="repo_data">20</tspan></text>
+<text x="670" y="100" class="text-muted">STARS : <tspan class="text-main" id="star_data">22</tspan></text>
+<text x="670" y="120" class="text-muted">COMMITS: <tspan class="text-main" id="commit_data">123</tspan></text>
+<text x="760" y="80" class="text-muted">PR: <tspan class="text-main" id="contrib_data">20</tspan></text>
+<text x="760" y="100" class="text-muted">FL: <tspan class="text-main" id="follower_data">4</tspan></text>
 
-<g class="stats" filter="url(#glow)">
-  <text x="20" y="385">
-    <tspan x="20" y="385"><tspan class="key">Repos</tspan><tspan class="cc">:</tspan> <tspan class="val" id="repo_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Contributed</tspan><tspan class="cc">:</tspan> <tspan class="val" id="contrib_data">20</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Stars</tspan><tspan class="cc">:</tspan> <tspan class="val" id="star_data">22</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Commits</tspan><tspan class="cc">:</tspan> <tspan class="val" id="commit_data">123</tspan>  <tspan class="cc">·</tspan>  <tspan class="key">Followers</tspan><tspan class="cc">:</tspan> <tspan class="val" id="follower_data">4</tspan></tspan>
-  </text>
-</g>
 
+<rect width="100%" height="20" class="scan" />
 
-<rect width="880" height="150" class="scan" rx="10" />
 </svg>
