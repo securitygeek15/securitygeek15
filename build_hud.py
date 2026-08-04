@@ -156,7 +156,7 @@ def build_svg(is_dark):
 <text x="40" y="170" class="text-muted">OS</text><text x="140" y="170" class="text-main">Arch Linux</text>
 <text x="40" y="195" class="text-muted">UPTIME</text><text x="140" y="195" class="text-main" id="uptime_data">17 years, 5 months</text>
 <text x="40" y="220" class="text-muted">KERNEL</text><text x="140" y="220" class="text-main">Security &amp; Pentesting</text>
-<text x="40" y="245" class="text-muted">IDE</text><text x="140" y="245" class="text-main">VSCode</text>
+<text x="40" y="245" class="text-muted">IDE</text><text x="140" y="245" class="text-main">Neovim</text>
 
 <!-- Skill Matrix -->
 <text x="40" y="290" class="text-accent">[+] SKILL_MATRIX</text>
