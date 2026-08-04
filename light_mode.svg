@@ -8,18 +8,14 @@
         font-display: swap;
     }
     .bg { fill: #fafafa; }
-    .text-main { fill: #18181b; font-family: ConsolasFallback, Consolas, monospace; font-size: 13px; font-weight: bold; }
-    .text-muted { fill: #71717a; font-family: ConsolasFallback, Consolas, monospace; font-size: 12px; }
-    .text-accent { fill: #dc2626; font-family: ConsolasFallback, Consolas, monospace; font-size: 13px; font-weight: bold; }
-    .micro-text { fill: #71717a; font-family: ConsolasFallback, Consolas, monospace; font-size: 10px; letter-spacing: 2px; }
+    .text-main { fill: #111111; font-family: ConsolasFallback, Consolas, monospace; font-size: 13px; font-weight: bold; }
+    .text-muted { fill: #737373; font-family: ConsolasFallback, Consolas, monospace; font-size: 12px; }
+    .text-accent { fill: #000000; font-family: ConsolasFallback, Consolas, monospace; font-size: 13px; font-weight: bold; }
+    .micro-text { fill: #737373; font-family: ConsolasFallback, Consolas, monospace; font-size: 10px; letter-spacing: 2px; }
     
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 10px #dc2626); }
-      50% { opacity: 1; filter: drop-shadow(0 0 20px #dc2626); }
-    }
-    @keyframes barAnim {
-      0%, 100% { transform: scaleY(0.2); }
-      50% { transform: scaleY(1); }
+      0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 4px #000000); }
+      50% { opacity: 1; filter: drop-shadow(0 0 8px #000000); }
     }
     @keyframes scanline {
       0% { transform: translateY(-50px); }
@@ -31,7 +27,7 @@
     }
     
     .art {
-        fill: #18181b;
+        fill: #111111;
         font-family: ConsolasFallback, Consolas, monospace;
         font-size: 12px;
         white-space: pre;
@@ -39,34 +35,30 @@
     
     /* The hologram effect applies an intense red glow to the Braille art */
     .hologram {
-        fill: #dc2626;
+        fill: #000000;
         animation: pulseGlow 4s infinite ease-in-out;
         opacity: 0.85;
     }
     
-    .bar {
-        transform-origin: bottom;
-        animation: barAnim infinite ease-in-out;
-    }
-    .cursor { animation: blink 1s infinite; fill: #dc2626; }
+    .cursor { animation: blink 1s infinite; fill: #000000; }
     .scan { animation: scanline 8s linear infinite; fill: url(#scan-grad); pointer-events: none; opacity: 0.15; }
   </style>
   
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 20 0 L 20 40 M 0 20 L 40 20" stroke="#00000011" stroke-width="1" stroke-dasharray="2 2" />
-    <circle cx="20" cy="20" r="1.5" fill="#dc262633" />
+    <path d="M 20 0 L 20 40 M 0 20 L 40 20" stroke="#0000000c" stroke-width="1" stroke-dasharray="2 2" />
+    <circle cx="20" cy="20" r="1.5" fill="#00000022" />
   </pattern>
   
   <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#dc2626" stop-opacity="0" />
-    <stop offset="50%" stop-color="#dc2626" stop-opacity="1" />
-    <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
+    <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+    <stop offset="50%" stop-color="#000000" stop-opacity="1" />
+    <stop offset="100%" stop-color="#000000" stop-opacity="0" />
   </linearGradient>
   
   <linearGradient id="art-fade" x1="100%" y1="0%" x2="0%" y2="0%">
-    <stop offset="0%" stop-color="#dc2626" stop-opacity="1" />
-    <stop offset="70%" stop-color="#dc2626" stop-opacity="0.3" />
-    <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
+    <stop offset="0%" stop-color="#000000" stop-opacity="1" />
+    <stop offset="70%" stop-color="#000000" stop-opacity="0.3" />
+    <stop offset="100%" stop-color="#000000" stop-opacity="0" />
   </linearGradient>
 </defs>
 
@@ -75,8 +67,8 @@
 <rect width="100%" height="100%" fill="url(#grid)" />
 
 
-<path d="M 20 10 L 860 10 L 870 20 L 870 400 L 860 410 L 20 410 L 10 400 L 10 20 Z" fill="none" stroke="#dc2626" stroke-width="1.5" opacity="0.5" />
-<path d="M 10 40 L 10 80 M 870 40 L 870 80 M 10 340 L 10 380 M 870 340 L 870 380" stroke="#dc2626" stroke-width="4" />
+<path d="M 20 10 L 860 10 L 870 20 L 870 400 L 860 410 L 20 410 L 10 400 L 10 20 Z" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.5" />
+<path d="M 10 40 L 10 80 M 870 40 L 870 80 M 10 340 L 10 380 M 870 340 L 870 380" stroke="#000000" stroke-width="4" />
 
 
 <text x="25" y="25" class="micro-text">SYS.INIT // CORE_V2.4</text>
@@ -127,14 +119,14 @@
 
 
 
-<rect x="40" y="50" width="380" height="60" fill="#00000005" stroke="#dc262633" stroke-width="1" />
-<rect x="40" y="50" width="4" height="60" fill="#dc2626" />
+<rect x="40" y="50" width="380" height="60" fill="#00000005" stroke="#00000022" stroke-width="1" />
+<rect x="40" y="50" width="4" height="60" fill="#000000" />
 <text x="55" y="70" class="text-accent">[+] TARGET_IDENTITY</text>
 <text x="55" y="95" class="text-main" font-size="20px" letter-spacing="1px">securitygeek15@system<tspan class="cursor">_</tspan></text>
 
 
 <text x="40" y="140" class="text-accent">[+] SYSTEM_SPECS</text>
-<path d="M 40 148 L 400 148" stroke="#71717a" stroke-width="1" stroke-dasharray="2 4" />
+<path d="M 40 148 L 400 148" stroke="#737373" stroke-width="1" stroke-dasharray="2 4" />
 <text x="40" y="170" class="text-muted">OS</text><text x="140" y="170" class="text-main">Arch Linux</text>
 <text x="40" y="195" class="text-muted">UPTIME</text><text x="140" y="195" class="text-main" id="uptime_data">17 years, 5 months</text>
 <text x="40" y="220" class="text-muted">KERNEL</text><text x="140" y="220" class="text-main">Security &amp; Pentesting</text>
@@ -142,7 +134,7 @@
 
 
 <text x="40" y="290" class="text-accent">[+] SKILL_MATRIX</text>
-<path d="M 40 298 L 400 298" stroke="#71717a" stroke-width="1" stroke-dasharray="2 4" />
+<path d="M 40 298 L 400 298" stroke="#737373" stroke-width="1" stroke-dasharray="2 4" />
 <text x="40" y="320" class="text-muted">LANGS</text><text x="140" y="320" class="text-main">Python, JS, Java, Go, Bash</text>
 <text x="40" y="345" class="text-muted">SECTOR</text><text x="140" y="345" class="text-main">Bug Bounty, CTF, Automation</text>
 <text x="40" y="370" class="text-muted">CONTACT</text><text x="140" y="370" class="text-main">goofyaapa@gmail.com</text>
@@ -151,39 +143,39 @@
 <g transform="translate(640, 360)">
   <rect x="-10" y="-30" width="220" height="70" fill="#fafafa" opacity="0.9" />
   <text x="0" y="-15" class="micro-text">CPU_LOAD_STREAM</text>
-  <rect x="0" y="0" width="4" height="10" fill="#dc2626" class="bar" style="animation-delay: -0.3s; animation-duration: 0.61s" />
-<rect x="8" y="0" width="4" height="20" fill="#dc2626" class="bar" style="animation-delay: -1.26s; animation-duration: 1.45s" />
-<rect x="16" y="0" width="4" height="10" fill="#dc2626" class="bar" style="animation-delay: -0.78s; animation-duration: 0.75s" />
-<rect x="24" y="0" width="4" height="8" fill="#dc2626" class="bar" style="animation-delay: -1.12s; animation-duration: 1.22s" />
-<rect x="32" y="0" width="4" height="20" fill="#dc2626" class="bar" style="animation-delay: -0.98s; animation-duration: 0.67s" />
-<rect x="40" y="0" width="4" height="20" fill="#dc2626" class="bar" style="animation-delay: -0.76s; animation-duration: 1.39s" />
-<rect x="48" y="0" width="4" height="11" fill="#dc2626" class="bar" style="animation-delay: -1.11s; animation-duration: 0.57s" />
-<rect x="56" y="0" width="4" height="5" fill="#dc2626" class="bar" style="animation-delay: -1.66s; animation-duration: 1.08s" />
-<rect x="64" y="0" width="4" height="13" fill="#dc2626" class="bar" style="animation-delay: -0.76s; animation-duration: 0.69s" />
-<rect x="72" y="0" width="4" height="11" fill="#dc2626" class="bar" style="animation-delay: -1.65s; animation-duration: 0.65s" />
-<rect x="80" y="0" width="4" height="23" fill="#dc2626" class="bar" style="animation-delay: -0.39s; animation-duration: 1.15s" />
-<rect x="88" y="0" width="4" height="8" fill="#dc2626" class="bar" style="animation-delay: -1.02s; animation-duration: 1.2s" />
-<rect x="96" y="0" width="4" height="9" fill="#dc2626" class="bar" style="animation-delay: -1.29s; animation-duration: 0.82s" />
-<rect x="104" y="0" width="4" height="21" fill="#dc2626" class="bar" style="animation-delay: -0.67s; animation-duration: 0.68s" />
-<rect x="112" y="0" width="4" height="11" fill="#dc2626" class="bar" style="animation-delay: -1.75s; animation-duration: 0.99s" />
-<rect x="120" y="0" width="4" height="7" fill="#dc2626" class="bar" style="animation-delay: -0.38s; animation-duration: 0.54s" />
-<rect x="128" y="0" width="4" height="21" fill="#dc2626" class="bar" style="animation-delay: -0.24s; animation-duration: 1.4s" />
-<rect x="136" y="0" width="4" height="28" fill="#dc2626" class="bar" style="animation-delay: -1.18s; animation-duration: 1.42s" />
-<rect x="144" y="0" width="4" height="5" fill="#dc2626" class="bar" style="animation-delay: -1.86s; animation-duration: 0.62s" />
-<rect x="152" y="0" width="4" height="12" fill="#dc2626" class="bar" style="animation-delay: -1.68s; animation-duration: 0.65s" />
-<rect x="160" y="0" width="4" height="25" fill="#dc2626" class="bar" style="animation-delay: -0.84s; animation-duration: 0.76s" />
-<rect x="168" y="0" width="4" height="8" fill="#dc2626" class="bar" style="animation-delay: -1.96s; animation-duration: 0.95s" />
-<rect x="176" y="0" width="4" height="22" fill="#dc2626" class="bar" style="animation-delay: -1.05s; animation-duration: 0.63s" />
-<rect x="184" y="0" width="4" height="9" fill="#dc2626" class="bar" style="animation-delay: -0.61s; animation-duration: 0.8s" />
-<rect x="192" y="0" width="4" height="20" fill="#dc2626" class="bar" style="animation-delay: -0.94s; animation-duration: 1.43s" />
+  <rect x="0" y="0" width="4" height="12" fill="#000000" />
+<rect x="8" y="0" width="4" height="7" fill="#000000" />
+<rect x="16" y="0" width="4" height="30" fill="#000000" />
+<rect x="24" y="0" width="4" height="12" fill="#000000" />
+<rect x="32" y="0" width="4" height="23" fill="#000000" />
+<rect x="40" y="0" width="4" height="28" fill="#000000" />
+<rect x="48" y="0" width="4" height="8" fill="#000000" />
+<rect x="56" y="0" width="4" height="12" fill="#000000" />
+<rect x="64" y="0" width="4" height="29" fill="#000000" />
+<rect x="72" y="0" width="4" height="13" fill="#000000" />
+<rect x="80" y="0" width="4" height="5" fill="#000000" />
+<rect x="88" y="0" width="4" height="12" fill="#000000" />
+<rect x="96" y="0" width="4" height="27" fill="#000000" />
+<rect x="104" y="0" width="4" height="21" fill="#000000" />
+<rect x="112" y="0" width="4" height="5" fill="#000000" />
+<rect x="120" y="0" width="4" height="18" fill="#000000" />
+<rect x="128" y="0" width="4" height="6" fill="#000000" />
+<rect x="136" y="0" width="4" height="19" fill="#000000" />
+<rect x="144" y="0" width="4" height="6" fill="#000000" />
+<rect x="152" y="0" width="4" height="12" fill="#000000" />
+<rect x="160" y="0" width="4" height="11" fill="#000000" />
+<rect x="168" y="0" width="4" height="16" fill="#000000" />
+<rect x="176" y="0" width="4" height="8" fill="#000000" />
+<rect x="184" y="0" width="4" height="12" fill="#000000" />
+<rect x="192" y="0" width="4" height="18" fill="#000000" />
 
-  <rect x="0" y="2" width="196" height="1" fill="#dc2626" />
+  <rect x="0" y="2" width="196" height="1" fill="#000000" />
 </g>
 
 
-<rect x="660" y="40" width="180" height="90" fill="#fafafa" stroke="#dc262633" stroke-width="1" />
+<rect x="660" y="40" width="180" height="90" fill="#fafafa" stroke="#00000022" stroke-width="1" />
 <rect x="660" y="40" width="180" height="90" fill="#00000005" />
-<rect x="836" y="40" width="4" height="90" fill="#dc2626" />
+<rect x="836" y="40" width="4" height="90" fill="#000000" />
 <text x="670" y="60" class="text-accent">[+] DATABANK</text>
 <text x="670" y="80" class="text-muted">REPOS : <tspan class="text-main" id="repo_data">20</tspan></text>
 <text x="670" y="100" class="text-muted">STARS : <tspan class="text-main" id="star_data">22</tspan></text>

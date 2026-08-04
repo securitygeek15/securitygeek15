@@ -2,21 +2,19 @@ import os
 
 def build_svg(is_dark):
     bg_color = "#050505" if is_dark else "#fafafa"
-    text_main = "#ffffff" if is_dark else "#18181b"
-    text_muted = "#a1a1aa" if is_dark else "#71717a"
-    accent = "#ef4444" if is_dark else "#dc2626"
-    accent_dim = "#ef444433" if is_dark else "#dc262633"
-    grid_color = "#ffffff11" if is_dark else "#00000011"
+    text_main = "#ffffff" if is_dark else "#111111"
+    text_muted = "#737373" if is_dark else "#737373"
+    accent = "#ffffff" if is_dark else "#000000"
+    accent_dim = "#ffffff22" if is_dark else "#00000022"
+    grid_color = "#ffffff0c" if is_dark else "#0000000c"
     panel_bg = "#ffffff05" if is_dark else "#00000005"
     
-    # Generate random heights and delays for the CPU graph
+    # Generate random heights for the static CPU graph
     import random
     bars = ""
     for i in range(25):
         height = random.randint(5, 30)
-        delay = round(random.uniform(0, 2), 2)
-        duration = round(random.uniform(0.5, 1.5), 2)
-        bars += f'<rect x="{i*8}" y="0" width="4" height="{height}" fill="{accent}" class="bar" style="animation-delay: -{delay}s; animation-duration: {duration}s" />\n'
+        bars += f'<rect x="{i*8}" y="0" width="4" height="{height}" fill="{accent}" />\n'
 
     # The Braille Art
     art_lines = [
@@ -75,12 +73,8 @@ def build_svg(is_dark):
     .micro-text {{ fill: {text_muted}; font-family: ConsolasFallback, Consolas, monospace; font-size: 10px; letter-spacing: 2px; }}
     
     @keyframes pulseGlow {{
-      0%, 100% {{ opacity: 0.7; filter: drop-shadow(0 0 10px {accent}); }}
-      50% {{ opacity: 1; filter: drop-shadow(0 0 20px {accent}); }}
-    }}
-    @keyframes barAnim {{
-      0%, 100% {{ transform: scaleY(0.2); }}
-      50% {{ transform: scaleY(1); }}
+      0%, 100% {{ opacity: 0.6; filter: drop-shadow(0 0 4px {accent}); }}
+      50% {{ opacity: 1; filter: drop-shadow(0 0 8px {accent}); }}
     }}
     @keyframes scanline {{
       0% {{ transform: translateY(-50px); }}
@@ -105,10 +99,6 @@ def build_svg(is_dark):
         opacity: 0.85;
     }}
     
-    .bar {{
-        transform-origin: bottom;
-        animation: barAnim infinite ease-in-out;
-    }}
     .cursor {{ animation: blink 1s infinite; fill: {accent}; }}
     .scan {{ animation: scanline 8s linear infinite; fill: url(#scan-grad); pointer-events: none; opacity: 0.15; }}
   </style>
