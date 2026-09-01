@@ -179,7 +179,7 @@
 <text x="670" y="60" class="text-accent">[+] DATABANK</text>
 <text x="670" y="80" class="text-muted">REPOS : <tspan class="text-main" id="repo_data">20</tspan></text>
 <text x="670" y="100" class="text-muted">STARS : <tspan class="text-main" id="star_data">24</tspan></text>
-<text x="670" y="120" class="text-muted">COMMITS: <tspan class="text-main" id="commit_data">127</tspan></text>
+<text x="670" y="120" class="text-muted">COMMITS: <tspan class="text-main" id="commit_data">0</tspan></text>
 <text x="760" y="80" class="text-muted">PR: <tspan class="text-main" id="contrib_data">20</tspan></text>
 <text x="760" y="100" class="text-muted">FL: <tspan class="text-main" id="follower_data">4</tspan></text>
 
