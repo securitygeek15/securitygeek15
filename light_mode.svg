@@ -114,7 +114,7 @@
   
   <text x="12" y="46" class="text-muted">REPOS   :</text><text x="90" y="46" class="text-main" id="repo_data">20</text>
   <text x="150" y="46" class="text-muted">STARS   :</text><text x="220" y="46" class="text-main" id="star_data">24</text>
-  <text x="290" y="46" class="text-muted">COMMITS :</text><text x="365" y="46" class="text-main" id="commit_data">130</text>
+  <text x="290" y="46" class="text-muted">COMMITS :</text><text x="365" y="46" class="text-main" id="commit_data">131</text>
 
   
   <text x="12" y="72" class="text-muted">CONTRIB :</text><text x="90" y="72" class="text-main" id="contrib_data">20</text>
