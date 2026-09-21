@@ -13,9 +13,9 @@ def build_svg(is_dark):
     random.seed(1337)
     cpu_bars = ""
     for i in range(30):
-        h = random.randint(4, 24)
+        h = random.randint(4, 20)
         x_pos = i * 6
-        cpu_bars += f'<rect x="{x_pos}" y="{26 - h}" width="3" height="{h}" fill="{text_main}" opacity="0.85" />\n'
+        cpu_bars += f'<rect x="{x_pos}" y="{22 - h}" width="3" height="{h}" fill="{text_main}" opacity="0.85" />\n'
 
     # Gojo "Nah, I'd win" Braille Art
     art_lines = [
@@ -34,7 +34,7 @@ def build_svg(is_dark):
         "⠀⠘⠃⢸⣿⡾⣿⣿⣿⣿⣯⣿⣿⣿⣶⣿⣿⣟⣾⡿⣫⣿⣿⣿⣽⣿⣿⣿⣿⢫⣾⣿⣿⣿⣿⣿⣴⡆⣻⣿⡏⣿⢻⣧⣿⡿⣿⡆⠀⠀",
         "⠀⠀⠀⠜⣿⣾⢿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣭⣿⣖⣿⢿⣿⡿⣿⣿⣿⡿⢡⢯⣿⣿⣿⣿⣿⣿⣿⣧⡿⣾⣷⣿⣿⢿⣿⡇⠉⠁⠀⠀",
         "⠀⠀⠀⠀⣿⣥⣾⣿⣿⣿⣿⣿⣿⣿⡇⣭⣿⣿⣿⣿⠃⠞⠟⣸⣿⠏⣸⣧⣀⠿⢿⣿⣿⣟⣿⣿⣿⣿⣽⣿⢿⣿⣿⣿⣿⠁⠀⠀⠀⠀",
-        "⠀⠀⠀⠈⠛⣹⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣟⣿⣿⡿⢶⣦⣄⣿⠏⠀⣿⣟⣿⣶⠾⣿⣟ Russian⣿⣟⣋⣛⣿⣿⣿⣿⡇⣻⣿⣿⣿⡏⠀⠀⠀⠀⠀".replace("Russian", ""),
+        "⠀⠀⠀⠈⠛⣹⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣟⣿⣿⡿⢶⣦⣄⣿⠏⠀⣿⣟⣿⣶⠾⣿⣟⣿⣟⣋⣛⣿⣿⣿⣿⡇⣻⣿⣿⣿⡏⠀⠀⠀⠀⠀",
         "⠀⠀⠀⠀⠟⠛⠫⣿⣿⣿⣿⣿⡿⣧⠛⣿⠛⣿⣿⣿⣷⡌⠹⡟⠀⠀⠉⡟⠋⢠⣾⣿⣿⣿⡟⣿⣿⣿⣿⢀⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀",
         "⠀⠀⠀⠀⠀⠀⠘⠋⣾⣷⣿⣿⣧⠙⠀⠙⢣⠝⠛⠋⣽⣷⢦⠇⠀⠀⠘⠁⣤⣾⣿⠝⠛⠉⠘⢻⣿⣿⢿⣼⣷⡟⢻⣷⠉⠀⡀⠀⠀⠀",
         "⠀⠀⠀⠀⠀⠀⠀⠐⠟⢻⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠈⠛⠀⠀⠀⠀⠀⣾⠟⠀⢸⣷⣿⡇⠀⠛⠀⠀⠁⠀⠀⠀",
@@ -47,14 +47,14 @@ def build_svg(is_dark):
         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣰⣦⡀⠸⣿⣦⡀⠀⠀⠀⠀⠀⠀⢀⣴⡟⠁⠀⠐⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
         "⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⡄⢺⣿⡄⠹⣿⠻⢦⣤⣤⣤⣤⣶⣿⡟⢀⣀⠀⠀⢸⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
         "⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣮⣿⣿⡀⠹⡷⣦⣀⡀⡀⢸⣿⠏⢠⣾⣿⠀⠀⣾⣿⣿⣿⣿⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⣀⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⧉⠀⠘⣷⣻⡟⠀⡼⠁⣴⣿⣿⣯⣥⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀",
+        "⣀⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠘⣷⣻⡟⠀⡼⠁⣴⣿⣿⣯⣥⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀",
         "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣯⣿⣤⣤⣤⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣄",
         "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
     ]
 
     art_svg = ""
     for idx, line in enumerate(art_lines):
-        art_svg += f'<tspan x="448" y="{170 + idx * 7.4}">{line}</tspan>\n'
+        art_svg += f'<tspan x="12" y="{36 + idx * 5.8}">{line}</tspan>\n'
 
     svg = f"""<?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="100%" height="100%">
@@ -84,7 +84,8 @@ def build_svg(is_dark):
     .art {{
         fill: {text_main};
         font-family: 'ConsolasFallback', Consolas, monospace;
-        font-size: 6.8px;
+        font-size: 5.4px;
+        line-height: 1;
         white-space: pre;
         opacity: 0.95;
     }}
@@ -160,7 +161,7 @@ def build_svg(is_dark):
   <text x="130" y="126" class="text-main">[====================] 95%</text>
 </g>
 
-<!-- RIGHT COLUMN: Databank Stats & Braille Art -->
+<!-- RIGHT COLUMN: Databank Stats & ASCII Box -->
 
 <!-- 1. DATABANK STATS BOX -->
 <g transform="translate(435, 48)">
@@ -179,24 +180,24 @@ def build_svg(is_dark):
   <text x="290" y="72" class="text-muted">RANK    :</text><text x="365" y="72" class="text-main">S+ TIER</text>
 </g>
 
-<!-- 2. BRAILLE ARTWORK STREAM BOX -->
+<!-- 2. ASCII BOX -->
 <g transform="translate(435, 150)">
   <rect width="420" height="248" fill="none" stroke="{border_color}" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ ARTWORK_STREAM ]</text>
+  <text x="12" y="16" class="text-header">[ ASCII ]</text>
   <line x1="0" y1="24" x2="420" y2="24" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 2" />
   
-  <g class="art">
+  <text class="art">
 {art_svg}
-  </g>
+  </text>
 
   <!-- Bottom ASCII CPU Visualizer -->
-  <g transform="translate(12, 212)">
-    <line x1="0" y1="0" x2="396" y2="0" stroke="{border_dim}" stroke-width="0.8" stroke-dasharray="2 2" />
-    <text x="0" y="18" class="micro-text">CPU_LOAD_STREAM :</text>
-    <g transform="translate(130, 2)">
+  <g transform="translate(12, 220)">
+    <line x1="0" y1="-4" x2="396" y2="-4" stroke="{border_dim}" stroke-width="0.8" stroke-dasharray="2 2" />
+    <text x="0" y="14" class="micro-text">CPU_STREAM:</text>
+    <g transform="translate(90, 0)">
       {cpu_bars}
     </g>
-    <text x="325" y="18" class="text-main" font-size="10px">99.8% UP</text>
+    <text x="310" y="14" class="text-main" font-size="10px">99.8% UP</text>
   </g>
 </g>
 
@@ -213,4 +214,4 @@ def build_svg(is_dark):
 if __name__ == '__main__':
     build_svg(True)
     build_svg(False)
-    print("Gojo 'Nah, I'd win' ASCII HUD SVGs generated successfully!")
+    print("Fixed Gojo ASCII HUD SVGs generated successfully!")

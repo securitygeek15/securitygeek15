@@ -26,7 +26,8 @@
     .art {
         fill: #ffffff;
         font-family: 'ConsolasFallback', Consolas, monospace;
-        font-size: 6.8px;
+        font-size: 5.4px;
+        line-height: 1;
         white-space: pre;
         opacity: 0.95;
     }
@@ -113,7 +114,7 @@
   
   <text x="12" y="46" class="text-muted">REPOS   :</text><text x="90" y="46" class="text-main" id="repo_data">20</text>
   <text x="150" y="46" class="text-muted">STARS   :</text><text x="220" y="46" class="text-main" id="star_data">24</text>
-  <text x="290" y="46" class="text-muted">COMMITS :</text><text x="365" y="46" class="text-main" id="commit_data">129</text>
+  <text x="290" y="46" class="text-muted">COMMITS :</text><text x="365" y="46" class="text-main" id="commit_data">130</text>
 
   
   <text x="12" y="72" class="text-muted">CONTRIB :</text><text x="90" y="72" class="text-main" id="contrib_data">20</text>
@@ -124,82 +125,82 @@
 
 <g transform="translate(435, 150)">
   <rect width="420" height="248" fill="none" stroke="#ffffff" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ ARTWORK_STREAM ]</text>
+  <text x="12" y="16" class="text-header">[ ASCII ]</text>
   <line x1="0" y1="24" x2="420" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
   
-  <g class="art">
-<tspan x="448" y="170.0">⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⣾⡳⣼⣆⠀⠀⢹⡄⠹⣷⣄⢠⠇⠻⣷⣶⢀⣸⣿⡾⡏⠀⠰⣿⣰⠏⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="177.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⣀⣀⣀⡹⣟⡪⢟⣷⠦⠬⣿⣦⣌⡙⠿⡆⠻⡌⠿⣦⣿⣿⣿⣿⣦⣿⡿⠟⠚⠉⠀⠉⠳⣄⡀⠀⠀⠁⠀</tspan>
-<tspan x="448" y="184.8">⠀⠀⠀⠀⠀⠀⠀⡀⢀⣼⣟⠛⠛⠙⠛⠉⠻⢶⣮⢿⣯⡙⢶⡌⠲⢤⡑⠀⠈⠛⠟⢿⣿⠛⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣆⠀⠀⠀</tspan>
-<tspan x="448" y="192.2">⠀⠀⠀⠀⠀⡸⠯⣙⠛⢉⣉⣙⣿⣿⡳⢶⣦⣝⢿⣆⠉⠻⣄⠈⢆⢵⡈⠀⠀⢰⡆⠀⣼⠓⠀⠀⠀          Nah    ⠀⠀⠈⣷⠀⠀</tspan>
-<tspan x="448" y="199.6">⠀⠀⠀⠖⠉⠻⣟⡿⣿⣭⢽⣽⣶⣈⢛⣾⣿⣧⠀⠙⠓⠀⠑⢦⡀⠹⣧⢂⠀⣿⡇⢀⣿⠺⠇⠀          ⠀I'd⠀          ⠀⣿⠀⠀</tspan>
-<tspan x="448" y="207.0">⠀⠀⠀⠀⠐⠈⠉⢛⣿⣿⣶⣤⣈⠉⣰⣗⡈⢛⣇⠀⣵⡀⠀⠘⣿⡄⢻⣤⠀⢻⡇⣼⣧⣿⡄⠀⠀         Win⠀      ⠀⠀⡿⠀⠀</tspan>
-<tspan x="448" y="214.4">⠀⠀⠀⠀⠀⣠⣾⣿⢍⡉⠛⠻⣷⡆⠨⣿⣭⣤⣍⠀⢹⣷⡀⠀⠹⣿⡄⠈⠀⢿⠁⣿⣿⠏⠀⠀⠀                        ⠀⠀⠀⣇⠀⠀</tspan>
-<tspan x="448" y="221.8">⠀⣿⣇⣠⣾⣿⣛⣲⣿⠛⠀⠀⢀⣸⣿⣿⣟⣮⡻⣷⣤⡙⢟⡀⠀⠙⢧⠀⠀⠎⠀⠉⠁⠰⣿⠀⠀                         ⠀⢀⡿⠀⠀</tspan>
-<tspan x="448" y="229.2">⠀⠈⢻⣿⣿⣽⣿⣿⣿⣴⡏⠚⢛⣈⣍⠛⠛⠿⢦⣌⢙⠻⡆⠁⠀⠀⠀⣴⣦⠀⠀⠀⠐⢳⢻⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠮⠀⠀⠀</tspan>
-<tspan x="448" y="236.60000000000002">⠀⠀⠈⠙⣿⣧⣶⣿⠿⣧⣴⣿⢻⡉⠀⢀⣠⣴⣾⡟⠿⠃⠁⣠⣤⡶⣾⡟⠅⠀⣀⡄⠀⣾⢸⣿⣏⢻⢶⣦⣤⣤⣄⢶⣾⣿⣡⣤⡄⠀</tspan>
-<tspan x="448" y="244.0">⠀⠀⣠⣞⣋⣿⣿⣾⣿⡿⡛⣹⡟⣤⢰⡿⠟⠉⣀⣀⣤⣤⡠⠙⢁⣾⡿⠂⠀⣿⠟⣁⠀⣹⠀⣹⣿⡟⣼⣿⣿⣌⣿⣞⣿⣿⠁⠀⠀⠀</tspan>
-<tspan x="448" y="251.4">⠀⢠⡿⢛⢟⣿⣿⣿⣿⣿⣿⡟⣼⣿⣟⢓⠛⣿⣏⣿⣵⣗⣵⣴⣿⢟⡵⣣⣼⣿⢟⣵⣶⢻⣶⣿⠀⠀⣈⢻⣿⣿⣿⢿⣾⢿⣧⠀⠀⠀</tspan>
-<tspan x="448" y="258.8">⠀⠘⠃⢸⣿⡾⣿⣿⣿⣿⣯⣿⣿⣿⣶⣿⣿⣟⣾⡿⣫⣿⣿⣿⣽⣿⣿⣿⣿⢫⣾⣿⣿⣿⣿⣿⣴⡆⣻⣿⡏⣿⢻⣧⣿⡿⣿⡆⠀⠀</tspan>
-<tspan x="448" y="266.2">⠀⠀⠀⠜⣿⣾⢿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣭⣿⣖⣿⢿⣿⡿⣿⣿⣿⡿⢡⢯⣿⣿⣿⣿⣿⣿⣿⣧⡿⣾⣷⣿⣿⢿⣿⡇⠉⠁⠀⠀</tspan>
-<tspan x="448" y="273.6">⠀⠀⠀⠀⣿⣥⣾⣿⣿⣿⣿⣿⣿⣿⡇⣭⣿⣿⣿⣿⠃⠞⠟⣸⣿⠏⣸⣧⣀⠿⢿⣿⣿⣟⣿⣿⣿⣿⣽⣿⢿⣿⣿⣿⣿⠁⠀⠀⠀⠀</tspan>
-<tspan x="448" y="281.0">⠀⠀⠀⠈⠛⣹⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣟⣿⣿⡿⢶⣦⣄⣿⠏⠀⣿⣟⣿⣶⠾⣿⣟ ⣿⣟⣋⣛⣿⣿⣿⣿⡇⣻⣿⣿⣿⡏⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="288.4">⠀⠀⠀⠀⠟⠛⠫⣿⣿⣿⣿⣿⡿⣧⠛⣿⠛⣿⣿⣿⣷⡌⠹⡟⠀⠀⠉⡟⠋⢠⣾⣿⣿⣿⡟⣿⣿⣿⣿⢀⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="295.8">⠀⠀⠀⠀⠀⠀⠘⠋⣾⣷⣿⣿⣧⠙⠀⠙⢣⠝⠛⠋⣽⣷⢦⠇⠀⠀⠘⠁⣤⣾⣿⠝⠛⠉⠘⢻⣿⣿⢿⣼⣷⡟⢻⣷⠉⠀⡀⠀⠀⠀</tspan>
-<tspan x="448" y="303.20000000000005">⠀⠀⠀⠀⠀⠀⠀⠐⠟⢻⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠈⠛⠀⠀⠀⠀⠀⣾⠟⠀⢸⣷⣿⡇⠀⠛⠀⠀⠁⠀⠀⠀</tspan>
-<tspan x="448" y="310.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⡧⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="318.0">⠀⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠈⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⢻⡿⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="325.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠲⣄⠀⡄⠆⠀⠀⠀⠀⠀⠀⠀⠀⣼⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="332.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⣀⠀⠀⣠⣾⣿⠁⠀⠀⠀⠀⠀⣀⡄⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="340.20000000000005">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢻⣆⠀⠛⠁⠶⣶⣶⣶⣶⣶⣶⡶⠆⠘⠋⣠⡾⢫⣾⡟⠀⠀⠀⠀⠀⠐⠉⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="347.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠛⠀⠙⣷⡀⠀⠀⠙⠛⠛⠛⠛⠋⠁⠀⢀⣴⠋⠀⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="355.0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣰⣦⡀⠸⣿⣦⡀⠀⠀⠀⠀⠀⠀⢀⣴⡟⠁⠀⠐⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="362.4">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⡄⢺⣿⡄⠹⣿⠻⢦⣤⣤⣤⣤⣶⣿⡟⢀⣀⠀⠀⢸⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="369.8">⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣮⣿⣿⡀⠹⡷⣦⣀⡀⡀⢸⣿⠏⢠⣾⣿⠀⠀⣾⣿⣿⣿⣿⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="377.20000000000005">⣀⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⧉⠀⠘⣷⣻⡟⠀⡼⠁⣴⣿⣿⣯⣥⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀</tspan>
-<tspan x="448" y="384.6">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣯⣿⣤⣤⣤⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣄</tspan>
-<tspan x="448" y="392.0">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+  <text class="art">
+<tspan x="12" y="36.0">⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⣾⡳⣼⣆⠀⠀⢹⡄⠹⣷⣄⢠⠇⠻⣷⣶⢀⣸⣿⡾⡏⠀⠰⣿⣰⠏⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="41.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⣀⣀⣀⡹⣟⡪⢟⣷⠦⠬⣿⣦⣌⡙⠿⡆⠻⡌⠿⣦⣿⣿⣿⣿⣦⣿⡿⠟⠚⠉⠀⠉⠳⣄⡀⠀⠀⠁⠀</tspan>
+<tspan x="12" y="47.6">⠀⠀⠀⠀⠀⠀⠀⡀⢀⣼⣟⠛⠛⠙⠛⠉⠻⢶⣮⢿⣯⡙⢶⡌⠲⢤⡑⠀⠈⠛⠟⢿⣿⠛⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣆⠀⠀⠀</tspan>
+<tspan x="12" y="53.4">⠀⠀⠀⠀⠀⡸⠯⣙⠛⢉⣉⣙⣿⣿⡳⢶⣦⣝⢿⣆⠉⠻⣄⠈⢆⢵⡈⠀⠀⢰⡆⠀⣼⠓⠀⠀⠀          Nah    ⠀⠀⠈⣷⠀⠀</tspan>
+<tspan x="12" y="59.2">⠀⠀⠀⠖⠉⠻⣟⡿⣿⣭⢽⣽⣶⣈⢛⣾⣿⣧⠀⠙⠓⠀⠑⢦⡀⠹⣧⢂⠀⣿⡇⢀⣿⠺⠇⠀          ⠀I'd⠀          ⠀⣿⠀⠀</tspan>
+<tspan x="12" y="65.0">⠀⠀⠀⠀⠐⠈⠉⢛⣿⣿⣶⣤⣈⠉⣰⣗⡈⢛⣇⠀⣵⡀⠀⠘⣿⡄⢻⣤⠀⢻⡇⣼⣧⣿⡄⠀⠀         Win⠀      ⠀⠀⡿⠀⠀</tspan>
+<tspan x="12" y="70.8">⠀⠀⠀⠀⠀⣠⣾⣿⢍⡉⠛⠻⣷⡆⠨⣿⣭⣤⣍⠀⢹⣷⡀⠀⠹⣿⡄⠈⠀⢿⠁⣿⣿⠏⠀⠀⠀                        ⠀⠀⠀⣇⠀⠀</tspan>
+<tspan x="12" y="76.6">⠀⣿⣇⣠⣾⣿⣛⣲⣿⠛⠀⠀⢀⣸⣿⣿⣟⣮⡻⣷⣤⡙⢟⡀⠀⠙⢧⠀⠀⠎⠀⠉⠁⠰⣿⠀⠀                         ⠀⢀⡿⠀⠀</tspan>
+<tspan x="12" y="82.4">⠀⠈⢻⣿⣿⣽⣿⣿⣿⣴⡏⠚⢛⣈⣍⠛⠛⠿⢦⣌⢙⠻⡆⠁⠀⠀⠀⣴⣦⠀⠀⠀⠐⢳⢻⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠮⠀⠀⠀</tspan>
+<tspan x="12" y="88.19999999999999">⠀⠀⠈⠙⣿⣧⣶⣿⠿⣧⣴⣿⢻⡉⠀⢀⣠⣴⣾⡟⠿⠃⠁⣠⣤⡶⣾⡟⠅⠀⣀⡄⠀⣾⢸⣿⣏⢻⢶⣦⣤⣤⣄⢶⣾⣿⣡⣤⡄⠀</tspan>
+<tspan x="12" y="94.0">⠀⠀⣠⣞⣋⣿⣿⣾⣿⡿⡛⣹⡟⣤⢰⡿⠟⠉⣀⣀⣤⣤⡠⠙⢁⣾⡿⠂⠀⣿⠟⣁⠀⣹⠀⣹⣿⡟⣼⣿⣿⣌⣿⣞⣿⣿⠁⠀⠀⠀</tspan>
+<tspan x="12" y="99.8">⠀⢠⡿⢛⢟⣿⣿⣿⣿⣿⣿⡟⣼⣿⣟⢓⠛⣿⣏⣿⣵⣗⣵⣴⣿⢟⡵⣣⣼⣿⢟⣵⣶⢻⣶⣿⠀⠀⣈⢻⣿⣿⣿⢿⣾⢿⣧⠀⠀⠀</tspan>
+<tspan x="12" y="105.6">⠀⠘⠃⢸⣿⡾⣿⣿⣿⣿⣯⣿⣿⣿⣶⣿⣿⣟⣾⡿⣫⣿⣿⣿⣽⣿⣿⣿⣿⢫⣾⣿⣿⣿⣿⣿⣴⡆⣻⣿⡏⣿⢻⣧⣿⡿⣿⡆⠀⠀</tspan>
+<tspan x="12" y="111.39999999999999">⠀⠀⠀⠜⣿⣾⢿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣭⣿⣖⣿⢿⣿⡿⣿⣿⣿⡿⢡⢯⣿⣿⣿⣿⣿⣿⣿⣧⡿⣾⣷⣿⣿⢿⣿⡇⠉⠁⠀⠀</tspan>
+<tspan x="12" y="117.2">⠀⠀⠀⠀⣿⣥⣾⣿⣿⣿⣿⣿⣿⣿⡇⣭⣿⣿⣿⣿⠃⠞⠟⣸⣿⠏⣸⣧⣀⠿⢿⣿⣿⣟⣿⣿⣿⣿⣽⣿⢿⣿⣿⣿⣿⠁⠀⠀⠀⠀</tspan>
+<tspan x="12" y="123.0">⠀⠀⠀⠈⠛⣹⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣟⣿⣿⡿⢶⣦⣄⣿⠏⠀⣿⣟⣿⣶⠾⣿⣟⣿⣟⣋⣛⣿⣿⣿⣿⡇⣻⣿⣿⣿⡏⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="128.8">⠀⠀⠀⠀⠟⠛⠫⣿⣿⣿⣿⣿⡿⣧⠛⣿⠛⣿⣿⣿⣷⡌⠹⡟⠀⠀⠉⡟⠋⢠⣾⣿⣿⣿⡟⣿⣿⣿⣿⢀⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="134.6">⠀⠀⠀⠀⠀⠀⠘⠋⣾⣷⣿⣿⣧⠙⠀⠙⢣⠝⠛⠋⣽⣷⢦⠇⠀⠀⠘⠁⣤⣾⣿⠝⠛⠉⠘⢻⣿⣿⢿⣼⣷⡟⢻⣷⠉⠀⡀⠀⠀⠀</tspan>
+<tspan x="12" y="140.39999999999998">⠀⠀⠀⠀⠀⠀⠀⠐⠟⢻⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠈⠛⠀⠀⠀⠀⠀⣾⠟⠀⢸⣷⣿⡇⠀⠛⠀⠀⠁⠀⠀⠀</tspan>
+<tspan x="12" y="146.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⡧⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="152.0">⠀⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠈⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⢻⡿⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="157.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠲⣄⠀⡄⠆⠀⠀⠀⠀⠀⠀⠀⠀⣼⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="163.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⣀⠀⠀⣠⣾⣿⠁⠀⠀⠀⠀⠀⣀⡄⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="169.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢻⣆⠀⠛⠁⠶⣶⣶⣶⣶⣶⣶⡶⠆⠘⠋⣠⡾⢫⣾⡟⠀⠀⠀⠀⠀⠐⠉⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="175.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠛⠀⠙⣷⡀⠀⠀⠙⠛⠛⠛⠛⠋⠁⠀⢀⣴⠋⠀⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="181.0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣰⣦⡀⠸⣿⣦⡀⠀⠀⠀⠀⠀⠀⢀⣴⡟⠁⠀⠐⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="186.79999999999998">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⡄⢺⣿⡄⠹⣿⠻⢦⣤⣤⣤⣤⣶⣿⡟⢀⣀⠀⠀⢸⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="192.6">⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣮⣿⣿⡀⠹⡷⣦⣀⡀⡀⢸⣿⠏⢠⣾⣿⠀⠀⣾⣿⣿⣿⣿⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="198.4">⣀⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠘⣷⣻⡟⠀⡼⠁⣴⣿⣿⣯⣥⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀</tspan>
+<tspan x="12" y="204.2">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣯⣿⣤⣤⣤⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣄</tspan>
+<tspan x="12" y="210.0">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
 
-  </g>
+  </text>
 
   
-  <g transform="translate(12, 212)">
-    <line x1="0" y1="0" x2="396" y2="0" stroke="#333333" stroke-width="0.8" stroke-dasharray="2 2" />
-    <text x="0" y="18" class="micro-text">CPU_LOAD_STREAM :</text>
-    <g transform="translate(130, 2)">
-      <rect x="0" y="3" width="3" height="23" fill="#ffffff" opacity="0.85" />
-<rect x="6" y="5" width="3" height="21" fill="#ffffff" opacity="0.85" />
-<rect x="12" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="18" y="4" width="3" height="22" fill="#ffffff" opacity="0.85" />
-<rect x="24" y="4" width="3" height="22" fill="#ffffff" opacity="0.85" />
-<rect x="30" y="17" width="3" height="9" fill="#ffffff" opacity="0.85" />
-<rect x="36" y="12" width="3" height="14" fill="#ffffff" opacity="0.85" />
-<rect x="42" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="48" y="2" width="3" height="24" fill="#ffffff" opacity="0.85" />
-<rect x="54" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="60" y="13" width="3" height="13" fill="#ffffff" opacity="0.85" />
-<rect x="66" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="72" y="16" width="3" height="10" fill="#ffffff" opacity="0.85" />
-<rect x="78" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="84" y="19" width="3" height="7" fill="#ffffff" opacity="0.85" />
-<rect x="90" y="9" width="3" height="17" fill="#ffffff" opacity="0.85" />
-<rect x="96" y="2" width="3" height="24" fill="#ffffff" opacity="0.85" />
-<rect x="102" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="108" y="20" width="3" height="6" fill="#ffffff" opacity="0.85" />
-<rect x="114" y="6" width="3" height="20" fill="#ffffff" opacity="0.85" />
-<rect x="120" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="126" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="132" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="138" y="13" width="3" height="13" fill="#ffffff" opacity="0.85" />
-<rect x="144" y="22" width="3" height="4" fill="#ffffff" opacity="0.85" />
-<rect x="150" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="156" y="3" width="3" height="23" fill="#ffffff" opacity="0.85" />
-<rect x="162" y="19" width="3" height="7" fill="#ffffff" opacity="0.85" />
-<rect x="168" y="8" width="3" height="18" fill="#ffffff" opacity="0.85" />
-<rect x="174" y="15" width="3" height="11" fill="#ffffff" opacity="0.85" />
+  <g transform="translate(12, 220)">
+    <line x1="0" y1="-4" x2="396" y2="-4" stroke="#333333" stroke-width="0.8" stroke-dasharray="2 2" />
+    <text x="0" y="14" class="micro-text">CPU_STREAM:</text>
+    <g transform="translate(90, 0)">
+      <rect x="0" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="6" y="13" width="3" height="9" fill="#ffffff" opacity="0.85" />
+<rect x="12" y="8" width="3" height="14" fill="#ffffff" opacity="0.85" />
+<rect x="18" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="24" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="30" y="9" width="3" height="13" fill="#ffffff" opacity="0.85" />
+<rect x="36" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="42" y="12" width="3" height="10" fill="#ffffff" opacity="0.85" />
+<rect x="48" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="54" y="15" width="3" height="7" fill="#ffffff" opacity="0.85" />
+<rect x="60" y="5" width="3" height="17" fill="#ffffff" opacity="0.85" />
+<rect x="66" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="72" y="16" width="3" height="6" fill="#ffffff" opacity="0.85" />
+<rect x="78" y="2" width="3" height="20" fill="#ffffff" opacity="0.85" />
+<rect x="84" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="90" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="96" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="102" y="9" width="3" height="13" fill="#ffffff" opacity="0.85" />
+<rect x="108" y="18" width="3" height="4" fill="#ffffff" opacity="0.85" />
+<rect x="114" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="120" y="15" width="3" height="7" fill="#ffffff" opacity="0.85" />
+<rect x="126" y="4" width="3" height="18" fill="#ffffff" opacity="0.85" />
+<rect x="132" y="11" width="3" height="11" fill="#ffffff" opacity="0.85" />
+<rect x="138" y="13" width="3" height="9" fill="#ffffff" opacity="0.85" />
+<rect x="144" y="8" width="3" height="14" fill="#ffffff" opacity="0.85" />
+<rect x="150" y="4" width="3" height="18" fill="#ffffff" opacity="0.85" />
+<rect x="156" y="10" width="3" height="12" fill="#ffffff" opacity="0.85" />
+<rect x="162" y="12" width="3" height="10" fill="#ffffff" opacity="0.85" />
+<rect x="168" y="16" width="3" height="6" fill="#ffffff" opacity="0.85" />
+<rect x="174" y="2" width="3" height="20" fill="#ffffff" opacity="0.85" />
 
     </g>
-    <text x="325" y="18" class="text-main" font-size="10px">99.8% UP</text>
+    <text x="310" y="14" class="text-main" font-size="10px">99.8% UP</text>
   </g>
 </g>
 
