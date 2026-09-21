@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="100%" height="100%">
 <defs>
   <style>
     @font-face {
@@ -7,360 +7,199 @@
         src: local('Consolas'), local('Fira Code'), local('Cascadia Code'), local('Courier New'), monospace;
         font-display: swap;
     }
-    .bg { fill: url(#bg-grad); }
-    .font-mono { font-family: 'ConsolasFallback', Consolas, 'Fira Code', monospace; }
+    .bg { fill: #000000; }
+    .text-main { fill: #ffffff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 13px; font-weight: bold; }
+    .text-muted { fill: #777777; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 11px; }
+    .text-title { fill: #ffffff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 18px; font-weight: bold; letter-spacing: 1px; }
+    .text-header { fill: #ffffff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 12px; font-weight: bold; letter-spacing: 1px; }
+    .micro-text { fill: #777777; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 10px; letter-spacing: 1px; }
     
-    .text-main { fill: #f8fafc; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 13px; font-weight: 600; }
-    .text-muted { fill: #94a3b8; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 11px; }
-    .text-accent { fill: #00f0ff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 12px; font-weight: bold; letter-spacing: 0.5px; }
-    .text-title { fill: #f8fafc; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 21px; font-weight: 800; letter-spacing: 1px; }
-    .text-stat-val { fill: #f8fafc; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 16px; font-weight: 800; }
-    .text-stat-lbl { fill: #94a3b8; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 10px; letter-spacing: 1px; font-weight: 600; }
-    .micro-text { fill: #94a3b8; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 10px; letter-spacing: 1.5px; }
-    
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 3px #00f0ff); }
-      50% { opacity: 1; filter: drop-shadow(0 0 9px #00f0ff); }
-    }
-    @keyframes pulseDot {
-      0%, 100% { opacity: 1; r: 4; }
-      50% { opacity: 0.4; r: 5; }
-    }
-    @keyframes scanline {
-      0% { transform: translateY(-40px); }
-      100% { transform: translateY(470px); }
-    }
     @keyframes blink {
       0%, 49% { opacity: 1; }
       50%, 100% { opacity: 0; }
     }
-    @keyframes radarSpin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes scanline {
+      0% { transform: translateY(-40px); }
+      100% { transform: translateY(430px); }
     }
     
     .art {
-        fill: #00f0ff;
+        fill: #ffffff;
         font-family: 'ConsolasFallback', Consolas, monospace;
-        font-size: 7.8px;
+        font-size: 7.5px;
         white-space: pre;
-        opacity: 0.85;
+        opacity: 0.9;
     }
     
-    .hologram {
-        animation: pulseGlow 4s infinite ease-in-out;
-    }
-    
-    .cursor { animation: blink 1s infinite; fill: #00f0ff; }
-    .status-dot { animation: pulseDot 2s infinite ease-in-out; fill: #00ff9d; }
-    .scan { animation: scanline 7s linear infinite; fill: url(#scan-grad); pointer-events: none; opacity: 0.12; }
-    .radar-line { transform-origin: 675px 305px; animation: radarSpin 12s linear infinite; }
+    .cursor { animation: blink 1s infinite; fill: #ffffff; }
+    .scan { animation: scanline 8s linear infinite; fill: url(#scan-grad); pointer-events: none; opacity: 0.1; }
   </style>
   
-  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#0f172a" />
-    <stop offset="100%" stop-color="#080c14" />
-  </linearGradient>
-
-  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f0ff0d" stroke-width="1" />
-    <circle cx="30" cy="30" r="1" fill="#00f0ff33" />
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#ffffff0a" stroke-width="0.5" />
+    <line x1="0" y1="0" x2="0" y2="20" stroke="#ffffff0a" stroke-width="0.5" />
   </pattern>
   
   <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
-    <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.8" />
-    <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6" />
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
   </linearGradient>
-
-  <linearGradient id="panel-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#0f172a" stop-opacity="0.6" />
-    <stop offset="100%" stop-color="#1e293b" stop-opacity="0.5" />
-  </linearGradient>
-  
-  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur stdDeviation="3" result="blur" />
-    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-  </filter>
 </defs>
 
 
-<rect width="100%" height="100%" class="bg" rx="10" />
-<rect width="100%" height="100%" fill="url(#grid)" rx="10" />
+<rect width="100%" height="100%" class="bg" />
+<rect width="100%" height="100%" fill="url(#grid)" />
 
 
-<path d="M 20 12 L 900 12 L 910 22 L 910 438 L 900 448 L 20 448 L 10 438 L 10 22 Z" fill="none" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.4" />
+<rect x="10" y="10" width="860" height="400" fill="none" stroke="#ffffff" stroke-width="1.5" />
+<path d="M 10 18 L 18 10 M 862 10 L 870 18 M 10 402 L 18 410 M 862 410 L 870 402" stroke="#ffffff" stroke-width="1.5" />
 
 
-<path d="M 10 32 L 10 22 L 20 12 M 900 12 L 910 22 L 910 32 M 10 428 L 10 438 L 20 448 M 900 448 L 910 438 L 910 428" fill="none" stroke="#00f0ff" stroke-width="2.5" />
-
-
-<rect x="20" y="20" width="880" height="32" fill="#0f172a" fill-opacity="0.7" rx="4" stroke="#00f0ff33" stroke-width="1" />
-<circle cx="36" cy="36" r="4" class="status-dot" />
-<text x="48" y="40" class="text-accent" font-size="11px">[● ONLINE]</text>
-<text x="135" y="40" class="micro-text">SYS.SECURITY.HUD v3.5 // NODE: securitygeek15</text>
-<text x="640" y="40" class="micro-text">ENCRYPTED_SESSION [256-BIT]</text>
-<rect x="805" y="27" width="85" height="18" fill="#00f0ff" fill-opacity="0.15" rx="3" stroke="#00f0ff" stroke-width="0.8" />
-<text x="812" y="40" class="text-accent" font-size="9px">SEC_LEVEL: ALPHA</text>
+<text x="25" y="26" class="micro-text">SYS.INIT // BLACK_AND_WHITE_ASCII</text>
+<text x="700" y="26" class="micro-text">STATUS: ACTIVE // SEC_NODE</text>
+<line x1="10" y1="35" x2="870" y2="35" stroke="#ffffff" stroke-width="1" />
 
 
 
 
-<g transform="translate(24, 62)">
-  <rect width="424" height="66" fill="url(#panel-grad)" rx="6" stroke="#00f0ff33" stroke-width="1" />
-  <rect x="0" y="0" width="4" height="66" fill="#00f0ff" rx="2" />
-  <text x="16" y="22" class="text-accent">[+] TARGET_IDENTITY</text>
-  <text x="16" y="48" class="text-title">securitygeek15<tspan class="cursor">_</tspan></text>
-  <text x="300" y="22" class="micro-text" font-size="9px">ROLE: SEC_ENG</text>
-  <text x="235" y="48" class="text-muted" font-size="11px">Cyber Sec &amp; Pentester</text>
+<g transform="translate(25, 48)">
+  <rect width="395" height="58" fill="none" stroke="#ffffff" stroke-width="1" />
+  <text x="12" y="16" class="text-header">[ IDENTITY ]</text>
+  <line x1="0" y1="24" x2="395" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
+  <text x="12" y="44" class="text-title">securitygeek15@system<tspan class="cursor">_</tspan></text>
 </g>
 
 
-<g transform="translate(24, 138)">
-  <rect width="424" height="126" fill="url(#panel-grad)" rx="6" stroke="#00f0ff33" stroke-width="1" />
-  <text x="16" y="20" class="text-accent">[+] SYSTEM_DIAGNOSTICS</text>
-  <line x1="16" y1="28" x2="408" y2="28" stroke="#00f0ff33" stroke-width="1" stroke-dasharray="3 3" />
+<g transform="translate(25, 118)">
+  <rect width="395" height="126" fill="none" stroke="#ffffff" stroke-width="1" />
+  <text x="12" y="16" class="text-header">[ SYSTEM_SPECS ]</text>
+  <line x1="0" y1="24" x2="395" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
   
-  
-  <text x="16" y="48" class="text-muted">OS</text>
-  <text x="80" y="48" class="text-main">Arch Linux (x86_64)</text>
-  
-  <text x="16" y="72" class="text-muted">KERNEL</text>
-  <text x="80" y="72" class="text-main">Security &amp; Hardened</text>
-  
-  <text x="16" y="96" class="text-muted">SHELL</text>
-  <text x="80" y="96" class="text-main">Zsh / Bash</text>
-
-  <text x="16" y="116" class="text-muted">IDE</text>
-  <text x="80" y="116" class="text-main">Neovim / VS Code</text>
-
-  
-  <text x="230" y="48" class="text-muted">UPTIME</text>
-  <text x="290" y="48" class="text-main" id="uptime_data">17 years, 6 months</text>
-
-  <text x="230" y="72" class="text-muted">STATUS</text>
-  <text x="290" y="72" class="text-main">🟢 Active / Hunting</text>
-
-  <text x="230" y="96" class="text-muted">SECTOR</text>
-  <text x="290" y="96" class="text-main">Red Team / CTF</text>
-
-  <text x="230" y="116" class="text-muted">CONTACT</text>
-  <text x="290" y="116" class="text-main" font-size="11px">goofyaapa@gmail.com</text>
+  <text x="12" y="42" class="text-muted">OS      :</text><text x="90" y="42" class="text-main">Arch Linux (x86_64)</text>
+  <text x="12" y="62" class="text-muted">UPTIME  :</text><text x="90" y="62" class="text-main" id="uptime_data">17 years, 6 months</text>
+  <text x="12" y="82" class="text-muted">KERNEL  :</text><text x="90" y="82" class="text-main">Security &amp; Pentesting</text>
+  <text x="12" y="102" class="text-muted">SHELL   :</text><text x="90" y="102" class="text-main">Zsh / Bash</text>
+  <text x="240" y="82" class="text-muted">IDE   :</text><text x="285" y="82" class="text-main">Neovim</text>
+  <text x="240" y="102" class="text-muted">SECTOR:</text><text x="285" y="102" class="text-main">Red Team</text>
 </g>
 
 
-<g transform="translate(24, 274)">
-  <rect width="424" height="166" fill="url(#panel-grad)" rx="6" stroke="#00f0ff33" stroke-width="1" />
-  <text x="16" y="20" class="text-accent">[+] SECURITY &amp; TECH ARSENAL</text>
-  <line x1="16" y1="28" x2="408" y2="28" stroke="#00f0ff33" stroke-width="1" stroke-dasharray="3 3" />
+<g transform="translate(25, 256)">
+  <rect width="395" height="142" fill="none" stroke="#ffffff" stroke-width="1" />
+  <text x="12" y="16" class="text-header">[ SKILL_MATRIX ]</text>
+  <line x1="0" y1="24" x2="395" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
+  
+  <text x="12" y="42" class="text-muted">LANGS   :</text><text x="90" y="42" class="text-main">Python, Go, Bash, Java, JS, C/C++</text>
+  <text x="12" y="62" class="text-muted">DOMAINS :</text><text x="90" y="62" class="text-main">Web Pentesting, CTF, Automation</text>
+  <text x="12" y="82" class="text-muted">TOOLS   :</text><text x="90" y="82" class="text-main">Burp Suite, Metasploit, Wireshark</text>
   
   
-  <text x="16" y="46" class="text-muted">LANGS</text>
-  <g transform="translate(75, 34)">
-    <rect x="0" y="0" width="52" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="26" y="13" class="text-main" font-size="10px" text-anchor="middle">Python</text>
-    
-    <rect x="58" y="0" width="40" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="78" y="13" class="text-main" font-size="10px" text-anchor="middle">Go</text>
-    
-    <rect x="104" y="0" width="44" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="126" y="13" class="text-main" font-size="10px" text-anchor="middle">Bash</text>
-    
-    <rect x="154" y="0" width="42" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="175" y="13" class="text-main" font-size="10px" text-anchor="middle">Java</text>
-    
-    <rect x="202" y="0" width="34" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="219" y="13" class="text-main" font-size="10px" text-anchor="middle">JS</text>
+  <text x="12" y="106" class="text-muted">OFFENSIVE SEC :</text>
+  <text x="130" y="106" class="text-main">[==================  ] 90%</text>
 
-    <rect x="242" y="0" width="44" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="264" y="13" class="text-main" font-size="10px" text-anchor="middle">C/C++</text>
-  </g>
-
-  <text x="16" y="74" class="text-muted">DOMAINS</text>
-  <g transform="translate(75, 62)">
-    <rect x="0" y="0" width="90" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="45" y="13" class="text-main" font-size="10px" text-anchor="middle">Web Pentesting</text>
-    
-    <rect x="96" y="0" width="70" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="131" y="13" class="text-main" font-size="10px" text-anchor="middle">Bug Bounty</text>
-    
-    <rect x="172" y="0" width="42" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="193" y="13" class="text-main" font-size="10px" text-anchor="middle">CTF</text>
-    
-    <rect x="220" y="0" width="72" height="18" fill="#1e293b" fill-opacity="0.5" rx="3" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="256" y="13" class="text-main" font-size="10px" text-anchor="middle">Automation</text>
-  </g>
-
-  
-  <g transform="translate(16, 96)">
-    <text x="0" y="12" class="text-muted" font-size="10px">OFFENSIVE SEC</text>
-    <rect x="110" y="3" width="220" height="10" fill="#1e293b" rx="3" />
-    <rect x="110" y="3" width="206" height="10" fill="#00f0ff" rx="3" opacity="0.9" />
-    <text x="340" y="12" class="text-accent" font-size="10px">94%</text>
-
-    <text x="0" y="32" class="text-muted" font-size="10px">AUTOMATION &amp; BOT</text>
-    <rect x="110" y="23" width="220" height="10" fill="#1e293b" rx="3" />
-    <rect x="110" y="23" width="198" height="10" fill="#00ff9d" rx="3" opacity="0.9" />
-    <text x="340" y="32" class="text-accent" font-size="10px">90%</text>
-
-    <text x="0" y="52" class="text-muted" font-size="10px">REVERSE ENG &amp; CTF</text>
-    <rect x="110" y="43" width="220" height="10" fill="#1e293b" rx="3" />
-    <rect x="110" y="43" width="187" height="10" fill="#b026ff" rx="3" opacity="0.9" />
-    <text x="340" y="52" class="text-accent" font-size="10px">85%</text>
-  </g>
+  <text x="12" y="126" class="text-muted">AUTOMATION    :</text>
+  <text x="130" y="126" class="text-main">[====================] 95%</text>
 </g>
 
 
 
 
-<g transform="translate(464, 62)">
-  
-  <g transform="translate(0, 0)">
-    <rect width="136" height="50" fill="url(#panel-grad)" rx="5" stroke="#00f0ff33" stroke-width="1" />
-    <rect x="0" y="0" width="3" height="50" fill="#00f0ff" rx="1" />
-    <text x="12" y="18" class="text-stat-lbl">REPOSITORIES</text>
-    <text x="12" y="40" class="text-stat-val" id="repo_data">20</text>
-    <text x="105" y="38" font-size="16px">📦</text>
-  </g>
+<g transform="translate(435, 48)">
+  <rect width="420" height="92" fill="none" stroke="#ffffff" stroke-width="1" />
+  <text x="12" y="16" class="text-header">[ DATABANK ]</text>
+  <line x1="0" y1="24" x2="420" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
   
   
-  <g transform="translate(148, 0)">
-    <rect width="136" height="50" fill="url(#panel-grad)" rx="5" stroke="#00f0ff33" stroke-width="1" />
-    <rect x="0" y="0" width="3" height="50" fill="#00ff9d" rx="1" />
-    <text x="12" y="18" class="text-stat-lbl">TOTAL STARS</text>
-    <text x="12" y="40" class="text-stat-val" id="star_data">24</text>
-    <text x="105" y="38" font-size="16px">⭐</text>
-  </g>
+  <text x="12" y="46" class="text-muted">REPOS   :</text><text x="90" y="46" class="text-main" id="repo_data">20</text>
+  <text x="150" y="46" class="text-muted">STARS   :</text><text x="220" y="46" class="text-main" id="star_data">24</text>
+  <text x="290" y="46" class="text-muted">COMMITS :</text><text x="365" y="46" class="text-main" id="commit_data">128</text>
 
   
-  <g transform="translate(296, 0)">
-    <rect width="136" height="50" fill="url(#panel-grad)" rx="5" stroke="#00f0ff33" stroke-width="1" />
-    <rect x="0" y="0" width="3" height="50" fill="#b026ff" rx="1" />
-    <text x="12" y="18" class="text-stat-lbl">COMMITS</text>
-    <text x="12" y="40" class="text-stat-val" id="commit_data">128</text>
-    <text x="105" y="38" font-size="16px">⚡</text>
-  </g>
-
-  
-  <g transform="translate(0, 58)">
-    <rect width="136" height="50" fill="url(#panel-grad)" rx="5" stroke="#00f0ff33" stroke-width="1" />
-    <rect x="0" y="0" width="3" height="50" fill="#00ff9d" rx="1" />
-    <text x="12" y="18" class="text-stat-lbl">CONTRIBS / PRS</text>
-    <text x="12" y="40" class="text-stat-val" id="contrib_data">20</text>
-    <text x="105" y="38" font-size="16px">🔀</text>
-  </g>
-
-  
-  <g transform="translate(148, 58)">
-    <rect width="136" height="50" fill="url(#panel-grad)" rx="5" stroke="#00f0ff33" stroke-width="1" />
-    <rect x="0" y="0" width="3" height="50" fill="#00f0ff" rx="1" />
-    <text x="12" y="18" class="text-stat-lbl">FOLLOWERS</text>
-    <text x="12" y="40" class="text-stat-val" id="follower_data">5</text>
-    <text x="105" y="38" font-size="16px">👥</text>
-  </g>
-
-  
-  <g transform="translate(296, 58)">
-    <rect width="136" height="50" fill="url(#panel-grad)" rx="5" stroke="#00f0ff33" stroke-width="1" />
-    <rect x="0" y="0" width="3" height="50" fill="#00f0ff" rx="1" />
-    <text x="12" y="18" class="text-stat-lbl">SECURITY RANK</text>
-    <text x="12" y="40" class="text-stat-val" fill="#00f0ff">S+ TIER</text>
-    <text x="105" y="38" font-size="16px">🛡️</text>
-  </g>
+  <text x="12" y="72" class="text-muted">CONTRIB :</text><text x="90" y="72" class="text-main" id="contrib_data">20</text>
+  <text x="150" y="72" class="text-muted">FOLLOW  :</text><text x="220" y="72" class="text-main" id="follower_data">5</text>
+  <text x="290" y="72" class="text-muted">RANK    :</text><text x="365" y="72" class="text-main">S+ TIER</text>
 </g>
 
 
-<g transform="translate(464, 180)">
-  <rect width="432" height="260" fill="url(#panel-grad)" rx="6" stroke="#00f0ff33" stroke-width="1" />
+<g transform="translate(435, 150)">
+  <rect width="420" height="248" fill="none" stroke="#ffffff" stroke-width="1" />
+  <text x="12" y="16" class="text-header">[ ARTWORK_STREAM ]</text>
+  <line x1="0" y1="24" x2="420" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
   
-  
-  <text x="16" y="20" class="text-accent">[+] HOLOGRAPHIC_AVATAR // MONITOR</text>
-  <text x="320" y="20" class="micro-text" font-size="9px">FEED: LIVE_STREAM</text>
-  <line x1="16" y1="26" x2="416" y2="26" stroke="#00f0ff33" stroke-width="1" stroke-dasharray="3 3" />
+  <g class="art">
+<tspan x="450" y="170.0">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾</tspan>
+<tspan x="450" y="178.6">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃</tspan>
+<tspan x="450" y="187.2">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁</tspan>
+<tspan x="450" y="195.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⣷⡀⠀⠀⢷⡇⠀⠻⣼⠀⠀⠀⡾⣷⡀⠀⢸⡄⡇⠘⣶⡼⠀⠀⠀⠀⠀⠀⣰⣦⠞⠁⢰⠁⢰⣯⣺⢏⠏⢀⣼⠃⢀⡼⢁⣬⡿</tspan>
+<tspan x="450" y="204.4">⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⡇⠀⠀⣌⣇⠀⠀⠉⠘⣆⡴⠇⠀⢣⠀⠀⠻⡀⠀⠘⣇⠀⠀⠀⠀⣠⣾⣥⠟⠀⢀⣾⡄⢸⠃⢠⣞⣴⠋⣼⠠⣯⢊⠏⣾⣁</tspan>
+<tspan x="450" y="213.0">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠹⣿⠀⠀⠹⣾⡄⠀⠀⠀⠈⢷⠀⠠⡈⢷⡀⠀⢳⡀⠀⠀⣆⠀⣠⢾⢟⡿⡁⢀⡴⣻⣿⠁⣟⣀⡽⢫⢏⡜⢁⣰⠏⡜⠀⢻⡟</tspan>
+<tspan x="450" y="221.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠈⢧⠀⢠⠘⢷⢸⠳⡄⠀⠀⢧⡀⢹⣶⡄⠀⢸⣿⠀⠀⣿⠟⢡⠏⣾⣼⡷⠋⣴⡏⣮⣾⢿⡇⢡⣯⢏⣠⣾⣁⣴⢃⣴⠋</tspan>
+<tspan x="450" y="230.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡄⠈⣇⣿⠀⢰⡻⢧⣹⣄⠀⠀⠳⣄⢷⠈⢧⠘⢏⡆⣸⣁⣰⢏⡼⣿⡟⢠⠞⠟⡷⣿⣿⢀⡷⠚⢉⣿⡿⠚⣻⣱⠟⠁</tspan>
+<tspan x="450" y="238.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣶⣆⣹⡠⣄⠳⡀⣹⢻⣿⣧⣀⣦⡙⡆⢻⠀⡼⣽⡿⢁⣯⡞⣀⣾⠟⠁⠀⠀⠀⣾⡟⣸⠁⣰⠿⡿⣣⣾⡽⢟⡟⠁</tspan>
+<tspan x="450" y="247.39999999999998">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣻⡷⣬⠲⡄⠿⢸⣿⢻⣿⣿⣿⣿⣾⣧⣁⢻⠃⣼⣼⡾⢻⣿⠀⠀⠀⠀⠀⢻⢇⣧⣴⠃⣼⡟⡝⡽⣿⡟</tspan>
+<tspan x="450" y="256.0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣋⠹⣌⣢⣿⠂⢸⣿⢸⣿⣿⣿⣿⣯⠙⢿⣾⣴⡿⠉⠀⠘⣿⡀⠀⠀⠀⠀⢸⣿⣩⣇⢠⣾⢸⡇⢘⣽⠛</tspan>
+<tspan x="450" y="264.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⢹⣿⣄⠀⢻⣿⣿⣿⣿⣿⠟⠀⠀⠙⠃⠀⠀⣠⠒⢿⣷⡀⠀⠀⢀⣸⣿⡟⢻⣿⠃⣼⣵⠛⠁</tspan>
+<tspan x="450" y="273.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣮⣻⡿⢗⢦⣻⣿⣿⣿⣿⠆⠀⠀⢰⠇⠀⢰⠟⢀⡾⢹⣇⣠⣴⣿⣿⠋⠀⢿⠶⢋⣾⠙⠛⠳⠶⠦⢤⣄⣀⣀⡀</tspan>
+<tspan x="450" y="281.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠾⠻⣿⣿⢷⣜⠻⢿⣿⡿⠀⠀⠀⣼⠀⢀⡏⢀⣼⣧⣼⣯⠟⢋⣽⡏⠀⢀⣬⠴⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠓⠶⢤⣀⡀</tspan>
+<tspan x="450" y="290.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠾⣋⠁⠀⠀⢳⡹⣆⠉⠛⣦⣝⢧⡀⢠⡆⡧⡄⣈⡵⢋⣬⠶⠋⠀⣤⠿⠛⠀⠀⡼⠁⡄⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉</tspan>
+<tspan x="450" y="299.0">⠀⠀⣠⣤⠄⠀⠠⠴⠶⠤⣴⠞⠋⠀⠀⠀⠀⠀⠀⠈⢧⣿⡗⢶⣤⣈⣳⣽⣦⡿⡇⣷⡿⢚⣿⣶⣶⣶⣿⠃⠀⠀⠀⢠⠇⠀⠃⠀⠙⡆</tspan>
+<tspan x="450" y="307.6">⠈⠉⠀⠀⠀⠀⠀⢀⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⡇⠀⣿⣿⣿⣿⠙⠟⠁⠀⠀⠈⠀⢻⣿⣿⠃⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⢀</tspan>
+<tspan x="450" y="316.2">⠀⢀⣠⣴⣾⣿⡿⠋⠀⠀⠀⠀⠀⢀⡠⣴⣾⣿⣿⣿⣿⣿⡹⠀⣿⣿⣿⡃⣰⡆⠀⠀⠀⠀⠀⣿⡇⢸⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⢀⡴⣿⠛⣖⡀</tspan>
+<tspan x="450" y="324.79999999999995">⣠⣿⣿⡿⠿⠋⠀⠀⠀⠀⠀⠀⣺⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⢿⣏⢸⣏⡋⠀⠀⠀⠀⠀⠀⢿⡇⠘⠀⠀⠀⣠⣟⠀⠀⠀⠀⢀⣾⣵⣷⣬⣭⣽⠟⠓</tspan>
+<tspan x="450" y="333.4">⠉⠁⠀⠀⠀⠀⠀⠀⣠⠤⢲⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡝⣾⣯⠈⢿⣝⢦⣠⣶⡀⠀⠀⠙⢷⠀⠀⢀⣴⣿⠙⠀⢠⠆⠀⣸⣿⣿⣿⣿⡏</tspan>
+<tspan x="450" y="342.0">⣾⣿⣷⡄⠀⠀⠀⡀⠉⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣿⡄⠈⢿⣿⠾⠾⠷⣖⡒⠂⢸⠀⣰⣿⣿⠏⠀⢀⡏⠀⢠⣿⣿⣿⣿⣿⣿⣦⡀</tspan>
+<tspan x="450" y="350.6">⣿⣿⣿⠃⠀⠀⠀⣧⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣄⠀⢬⣉⣉⠉⠉⠉⠀⣼⣾⣿⣿⡟⠀⣠⡿⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣦⣄</tspan>
+<tspan x="450" y="359.2">⣿⠟⣁⣤⣴⣿⣿⣿⣶⣤⡈⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡞⣿⣿⣦⡀⠀⠀⠀⠀⣠⣼⣿⣿⣿⠏⠀⢿⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉</tspan>
+<tspan x="450" y="367.79999999999995">⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣹⡼⣿⣿⣷⣄⣀⣀⣴⡿⡿⢻⣽⠋⠀⣰⠏⠘⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠋</tspan>
+<tspan x="450" y="376.4">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣒⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⡻⣿⣿⠋⠀⠀⢀⡅⠀⢠⣿⠀⠀⠘⠻⠿⢿⣿⠿⠛⠋⠉⠀⢀⡀</tspan>
+<tspan x="450" y="385.0">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠉⠙⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⡽⣿⠀⠀⢠⡞⠀⢠⣿⡿⣦⣀⣤⣄⣀⣤⣤⣶⣶⣾⠿⠟⠉</tspan>
+<tspan x="450" y="393.6">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣶⣦⣤⡀⠀⠈⠙⠿⣿⣿⣷⣾⣿⣿⣿⣿⡈⣇⣴⠏⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁</tspan>
 
-  
-  <g transform="translate(216, 135)" opacity="0.25">
-    <circle r="80" stroke="#00f0ff" stroke-width="1" fill="none" stroke-dasharray="4 4" />
-    <circle r="55" stroke="#00f0ff" stroke-width="0.8" fill="none" />
-    <circle r="30" stroke="#00ff9d" stroke-width="0.8" fill="none" stroke-dasharray="2 2" />
-    <line x1="-90" y1="0" x2="90" y2="0" stroke="#00f0ff" stroke-width="0.8" />
-    <line x1="0" y1="-90" x2="0" y2="90" stroke="#00f0ff" stroke-width="0.8" />
   </g>
 
   
-  <g class="hologram">
-    <text class="art">
-<tspan x="475" y="202.0">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⢠⡀⢳⡀⠀⣀⠀⠈⡆⠳⣄⠘⡄⢢⡀⠳⣽⡄⠀⠀⠁⣰⡁⠀⠀⠀⡆⠀⠀⣠⠎⠁⠀⠀⢀⡟⢰⣣⡏⠀⠀⠀⡴⠃⠀⠈⠀⣾</tspan>
-<tspan x="475" y="211.2">⠀⠀⠀⠀⠀⠀⠀⠀⢾⠁⠀⠀⠄⡄⠹⣶⡏⠀⠀⡇⠀⠘⣷⣽⠀⢿⡄⠘⣇⣴⠀⠀⢩⡇⠀⠀⠀⠓⠦⠞⠁⠀⠀⠀⢀⠞⣹⠋⢁⡆⠀⠀⠀⠇⠰⠀⢀⣴⠃</tspan>
-<tspan x="475" y="220.4">⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠸⡄⡸⢻⡀⠀⡇⠀⠀⢸⡘⡆⠈⡇⠀⣿⢻⠀⢀⡟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠆⡴⠁⣰⠇⢀⡟⠀⠀⡖⠀⠞⡰⢠⣿⠁</tspan>
-<tspan x="475" y="229.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⣷⡀⠀⠀⢷⡇⠀⠻⣼⠀⠀⠀⡾⣷⡀⠀⢸⡄⡇⠘⣶⡼⠀⠀⠀⠀⠀⠀⣰⣦⠞⠁⢰⠁⢰⣯⣺⢏⠏⢀⣼⠃⢀⡼⢁⣬⡿</tspan>
-<tspan x="475" y="238.8">⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⡇⠀⠀⣌⣇⠀⠀⠉⠘⣆⡴⠇⠀⢣⠀⠀⠻⡀⠀⠘⣇⠀⠀⠀⠀⣠⣾⣥⠟⠀⢀⣾⡄⢸⠃⢠⣞⣴⠋⣼⠠⣯⢊⠏⣾⣁</tspan>
-<tspan x="475" y="248.0">⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠹⣿⠀⠀⠹⣾⡄⠀⠀⠀⠈⢷⠀⠠⡈⢷⡀⠀⢳⡀⠀⠀⣆⠀⣠⢾⢟⡿⡁⢀⡴⣻⣿⠁⣟⣀⡽⢫⢏⡜⢁⣰⠏⡜⠀⢻⡟</tspan>
-<tspan x="475" y="257.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠈⢧⠀⢠⠘⢷⢸⠳⡄⠀⠀⢧⡀⢹⣶⡄⠀⢸⣿⠀⠀⣿⠟⢡⠏⣾⣼⡷⠋⣴⡏⣮⣾⢿⡇⢡⣯⢏⣠⣾⣁⣴⢃⣴⠋</tspan>
-<tspan x="475" y="266.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡄⠈⣇⣿⠀⢰⡻⢧⣹⣄⠀⠀⠳⣄⢷⠈⢧⠘⢏⡆⣸⣁⣰⢏⡼⣿⡟⢠⠞⠟⡷⣿⣿⢀⡷⠚⢉⣿⡿⠚⣻⣱⠟⠁</tspan>
-<tspan x="475" y="275.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣶⣆⣹⡠⣄⠳⡀⣹⢻⣿⣧⣀⣦⡙⡆⢻⠀⡼⣽⡿⢁⣯⡞⣀⣾⠟⠁⠀⠀⠀⣾⡟⣸⠁⣰⠿⡿⣣⣾⡽⢟⡟⠁</tspan>
-<tspan x="475" y="284.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣻⡷⣬⠲⡄⠿⢸⣿⢻⣿⣿⣿⣿⣾⣧⣁⢻⠃⣼⣼⡾⢻⣿⠀⠀⠀⠀⠀⢻⢇⣧⣴⠃⣼⡟⡝⡽⣿⡟</tspan>
-<tspan x="475" y="294.0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣋⠹⣌⣢⣿⠂⢸⣿⢸⣿⣿⣿⣿⣯⠙⢿⣾⣴⡿⠉⠀⠘⣿⡀⠀⠀⠀⠀⢸⣿⣩⣇⢠⣾⢸⡇⢘⣽⠛</tspan>
-<tspan x="475" y="303.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⢹⣿⣄⠀⢻⣿⣿⣿⣿⣿⠟⠀⠀⠙⠃⠀⠀⣠⠒⢿⣷⡀⠀⠀⢀⣸⣿⡟⢻⣿⠃⣼⣵⠛⠁</tspan>
-<tspan x="475" y="312.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣮⣻⡿⢗⢦⣻⣿⣿⣿⣿⠆⠀⠀⢰⠇⠀⢰⠟⢀⡾⢹⣇⣠⣴⣿⣿⠋⠀⢿⠶⢋⣾⠙⠛⠳⠶⠦⢤⣄⣀⣀⡀</tspan>
-<tspan x="475" y="321.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠾⠻⣿⣿⢷⣜⠻⢿⣿⡿⠀⠀⠀⣼⠀⢀⡏⢀⣼⣧⣼⣯⠟⢋⣽⡏⠀⢀⣬⠴⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠓⠶⢤⣀⡀</tspan>
-<tspan x="475" y="330.79999999999995">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠾⣋⠁⠀⠀⢳⡹⣆⠉⠛⣦⣝⢧⡀⢠⡆⡧⡄⣈⡵⢋⣬⠶⠋⠀⣤⠿⠛⠀⠀⡼⠁⡄⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉</tspan>
-<tspan x="475" y="340.0">⠀⠀⣠⣤⠄⠀⠠⠴⠶⠤⣴⠞⠋⠀⠀⠀⠀⠀⠀⠈⢧⣿⡗⢶⣤⣈⣳⣽⣦⡿⡇⣷⡿⢚⣿⣶⣶⣶⣿⠃⠀⠀⠀⢠⠇⠀⠃⠀⠙⡆</tspan>
-<tspan x="475" y="349.2">⠈⠉⠀⠀⠀⠀⠀⢀⡴⠚⠁⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⡇⠀⣿⣿⣿⣿⠙⠟⠁⠀⠀⠈⠀⢻⣿⣿⠃⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⢀</tspan>
-<tspan x="475" y="358.4">⠀⢀⣠⣴⣾⣿⡿⠋⠀⠀⠀⠀⠀⢀⡠⣴⣾⣿⣿⣿⣿⣿⡹⠀⣿⣿⣿⡃⣰⡆⠀⠀⠀⠀⠀⣿⡇⢸⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⢀⡴⣿⠛⣖⡀</tspan>
-<tspan x="475" y="367.6">⣠⣿⣿⡿⠿⠋⠀⠀⠀⠀⠀⠀⣺⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⢿⣏⢸⣏⡋⠀⠀⠀⠀⠀⠀⢿⡇⠘⠀⠀⠀⣠⣟⠀⠀⠀⠀⢀⣾⣵⣷⣬⣭⣽⠟⠓</tspan>
-<tspan x="475" y="376.79999999999995">⠉⠁⠀⠀⠀⠀⠀⠀⣠⠤⢲⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡝⣾⣯⠈⢿⣝⢦⣠⣶⡀⠀⠀⠙⢷⠀⠀⢀⣴⣿⠙⠀⢠⠆⠀⣸⣿⣿⣿⣿⡏</tspan>
-<tspan x="475" y="386.0">⣾⣿⣷⡄⠀⠀⠀⡀⠉⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣿⡄⠈⢿⣿⠾⠾⠷⣖⡒⠂⢸⠀⣰⣿⣿⠏⠀⢀⡏⠀⢠⣿⣿⣿⣿⣿⣿⣦⡀</tspan>
-<tspan x="475" y="395.2">⣿⣿⣿⠃⠀⠀⠀⣧⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣄⠀⢬⣉⣉⠉⠉⠉⠀⣼⣾⣿⣿⡟⠀⣠⡿⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣦⣄</tspan>
-<tspan x="475" y="404.4">⣿⠟⣁⣤⣴⣿⣿⣿⣶⣤⡈⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡞⣿⣿⣦⡀⠀⠀⠀⠀⣠⣼⣿⣿⣿⠏⠀⣰⢿⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉</tspan>
-<tspan x="475" y="413.6">⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣹⡼⣿⣿⣷⣄⣀⣀⣴⡿⡿⢻⣽⠋⠀⣰⠏⠘⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠋</tspan>
-<tspan x="475" y="422.79999999999995">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣒⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⡻⣿⣿⠋⠀⠀⢀⡅⠀⢠⣿⠀⠀⠘⠻⠿⢿⣿⠿⠛⠋⠉⠀⢀⡀</tspan>
-<tspan x="475" y="432.0">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⡽⣿⠀⠀⢠⡞⠀⢠⣿⡿⣦⣀⣤⣄⣀⣤⣤⣶⣶⣾⠿⠟⠉</tspan>
-<tspan x="475" y="441.2">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣶⣦⣤⣄⡀⠀⠈⠙⠿⣿⣿⣷⣾⣿⣿⣿⣿⡈⣇⣴⠏⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁</tspan>
-
-    </text>
-  </g>
-
-  
-  <g transform="translate(16, 212)">
-    <rect width="400" height="38" fill="#1e293b" fill-opacity="0.5" rx="4" stroke="#00f0ff33" stroke-width="0.8" />
-    <text x="10" y="14" class="micro-text" font-size="8px" fill="#00f0ff">CPU_LOAD_STREAM // NET_TRAFFIC_MONITOR</text>
-    <g transform="translate(10, 20)">
-      <rect x="0" y="9" width="4" height="26" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="7" y="26" width="4" height="9" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="14" y="29" width="4" height="6" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="21" y="6" width="4" height="29" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="28" y="21" width="4" height="14" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="35" y="22" width="4" height="13" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="42" y="22" width="4" height="13" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="49" y="25" width="4" height="10" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="56" y="6" width="4" height="29" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="63" y="26" width="4" height="9" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="70" y="8" width="4" height="27" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="77" y="6" width="4" height="29" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="84" y="12" width="4" height="23" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="91" y="27" width="4" height="8" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="98" y="11" width="4" height="24" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="105" y="16" width="4" height="19" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="112" y="28" width="4" height="7" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="119" y="29" width="4" height="6" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="126" y="27" width="4" height="8" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="133" y="23" width="4" height="12" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="140" y="22" width="4" height="13" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="147" y="13" width="4" height="22" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="154" y="10" width="4" height="25" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="161" y="29" width="4" height="6" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="168" y="12" width="4" height="23" fill="#00ff9d" rx="1" opacity="0.85" />
-<rect x="175" y="23" width="4" height="12" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="182" y="7" width="4" height="28" fill="#00f0ff" rx="1" opacity="0.85" />
-<rect x="189" y="9" width="4" height="26" fill="#00f0ff" rx="1" opacity="0.85" />
+  <g transform="translate(12, 210)">
+    <line x1="0" y1="0" x2="396" y2="0" stroke="#333333" stroke-width="0.8" stroke-dasharray="2 2" />
+    <text x="0" y="18" class="micro-text">CPU_LOAD_STREAM :</text>
+    <g transform="translate(130, 2)">
+      <rect x="0" y="3" width="3" height="23" fill="#ffffff" opacity="0.85" />
+<rect x="6" y="5" width="3" height="21" fill="#ffffff" opacity="0.85" />
+<rect x="12" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="18" y="4" width="3" height="22" fill="#ffffff" opacity="0.85" />
+<rect x="24" y="4" width="3" height="22" fill="#ffffff" opacity="0.85" />
+<rect x="30" y="17" width="3" height="9" fill="#ffffff" opacity="0.85" />
+<rect x="36" y="12" width="3" height="14" fill="#ffffff" opacity="0.85" />
+<rect x="42" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="48" y="2" width="3" height="24" fill="#ffffff" opacity="0.85" />
+<rect x="54" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="60" y="13" width="3" height="13" fill="#ffffff" opacity="0.85" />
+<rect x="66" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="72" y="16" width="3" height="10" fill="#ffffff" opacity="0.85" />
+<rect x="78" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="84" y="19" width="3" height="7" fill="#ffffff" opacity="0.85" />
+<rect x="90" y="9" width="3" height="17" fill="#ffffff" opacity="0.85" />
+<rect x="96" y="2" width="3" height="24" fill="#ffffff" opacity="0.85" />
+<rect x="102" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="108" y="20" width="3" height="6" fill="#ffffff" opacity="0.85" />
+<rect x="114" y="6" width="3" height="20" fill="#ffffff" opacity="0.85" />
+<rect x="120" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="126" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="132" y="10" width="3" height="16" fill="#ffffff" opacity="0.85" />
+<rect x="138" y="13" width="3" height="13" fill="#ffffff" opacity="0.85" />
+<rect x="144" y="22" width="3" height="4" fill="#ffffff" opacity="0.85" />
+<rect x="150" y="11" width="3" height="15" fill="#ffffff" opacity="0.85" />
+<rect x="156" y="3" width="3" height="23" fill="#ffffff" opacity="0.85" />
+<rect x="162" y="19" width="3" height="7" fill="#ffffff" opacity="0.85" />
+<rect x="168" y="8" width="3" height="18" fill="#ffffff" opacity="0.85" />
+<rect x="174" y="15" width="3" height="11" fill="#ffffff" opacity="0.85" />
 
     </g>
-    <text x="345" y="28" class="text-accent" font-size="9px">99.8% UP</text>
+    <text x="325" y="18" class="text-main" font-size="10px">99.8% UP</text>
   </g>
 </g>
 
 
-<rect width="100%" height="24" class="scan" rx="10" />
+<rect width="100%" height="20" class="scan" />
 
 </svg>
