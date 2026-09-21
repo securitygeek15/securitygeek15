@@ -3,6 +3,7 @@ import json
 import urllib.request
 import xml.etree.ElementTree as ET
 import datetime
+import build_hud
 
 # Configuration
 TOKEN = os.environ.get('GITHUB_TOKEN')
@@ -26,6 +27,10 @@ def fetch_json(url):
         return None
 
 def main():
+    print(f"Building fresh HUD templates...")
+    build_hud.build_svg(True)
+    build_hud.build_svg(False)
+
     print(f"Fetching stats for {USER}...")
     
     user_data = fetch_json(f'{API_URL}/users/{USER}') or {}
