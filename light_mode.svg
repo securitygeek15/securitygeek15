@@ -78,7 +78,7 @@
   <line x1="0" y1="24" x2="395" y2="24" stroke="#000000" stroke-width="0.8" stroke-dasharray="2 2" />
   
   <text x="12" y="42" class="text-muted">OS      :</text><text x="90" y="42" class="text-main">Arch Linux (x86_64)</text>
-  <text x="12" y="62" class="text-muted">UPTIME  :</text><text x="90" y="62" class="text-main" id="uptime_data">17 years, 6 months</text>
+  <text x="12" y="62" class="text-muted">UPTIME  :</text><text x="90" y="62" class="text-main" id="uptime_data">17 years, 7 months</text>
   <text x="12" y="82" class="text-muted">KERNEL  :</text><text x="90" y="82" class="text-main">Security &amp; Pentesting</text>
   <text x="12" y="102" class="text-muted">SHELL   :</text><text x="90" y="102" class="text-main">Zsh / Bash</text>
   <text x="240" y="82" class="text-muted">IDE   :</text><text x="285" y="82" class="text-main">Neovim</text>
