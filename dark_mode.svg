@@ -1,210 +1,115 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="100%" height="100%">
-<defs>
-  <style>
-    @font-face {
-        font-family: 'ConsolasFallback';
-        src: local('Consolas'), local('Fira Code'), local('Cascadia Code'), local('Courier New'), monospace;
-        font-display: swap;
-    }
-    .bg { fill: #000000; }
-    .text-main { fill: #ffffff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 13px; font-weight: bold; }
-    .text-muted { fill: #777777; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 11px; }
-    .text-title { fill: #ffffff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 18px; font-weight: bold; letter-spacing: 1px; }
-    .text-header { fill: #ffffff; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 12px; font-weight: bold; letter-spacing: 1px; }
-    .micro-text { fill: #777777; font-family: 'ConsolasFallback', Consolas, monospace; font-size: 10px; letter-spacing: 1px; }
-    
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-    @keyframes scanline {
-      0% { transform: translateY(-40px); }
-      100% { transform: translateY(430px); }
-    }
-    
-    .art {
-        fill: #ffffff;
-        font-family: 'ConsolasFallback', Consolas, monospace;
-        font-size: 5.4px;
-        line-height: 1;
-        white-space: pre;
-        opacity: 0.95;
-    }
-    
-    .cursor { animation: blink 1s infinite; fill: #ffffff; }
-    .scan { animation: scanline 8s linear infinite; fill: url(#scan-grad); pointer-events: none; opacity: 0.1; }
-  </style>
-  
-  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-    <line x1="0" y1="0" x2="20" y2="0" stroke="#ffffff0a" stroke-width="0.5" />
-    <line x1="0" y1="0" x2="0" y2="20" stroke="#ffffff0a" stroke-width="0.5" />
-  </pattern>
-  
-  <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6" />
-    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-  </linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="600px" font-size="14px" viewBox="0 0 985 600">
+<style>
+@font-face {
+  src: local('Consolas'), local('Consolas Bold');
+  font-family: 'ConsolasFallback';
+  font-display: swap;
+  -webkit-size-adjust: 109%;
+  size-adjust: 109%;
+}
+.key {fill: #ffa657; font-weight: 500;}
+.value {fill: #a5d6ff;}
+.addColor {fill: #3fb950;}
+.delColor {fill: #f85149;}
+.cc {fill: #616e7f;}
+.title {fill: #58a6ff; font-weight: bold;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="985px" height="600px" fill="#161b22" rx="15"/>
 
-
-<rect width="100%" height="100%" class="bg" />
-<rect width="100%" height="100%" fill="url(#grid)" />
-
-
-<rect x="10" y="10" width="860" height="400" fill="none" stroke="#ffffff" stroke-width="1.5" />
-<path d="M 10 18 L 18 10 M 862 10 L 870 18 M 10 402 L 18 410 M 862 410 L 870 402" stroke="#ffffff" stroke-width="1.5" />
-
-
-<text x="25" y="26" class="micro-text">SYS.INIT // NAH_ID_WIN // MONOCHROME_ASCII</text>
-<text x="700" y="26" class="micro-text">STATUS: ACTIVE // SEC_NODE</text>
-<line x1="10" y1="35" x2="870" y2="35" stroke="#ffffff" stroke-width="1" />
-
-
-
-
-<g transform="translate(25, 48)">
-  <rect width="395" height="58" fill="none" stroke="#ffffff" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ IDENTITY ]</text>
-  <line x1="0" y1="24" x2="395" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
-  <text x="12" y="44" class="text-title">securitygeek15@system<tspan class="cursor">_</tspan></text>
-</g>
-
-
-<g transform="translate(25, 118)">
-  <rect width="395" height="126" fill="none" stroke="#ffffff" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ SYSTEM_SPECS ]</text>
-  <line x1="0" y1="24" x2="395" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
-  
-  <text x="12" y="42" class="text-muted">OS      :</text><text x="90" y="42" class="text-main">Arch Linux (x86_64)</text>
-  <text x="12" y="62" class="text-muted">UPTIME  :</text><text x="90" y="62" class="text-main" id="uptime_data">17 years, 7 months</text>
-  <text x="12" y="82" class="text-muted">KERNEL  :</text><text x="90" y="82" class="text-main">Security &amp; Pentesting</text>
-  <text x="12" y="102" class="text-muted">SHELL   :</text><text x="90" y="102" class="text-main">Zsh / Bash</text>
-  <text x="240" y="82" class="text-muted">IDE   :</text><text x="285" y="82" class="text-main">Neovim</text>
-  <text x="240" y="102" class="text-muted">SECTOR:</text><text x="285" y="102" class="text-main">Red Team</text>
-</g>
-
-
-<g transform="translate(25, 256)">
-  <rect width="395" height="142" fill="none" stroke="#ffffff" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ SKILL_MATRIX ]</text>
-  <line x1="0" y1="24" x2="395" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
-  
-  <text x="12" y="42" class="text-muted">LANGS   :</text><text x="90" y="42" class="text-main">Python, Go, Bash, Java, JS, C/C++</text>
-  <text x="12" y="62" class="text-muted">DOMAINS :</text><text x="90" y="62" class="text-main">Web Pentesting, CTF, Automation</text>
-  <text x="12" y="82" class="text-muted">TOOLS   :</text><text x="90" y="82" class="text-main">Burp Suite, Metasploit, Wireshark</text>
-  
-  
-  <text x="12" y="106" class="text-muted">OFFENSIVE SEC :</text>
-  <text x="130" y="106" class="text-main">[==================  ] 90%</text>
-
-  <text x="12" y="126" class="text-muted">AUTOMATION    :</text>
-  <text x="130" y="126" class="text-main">[====================] 95%</text>
-</g>
-
-
-
-
-<g transform="translate(435, 48)">
-  <rect width="420" height="92" fill="none" stroke="#ffffff" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ DATABANK ]</text>
-  <line x1="0" y1="24" x2="420" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
-  
-  
-  <text x="12" y="46" class="text-muted">REPOS   :</text><text x="90" y="46" class="text-main" id="repo_data">21</text>
-  <text x="150" y="46" class="text-muted">STARS   :</text><text x="220" y="46" class="text-main" id="star_data">25</text>
-  <text x="290" y="46" class="text-muted">COMMITS :</text><text x="365" y="46" class="text-main" id="commit_data">134</text>
-
-  
-  <text x="12" y="72" class="text-muted">CONTRIB :</text><text x="90" y="72" class="text-main" id="contrib_data">21</text>
-  <text x="150" y="72" class="text-muted">FOLLOW  :</text><text x="220" y="72" class="text-main" id="follower_data">5</text>
-  <text x="290" y="72" class="text-muted">RANK    :</text><text x="365" y="72" class="text-main">S+ TIER</text>
-</g>
-
-
-<g transform="translate(435, 150)">
-  <rect width="420" height="248" fill="none" stroke="#ffffff" stroke-width="1" />
-  <text x="12" y="16" class="text-header">[ ASCII ]</text>
-  <line x1="0" y1="24" x2="420" y2="24" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
-  
-  <text class="art">
-<tspan x="12" y="36.0">⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⣾⡳⣼⣆⠀⠀⢹⡄⠹⣷⣄⢠⠇⠻⣷⣶⢀⣸⣿⡾⡏⠀⠰⣿⣰⠏⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="41.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⣀⣀⣀⡹⣟⡪⢟⣷⠦⠬⣿⣦⣌⡙⠿⡆⠻⡌⠿⣦⣿⣿⣿⣿⣦⣿⡿⠟⠚⠉⠀⠉⠳⣄⡀⠀⠀⠁⠀</tspan>
-<tspan x="12" y="47.6">⠀⠀⠀⠀⠀⠀⠀⡀⢀⣼⣟⠛⠛⠙⠛⠉⠻⢶⣮⢿⣯⡙⢶⡌⠲⢤⡑⠀⠈⠛⠟⢿⣿⠛⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣆⠀⠀⠀</tspan>
-<tspan x="12" y="53.4">⠀⠀⠀⠀⠀⡸⠯⣙⠛⢉⣉⣙⣿⣿⡳⢶⣦⣝⢿⣆⠉⠻⣄⠈⢆⢵⡈⠀⠀⢰⡆⠀⣼⠓⠀⠀⠀          Nah    ⠀⠀⠈⣷⠀⠀</tspan>
-<tspan x="12" y="59.2">⠀⠀⠀⠖⠉⠻⣟⡿⣿⣭⢽⣽⣶⣈⢛⣾⣿⣧⠀⠙⠓⠀⠑⢦⡀⠹⣧⢂⠀⣿⡇⢀⣿⠺⠇⠀          ⠀I'd⠀          ⠀⣿⠀⠀</tspan>
-<tspan x="12" y="65.0">⠀⠀⠀⠀⠐⠈⠉⢛⣿⣿⣶⣤⣈⠉⣰⣗⡈⢛⣇⠀⣵⡀⠀⠘⣿⡄⢻⣤⠀⢻⡇⣼⣧⣿⡄⠀⠀         Win⠀      ⠀⠀⡿⠀⠀</tspan>
-<tspan x="12" y="70.8">⠀⠀⠀⠀⠀⣠⣾⣿⢍⡉⠛⠻⣷⡆⠨⣿⣭⣤⣍⠀⢹⣷⡀⠀⠹⣿⡄⠈⠀⢿⠁⣿⣿⠏⠀⠀⠀                        ⠀⠀⠀⣇⠀⠀</tspan>
-<tspan x="12" y="76.6">⠀⣿⣇⣠⣾⣿⣛⣲⣿⠛⠀⠀⢀⣸⣿⣿⣟⣮⡻⣷⣤⡙⢟⡀⠀⠙⢧⠀⠀⠎⠀⠉⠁⠰⣿⠀⠀                         ⠀⢀⡿⠀⠀</tspan>
-<tspan x="12" y="82.4">⠀⠈⢻⣿⣿⣽⣿⣿⣿⣴⡏⠚⢛⣈⣍⠛⠛⠿⢦⣌⢙⠻⡆⠁⠀⠀⠀⣴⣦⠀⠀⠀⠐⢳⢻⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠮⠀⠀⠀</tspan>
-<tspan x="12" y="88.19999999999999">⠀⠀⠈⠙⣿⣧⣶⣿⠿⣧⣴⣿⢻⡉⠀⢀⣠⣴⣾⡟⠿⠃⠁⣠⣤⡶⣾⡟⠅⠀⣀⡄⠀⣾⢸⣿⣏⢻⢶⣦⣤⣤⣄⢶⣾⣿⣡⣤⡄⠀</tspan>
-<tspan x="12" y="94.0">⠀⠀⣠⣞⣋⣿⣿⣾⣿⡿⡛⣹⡟⣤⢰⡿⠟⠉⣀⣀⣤⣤⡠⠙⢁⣾⡿⠂⠀⣿⠟⣁⠀⣹⠀⣹⣿⡟⣼⣿⣿⣌⣿⣞⣿⣿⠁⠀⠀⠀</tspan>
-<tspan x="12" y="99.8">⠀⢠⡿⢛⢟⣿⣿⣿⣿⣿⣿⡟⣼⣿⣟⢓⠛⣿⣏⣿⣵⣗⣵⣴⣿⢟⡵⣣⣼⣿⢟⣵⣶⢻⣶⣿⠀⠀⣈⢻⣿⣿⣿⢿⣾⢿⣧⠀⠀⠀</tspan>
-<tspan x="12" y="105.6">⠀⠘⠃⢸⣿⡾⣿⣿⣿⣿⣯⣿⣿⣿⣶⣿⣿⣟⣾⡿⣫⣿⣿⣿⣽⣿⣿⣿⣿⢫⣾⣿⣿⣿⣿⣿⣴⡆⣻⣿⡏⣿⢻⣧⣿⡿⣿⡆⠀⠀</tspan>
-<tspan x="12" y="111.39999999999999">⠀⠀⠀⠜⣿⣾⢿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣭⣿⣖⣿⢿⣿⡿⣿⣿⣿⡿⢡⢯⣿⣿⣿⣿⣿⣿⣿⣧⡿⣾⣷⣿⣿⢿⣿⡇⠉⠁⠀⠀</tspan>
-<tspan x="12" y="117.2">⠀⠀⠀⠀⣿⣥⣾⣿⣿⣿⣿⣿⣿⣿⡇⣭⣿⣿⣿⣿⠃⠞⠟⣸⣿⠏⣸⣧⣀⠿⢿⣿⣿⣟⣿⣿⣿⣿⣽⣿⢿⣿⣿⣿⣿⠁⠀⠀⠀⠀</tspan>
-<tspan x="12" y="123.0">⠀⠀⠀⠈⠛⣹⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣟⣿⣿⡿⢶⣦⣄⣿⠏⠀⣿⣟⣿⣶⠾⣿⣟⣿⣟⣋⣛⣿⣿⣿⣿⡇⣻⣿⣿⣿⡏⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="128.8">⠀⠀⠀⠀⠟⠛⠫⣿⣿⣿⣿⣿⡿⣧⠛⣿⠛⣿⣿⣿⣷⡌⠹⡟⠀⠀⠉⡟⠋⢠⣾⣿⣿⣿⡟⣿⣿⣿⣿⢀⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="134.6">⠀⠀⠀⠀⠀⠀⠘⠋⣾⣷⣿⣿⣧⠙⠀⠙⢣⠝⠛⠋⣽⣷⢦⠇⠀⠀⠘⠁⣤⣾⣿⠝⠛⠉⠘⢻⣿⣿⢿⣼⣷⡟⢻⣷⠉⠀⡀⠀⠀⠀</tspan>
-<tspan x="12" y="140.39999999999998">⠀⠀⠀⠀⠀⠀⠀⠐⠟⢻⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠈⠛⠀⠀⠀⠀⠀⣾⠟⠀⢸⣷⣿⡇⠀⠛⠀⠀⠁⠀⠀⠀</tspan>
-<tspan x="12" y="146.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⡧⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="152.0">⠀⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠈⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⢻⡿⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="157.8">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠲⣄⠀⡄⠆⠀⠀⠀⠀⠀⠀⠀⠀⣼⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="163.6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⣀⠀⠀⣠⣾⣿⠁⠀⠀⠀⠀⠀⣀⡄⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="169.4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢻⣆⠀⠛⠁⠶⣶⣶⣶⣶⣶⣶⡶⠆⠘⠋⣠⡾⢫⣾⡟⠀⠀⠀⠀⠀⠐⠉⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="175.2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠛⠀⠙⣷⡀⠀⠀⠙⠛⠛⠛⠛⠋⠁⠀⢀⣴⠋⠀⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="181.0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣰⣦⡀⠸⣿⣦⡀⠀⠀⠀⠀⠀⠀⢀⣴⡟⠁⠀⠐⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="186.79999999999998">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⡄⢺⣿⡄⠹⣿⠻⢦⣤⣤⣤⣤⣶⣿⡟⢀⣀⠀⠀⢸⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="192.6">⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣮⣿⣿⡀⠹⡷⣦⣀⡀⡀⢸⣿⠏⢠⣾⣿⠀⠀⣾⣿⣿⣿⣿⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="198.4">⣀⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠘⣷⣻⡟⠀⡼⠁⣴⣿⣿⣯⣥⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀</tspan>
-<tspan x="12" y="204.2">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣯⣿⣤⣤⣤⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣄</tspan>
-<tspan x="12" y="210.0">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
-
+<!-- Seamless Borderless Braille Art -->
+<g transform="translate(18, 15) scale(0.50, 0.96)" font-size="10px" font-family="monospace">
+  <text x="0" y="0" fill="#c9d1d9">
+<tspan x="0" y="0"></tspan>
+<tspan x="0" y="10"></tspan>
+<tspan x="0" y="20"></tspan>
+<tspan x="0" y="30">                                 ⢟⣭⣴⣾  ⠟⠛⠉⠁⠂⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⠉⠳⣌⠻ ⣾⣽</tspan>
+<tspan x="0" y="40">                                   ⠿⠛⣩⠔⠈⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠘⠿⠿</tspan>
+<tspan x="0" y="50">             ⣟                 ⠿⢛⣭⠖⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠒⢭⣙⠿</tspan>
+<tspan x="0" y="60">              ⣾⣟⠻           ⡿⢛⣥⡾⢋⣡⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⣮⡙⢿</tspan>
+<tspan x="0" y="70">                 ⣷⣦⣭⣉⣉⣙⣉⣉⣉⡥⢆⣴⣿⣫⣶⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠐⡐⢝⠣⡝⢿</tspan>
+<tspan x="0" y="80">                         ⢋⣴⣿⣯⣿⢿⡭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣄⠀⠌⠱⣝⢮⢻</tspan>
+<tspan x="0" y="90">                      ⠟⠋⢡⣿⣿⡿⣿⣷⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡌⠠⠊⢮⣣⢻</tspan>
+<tspan x="0" y="100">                   ⠟⣫⣴⢞⢁⡿⢁⠌⠾⣿⣿⣿⣿⡄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣆⡐⠀⠋⣧⢿</tspan>
+<tspan x="0" y="110">                ⡿⣫⣴⣿⠟⡡⠂⠎⡔⢡⡞⣽⠟⠋⠉⠙⠉⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢟⣿⡌⠄⠈⢻</tspan>
+<tspan x="0" y="120">              ⡿⣫⣾⣿⡿⢁⡞⠁⢀⠈⠀⢋⠞⠁⠀⠀⠀⡀⣰⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠘⣿⡆⢑⠀⠹</tspan>
+<tspan x="0" y="130">             ⣟⣴  ⡟⣠⠏⠀⠀⠀⠀⠀⠄⠀⠀⠀⠀⠐⣰⣏⣴⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡿⠀⠢⠀⢨⢿</tspan>
+<tspan x="0" y="140">                ⡟⢰⠏⠀⠀⠀⠀⢀⠂⠀⠀⠀⠀⠠⢰⣿⣿⣿⡼⠑⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⢞⡀⠱⡀⢣⣻</tspan>
+<tspan x="0" y="150">               ⡿⢰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠋⣿⠁⣼⡇⠀⢀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⡱⢀⠰⡈⣷⣻</tspan>
+<tspan x="0" y="160">               ⡇⠊⠌⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠛⠃⡸⠁⣴⣿⣧⣴⢊⡀⣷⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠄⢂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢌⠣⡀⢡⢸⣡⢿</tspan>
+<tspan x="0" y="170">               ⡅⡘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⠀⠁⢰⣿⣿⢿⢏⣾⠇⣿⣦⠄⠀⠀⠂⠀⠀⠀⠀⠀⠋⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢲⢡⠀⠋⣇⠚</tspan>
+<tspan x="0" y="180">             ⡿⠋⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⢸⣿⡏⣼⠟⡠⣿⡇⠂⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠡⢎⡀⢸⢸⡤</tspan>
+<tspan x="0" y="190">            ⠏⠀⡠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⠃⣼⠃⢧⠀⣰⡆⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⡅⠠⠂⣇</tspan>
+<tspan x="0" y="200">          ⡟⢁⣴ ⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠃⢀⡏⠁⠘⣿⣿⣷⢸⡇⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⡀⠂⢸⢱⡘</tspan>
+<tspan x="0" y="210">         ⠏⢠⣾  ⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠀⣇⢿⣿⡆⠇⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡄⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠁⠌⢸⡇</tspan>
+<tspan x="0" y="220">        ⡏⣴    ⠁⠀⠀⡄⠀⠀⠥⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⡿⠝⢆⠻⠿⠀⠀⠱⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣆⠀⠀⡀⠘⣧⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣼⡇</tspan>
+<tspan x="0" y="230">        ⣴    ⡇⠀⠀⠘⡀⠀⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣆⣈⣮⡁⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠀⠀⠀⠀⠙⠋⠀⠀⠐⡀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢼⢣</tspan>
+<tspan x="0" y="240">             ⠁⠀⢀⣼⣷⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢌⠈⠛⠿⢿⣿⡻⠿⠟⣁⠀⢤⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠠⣤⡀⠀⠀⣠⣤⣀⠄⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⢈⣾</tspan>
+<tspan x="0" y="250">            ⠏⠀⣴ ⣟⢿⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡆⠸⠂⣉⣳⢷⠭⠒⠷⠮⣬⣯⢒⣠⡀⠀⢤⠀⠀⢳⡀⠄⠀⠀⠀⠀⠠⣀⠀⠀⠀⠀⣀⠈⠛⠉⠀⣀⠄⡀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾</tspan>
+<tspan x="0" y="260">          ⠟⣁⣴⣦   ⡎⠃⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣣⠀⠨⠐⠂⠀⠈⠹⠛⠏⠀⠀⠓⠀⠉⠰⣜⠳⣄⠈⢻⣤⠀⠀⠀⠀⠀⠻⠍⣀⠤⠀⠈⠡⠀⣄⡙⢛⠻⠷⣦⡈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸</tspan>
+<tspan x="0" y="270">         ⣣⣾       ⣆⠀⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡍⠀⠀⢀⣠⡄⣶⠆⠧⠀⠠⢀⣰⣓⣲⣀⣄⢂⣠⣿⣷⣤⡘⠧⣄⡀⠈⢂⣤⡈⠀⠀⣀⣀⠀⠀⠀⠀⠀⠈⠉⠐⠀⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⠃⢈</tspan>
+<tspan x="0" y="280">                   ⠀⢺⠀⠀⠀⠀⠀⠀⠀⠀⠆⠀⣿⣦⣀⠴⢦⡔⢀⡶⠆⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢩⣾⣿⢻⣷⣮⣿⣿⣶⣯⣾⣷⣶⣶⣬⣤⣀⡀⠀⠀⠐⢀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⣣ ⠀</tspan>
+<tspan x="0" y="290">                   ⣆⠩⠀⢰⠀⠀⠀⠀⠀⡀⢸⡀⢹⣿⣟⡿⣶⣶⣿⣶⣶⣷⣿⣿⣿⣿⣿⣿⣿⢯⢾⣿⣿⣜⣧⢻⣿⣿⣿⣿⣿⣿⣿⣮⣛⣙⠿⢿⠽⠋⣡⣖⡦⠄⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢋⢁  ⢰</tspan>
+<tspan x="0" y="300">                    ⣧⠀⣼⣷⠀⠀⠀⠀⠀⢦⣷⣼⡿⣿⣿⣾⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣸⣿⣿⣿⣿⣎⢇⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣷⣶⣶⣷⣶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⢡  ⣏⣾</tspan>
+<tspan x="0" y="310">                     ⣷⡟⠏⣼⣆⠃⠈⢀⣶⣿⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣷⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢃⣴⠋⣠⠔⢁⠀⠀⠀⠀⠀⢤⡦⠃⣄</tspan>
+<tspan x="0" y="320">                      ⣷⣀⡹⢿⡆⣇⢶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡫⢒⣡⣴⣋⠀⠀⠀⣠⡘⠈⣴⡀⢻</tspan>
+<tspan x="0" y="330">                      ⣷⠛⢷⣌⣃⡈⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⠿⢟⣛⣛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢀⡆⡽⣹⠆⡿⢠</tspan>
+<tspan x="0" y="340">                       ⣗⢦⡉⢿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⡀⠙⢿⡿⣿⠟⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢏⣿⠛⠡⠍⣡⠞⢁</tspan>
+<tspan x="0" y="350">                        ⣎⢿⣦⢻⡼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⢷⣼⣿⣿⣿⣶⣾⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⡟⡼⢶⠞⢉⢠</tspan>
+<tspan x="0" y="360">                         ⣮⣛⣛⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⣿⣿⣿⢣⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁⡟⣡⢺⢣</tspan>
+<tspan x="0" y="370">                            ⣷⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⣣⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⣸⣾⠗⣡</tspan>
+<tspan x="0" y="380">                             ⣆⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⡉⡡⢴⠪⣝⠳⠮⢭⣑⢉⣉⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢰⣶⣶</tspan>
+<tspan x="0" y="390">                              ⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣉⠀⠀⣀⣀⢤⡤⣤⣤⣤⣤⣤⣤⢤⣄⣈⠀⠀⠨⠙⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢠</tspan>
+<tspan x="0" y="400">                               ⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡻⢭⣿⣷⣿⣟⣿⣟⣯⣿⣾⣽⣿⣶⣶⣦⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢡</tspan>
+<tspan x="0" y="410">                               ⡗⡆⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢠</tspan>
+<tspan x="0" y="420">                               ⡇⢟⢧⣈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⡀</tspan>
+<tspan x="0" y="430">                               ⣧⢸⣷⣭⢶⡌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢃⣠⣾⢠</tspan>
+<tspan x="0" y="440">                                ⢸⣿⣿⣯⢿⣦⡈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣡⣴⢟⣭⠇⣼</tspan>
+<tspan x="0" y="450">                                ⠈⣿⣿⣿⣷⣻⣿⣦⡈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢉⣠⠞⣛⣵⣿⣿⢀</tspan>
+<tspan x="0" y="460">                            ⠿⣟⣻⣟⡁⢿⣿⣿⣿⣇⢿⣿⣤⠓⢌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⣡⠔⠋⣤⣶⣿⣿⣿⡏⢸</tspan>
+<tspan x="0" y="470">                          ⣶⣾⣿⣿⡿⣫⣇⢈⣿⣿⣿⣿⣎⢿⣿⢮⣠⠙⠦⣙⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢛⡩⡴⢛⡡⢖⣽⣿⣿⠿⣟⣉⣡⣭⣽ ⣶⠹</tspan>
+<tspan x="0" y="480">                    ⣯⡿⣻ ⣛⣻⢿⠿⢋⣤⡾⢷⣿⡘⣻⣿⣿⣿⣿⡸⣿⣯⢻⣦⠱⣌⠒⡤⠀⠀⠀⢈⠉⣉⢉⢡⣀⢤⣶⣯⣷⠶⠛⣠⣿⣿⣭⣶        ⡇⢻</tspan>
+<tspan x="0" y="490">                  ⡟⠹⠖⣻    ⠿⣵⠋⡠⢴⣡⢻⡇⢷⣽⣿⣿⣿⣷⢻⣿⣷⣿⣧⢩⣓⠌⢳⡘⡭⢎⡳⡜⢎⡶⠹⢚⣙⣭⣷⣾⣿⣿⣿⣿⣿⣿⣶⣭⣛⡿    ⢡⠘</tspan>
+<tspan x="0" y="500">                 ⠏⡐⣶⣿⡇⠻ ⡟⣭⡍⣀⣴⣶⣿⣿⠈⣧⠸⣿⣞⢿⣿⣿⡧⣿⣷⣿⣿⣧⠹⡞⣆⠱⡙⣬⢣⢙⠠⣐⠶⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣏⡻⣿⣿⣿⣾⣝⠿ ⢸⢰⢻</tspan>
+<tspan x="0" y="510">                ⠇⡼⢸⣿⣿⣟⠀⢯⣵⣿⣧⡉⠻⢿⣿⣿⢰⡿⠀⣿⣿⣯⡻⣿⣿⢹⣿⡿⣿⡹⣧⡹⠼⣄⠓⠬⣃⢆⠀⣿⣿⣿⣶⣽⡻⣿⣿⣿⣿⣿⣿⣹⣿⡜⣿⣿⣿⣿⣿⣾⢸⢸⡄⢻</tspan>
+<tspan x="0" y="520">               ⠏⡼⣰⢿⣵⢻⣾⠀⢸⣿⣿⣿⣿⣷⣶⣶⠍⠂⣐⡀⢙⢿⣿⣿⣮⢿⢸⣿⣷⡹⣷⡙⣷⣌⠳⢋⡁⠏⢎⢥⠘⠻⠟⠛⡉⠁⢠⠹⣿⣿⣿⣿⣿⣿⣿⢹⣿⣿⣿⣿⣿⢸⡚⣟⣆⢻</tspan>
+<tspan x="0" y="530">              ⠋⣼⣵⣯⣟⣾⢳⣮⢆⠈⢿⣿⣿⡿⢟⠫⣀⣤⣅⢹⢠⢸⣮⢻⣿⣿⣿⣧⢻  ⣽⡇⢿⡟⣷⣾⣷⣌⡈⢆⢣⡉⠄⡑⠂⠈⠀⡴⠘⢿⣿⣿⣿⣿⣿⣇⣿⣿⣿⣿⣿⣮⣭⣝⢿⣦⠹</tspan>
+<tspan x="0" y="540">             ⠃⢜⣽⣿⣦⣍⡋⠯⣾⡽⡄⠀⠉⠉⢀⢰⣾⡿⣛⡅⢸⠰⠘⣿⣷⡻⣿⣿⣿⣏⢿   ⠸⣷⠸⣿⣾⣻⣿⣦⡑⠌⢰⣶⣦⠀⣧⠨⡁⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣾⣿⣿⣟⣶⣝⣷⣍⠻</tspan>
+<tspan x="0" y="550">            ⠇⢀⣼⣿⣿⣿⣿⣿⣷⣦⡹⠟⠂⠀⠄⠀⡀⢻⣾⣿⢸⡝⠀⢣⢹⣿⣷⡝⡻⣿⣿⣎  ⣟⢣⠹⣇⢻⣿⣿⣾⣽⡏⡖⣾⣿⢿⣧⠸⣧⠘⣦⠠⠻⣿⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⣿⣿⣿⣿⠊⠿⢷⢹</tspan>
+<tspan x="0" y="560">          ⡿⠃⣰⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠀⡐⠈⠐⡐⠀⠀⢿⢟⢸⣧⠀⢣⠄⢿⣿⣿⡕⡙⢿⣿⡌  ⣧⢹⡝⣦⣙⣻⣵⡟⢡⣼⢟⡽⢧⣿⠃⣽⢣⡀⢧⠱⠜⢿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠫⢖⡿⣿⣷⣛</tspan>
+<tspan x="0" y="570">       ⠿⢛⡉⣀⣾⣿⣿⣿⣿⡿⠟⠋⠉⡀⠀⠄⠂⠤⢁⠃⠄⡁⠀⠘⣯⢸⡏⠐⡈⢖⠸⣿⣿⣧⢿⣎⢿⣿⢹  ⣧⢹⡾⢿⣿⠟⣰ ⣏⠞⣡⣿⢃⣶⣿⢸⢁⣌⠟⡸⢦⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⢳⢸ ⣮⢿</tspan>
+<tspan x="0" y="580">   ⡿⠿⢋⡑⢎⡡⢦⣿⣿⡿⠟⠋⠁⡀⠄⢂⠡⢀⣥⡬⣌⠤⠁⣈⡀⠔⠀⠀⡼⣸⢣⠀⡅⠪⣅⢈⢿⣿⣎⢿⣎⢿⡆   ⣆⢿⣶⢹⣸  ⢪⣾⣿⢏⣾⣾⡿⢁⠾⠜⢠⠓⢚⠳⣬⠻⣿⣿⣿⣿⣿⡿⠃⢠⠂⡍⢸  ⢷⡻</tspan>
+<tspan x="0" y="590">⠿⢛⡱⢈⠥⢣⠜⡢⢥⠿⠛⡉⠄⠂⢌⡐⢐⡈⠂⣀⣭⠬⠥⠒⣠⢾⣽⢻⡄⢁⠀⠠⢹⣮⠀⡜⠀⡐⠌⣧⡹ ⣎ ⠘ ⡸   ⡆⣷   ⣷  ⡏⢸⡿⠋⢠⣒⠒⣨⣴⣾ ⣶⣴⣷⣜⠿⠿⠟⢋⢀⡔⡡⢊⡄⠻ ⣻⣯ ⣜⢿</tspan>
   </text>
-
-  
-  <g transform="translate(12, 220)">
-    <line x1="0" y1="-4" x2="396" y2="-4" stroke="#333333" stroke-width="0.8" stroke-dasharray="2 2" />
-    <text x="0" y="14" class="micro-text">CPU_STREAM:</text>
-    <g transform="translate(90, 0)">
-      <rect x="0" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="6" y="13" width="3" height="9" fill="#ffffff" opacity="0.85" />
-<rect x="12" y="8" width="3" height="14" fill="#ffffff" opacity="0.85" />
-<rect x="18" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="24" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="30" y="9" width="3" height="13" fill="#ffffff" opacity="0.85" />
-<rect x="36" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="42" y="12" width="3" height="10" fill="#ffffff" opacity="0.85" />
-<rect x="48" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="54" y="15" width="3" height="7" fill="#ffffff" opacity="0.85" />
-<rect x="60" y="5" width="3" height="17" fill="#ffffff" opacity="0.85" />
-<rect x="66" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="72" y="16" width="3" height="6" fill="#ffffff" opacity="0.85" />
-<rect x="78" y="2" width="3" height="20" fill="#ffffff" opacity="0.85" />
-<rect x="84" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="90" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="96" y="6" width="3" height="16" fill="#ffffff" opacity="0.85" />
-<rect x="102" y="9" width="3" height="13" fill="#ffffff" opacity="0.85" />
-<rect x="108" y="18" width="3" height="4" fill="#ffffff" opacity="0.85" />
-<rect x="114" y="7" width="3" height="15" fill="#ffffff" opacity="0.85" />
-<rect x="120" y="15" width="3" height="7" fill="#ffffff" opacity="0.85" />
-<rect x="126" y="4" width="3" height="18" fill="#ffffff" opacity="0.85" />
-<rect x="132" y="11" width="3" height="11" fill="#ffffff" opacity="0.85" />
-<rect x="138" y="13" width="3" height="9" fill="#ffffff" opacity="0.85" />
-<rect x="144" y="8" width="3" height="14" fill="#ffffff" opacity="0.85" />
-<rect x="150" y="4" width="3" height="18" fill="#ffffff" opacity="0.85" />
-<rect x="156" y="10" width="3" height="12" fill="#ffffff" opacity="0.85" />
-<rect x="162" y="12" width="3" height="10" fill="#ffffff" opacity="0.85" />
-<rect x="168" y="16" width="3" height="6" fill="#ffffff" opacity="0.85" />
-<rect x="174" y="2" width="3" height="20" fill="#ffffff" opacity="0.85" />
-
-    </g>
-    <text x="310" y="14" class="text-main" font-size="10px">99.8% UP</text>
-  </g>
 </g>
 
-
-<rect width="100%" height="20" class="scan" />
-
+<!-- Profile Specs & Live GitHub Stats -->
+<text x="385" y="35" fill="#c9d1d9">
+<tspan x="385" y="35" class="title">securitygeek15@system</tspan> <tspan class="cc">-——————————————————————————————————————-—-</tspan>
+<tspan x="385" y="60" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">Arch Linux, Windows 11</tspan>
+<tspan x="385" y="80" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ....................... </tspan><tspan class="value" id="age_data">17 years, 7 months, 10 days</tspan>
+<tspan x="385" y="100" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">AI Security Operations &amp; CTF</tspan>
+<tspan x="385" y="120" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">AI Red Teaming &amp; Pentesting</tspan>
+<tspan x="385" y="140" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">Neovim, VSCode</tspan>
+<tspan x="385" y="160" class="cc">. </tspan>
+<tspan x="385" y="180" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">Python, Go, Bash, C/C++, Java</tspan>
+<tspan x="385" y="200" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">HTML, CSS, JavaScript, JSON</tspan>
+<tspan x="385" y="220" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">English</tspan>
+<tspan x="385" y="240" class="cc">. </tspan>
+<tspan x="385" y="260" class="cc">. </tspan><tspan class="key">Hobbies</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">Breaking &amp; Fixing Things</tspan>
+<tspan x="385" y="280" class="cc">. </tspan><tspan class="key">Research</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">LLM Safety &amp; Jailbreaking</tspan>
+<tspan x="385" y="300" class="cc">. </tspan>
+<tspan x="385" y="325" class="title">- Contact</tspan> <tspan class="cc">-————————————————————————————————————————————-—-</tspan>
+<tspan x="385" y="350" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> ...................... </tspan><tspan class="value">goofyaapa@gmail.com</tspan>
+<tspan x="385" y="370" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">securitygeek15</tspan>
+<tspan x="385" y="390" class="cc">. </tspan><tspan class="key">Focus</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">AI Security</tspan>
+<tspan x="385" y="410" class="cc">. </tspan><tspan class="key">Role</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Security Researcher</tspan>
+<tspan x="385" y="430" class="cc">. </tspan><tspan class="key">Target</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">Adversarial AI &amp; Defenses</tspan>
+<tspan x="385" y="450" class="cc">. </tspan>
+<tspan x="385" y="475" class="title">- GitHub Stats</tspan> <tspan class="cc">-———————————————————————————————————————-—-</tspan>
+<tspan x="385" y="500" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> ..... </tspan><tspan class="value" id="repo_data">21</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">21</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ............. </tspan><tspan class="value" id="star_data">25</tspan>
+<tspan x="385" y="520" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> .................... </tspan><tspan class="value" id="commit_data">134</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ......... </tspan><tspan class="value" id="follower_data">5</tspan>
+<tspan x="385" y="540" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc" id="loc_data_dots"></tspan><tspan class="value" id="loc_data">48,920</tspan> ( <tspan class="addColor" id="loc_add">52,140</tspan><tspan class="addColor">++</tspan>, <tspan class="delColor" id="loc_del">3,220</tspan><tspan class="delColor">--</tspan> )
+</text>
 </svg>
