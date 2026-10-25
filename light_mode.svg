@@ -88,7 +88,7 @@ text, tspan {white-space: pre;}
 <text x="385" y="35" fill="#24292f">
 <tspan x="385" y="35" class="title">securitygeek15@system</tspan> <tspan class="cc">-——————————————————————————————————————-—-</tspan>
 <tspan x="385" y="60" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">Arch Linux, Windows 11</tspan>
-<tspan x="385" y="80" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ....................... </tspan><tspan class="value" id="age_data">17 years, 7 months, 23 days</tspan>
+<tspan x="385" y="80" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ....................... </tspan><tspan class="value" id="age_data">17 years, 7 months, 24 days</tspan>
 <tspan x="385" y="100" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">AI Security Operations &amp; CTF</tspan>
 <tspan x="385" y="120" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">AI Red Teaming &amp; Pentesting</tspan>
 <tspan x="385" y="140" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">Neovim, VSCode</tspan>
